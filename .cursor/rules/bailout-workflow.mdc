@@ -1,0 +1,26 @@
+---
+description: Workflow Bailout: commit, messaggi, backup e tracciamento modifiche
+alwaysApply: true
+---
+
+# Workflow e convenzioni progetto Bailout
+
+## Contesto
+Progetto landing page (HTML/CSS/JS). Modifiche in Cursor → commit → push su GitHub → deploy automatico su Vercel. L’utente non è programmatore; preferisce spiegazioni chiare e procedure semplici.
+
+## Quando modifichi file
+1. **Messaggio di commit:** dopo aver applicato modifiche, suggerisci sempre un messaggio di commit in italiano, chiaro e descrittivo (es. "Aggiungi logo Bailout al sito", "Aggiorna testo hero").
+2. **Un commit per modifica logica:** invita a fare commit piccoli e frequenti, uno per ogni cambiamento comprensibile.
+3. **Backup:** i commit sono i backup; non serve creare cartelle "backup" a mano. Ricorda all’utente che può fare commit prima di modifiche grosse per avere un punto di ripristino.
+
+## Descrizioni
+- Preferisci risposte e messaggi in **italiano** se l’utente scrive in italiano.
+- Le guide del progetto sono in `docs/` (WORKFLOW.md, COMMIT_GUIDE.md); puoi citarle quando spieghi i passi (commit, push, dove cliccare).
+
+## Changelog
+- Per modifiche rilevanti (nuove sezioni, cambio struttura, contenuti importanti), suggerisci di aggiornare `CHANGELOG.md` con data e breve descrizione.
+
+## Riferimenti rapidi
+- Flusso completo: `docs/WORKFLOW.md`
+- Come fare commit e dove cliccare: `docs/COMMIT_GUIDE.md`
+- Registro modifiche: `CHANGELOG.md`
