@@ -1,0 +1,249 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Bailout — La Tua Ancora di Salvezza nel Mondo Bitcoin</title>
+  <meta name="description" content="Bailout: formazione, masterclass e consulenza Bitcoin. Diventa un sovrano digitale.">
+  <!-- Google Fonts: Lexend (tech look) -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Lexend:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <!-- Tailwind CSS CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            bitcoin: '#FF6102',
+            dark: '#212121',
+            darkCard: '#2a2a2a',
+          },
+          fontFamily: { sans: ['Lexend', 'sans-serif'] },
+          boxShadow: {
+            glow: '0 0 40px -10px rgba(255, 97, 2, 0.25)',
+            glowSm: '0 0 20px -5px rgba(255, 97, 2, 0.2)',
+          },
+        },
+      },
+    };
+  </script>
+  <!-- Lucide Icons -->
+  <script src="https://unpkg.com/lucide@latest"></script>
+  <style>
+    body { font-family: 'Lexend', sans-serif; background-color: #212121; }
+    .card-border { border: 1px solid rgba(255,255,255,0.08); }
+    .card-hover:hover { border-color: rgba(255, 97, 2, 0.4); box-shadow: 0 0 30px -8px rgba(255, 97, 2, 0.15); }
+    .btn-bitcoin { background: #FF6102; color: white; transition: all 0.2s; }
+    .btn-bitcoin:hover { background: #e85802; box-shadow: 0 0 25px -5px rgba(255, 97, 2, 0.4); }
+    .section-glow::before { content: ''; position: absolute; top: 0; left: 50%; transform: translateX(-50%); width: 80%; height: 1px; background: linear-gradient(90deg, transparent, rgba(255,97,2,0.2), transparent); opacity: 0.6; }
+  </style>
+</head>
+<body class="text-gray-100 antialiased min-h-screen">
+  <!-- ========== HERO ========== -->
+  <header class="relative overflow-hidden">
+    <div class="absolute inset-0 bg-gradient-to-b from-bitcoin/5 via-transparent to-transparent pointer-events-none"></div>
+    <div class="absolute top-20 left-1/4 w-64 h-64 bg-bitcoin/10 rounded-full blur-3xl pointer-events-none"></div>
+    <div class="absolute bottom-0 right-1/4 w-48 h-48 bg-bitcoin/5 rounded-full blur-3xl pointer-events-none"></div>
+    <div class="relative max-w-5xl mx-auto px-6 py-24 sm:py-32 text-center">
+      <h1 class="text-4xl sm:text-5xl md:text-6xl font-semibold text-white tracking-tight leading-tight">
+        Bailout: La Tua Ancora di Salvezza nel Mondo Bitcoin
+      </h1>
+      <p class="mt-6 text-lg sm:text-xl text-gray-400 max-w-2xl mx-auto leading-relaxed">
+        Formazione seria, masterclass pratiche e consulenza tecnica per chi vuole diventare sovrano del proprio stack Bitcoin. Niente fuffa, solo proof of work.
+      </p>
+      <div class="mt-10">
+        <a href="#proof-of-work" class="inline-flex items-center gap-2 px-8 py-4 rounded-lg btn-bitcoin font-medium text-base">
+          <i data-lucide="shield-check" class="w-5 h-5"></i>
+          Diventa un sovrano digitale
+        </a>
+      </div>
+    </div>
+  </header>
+
+  <!-- ========== PROOF OF WORK (3 card) ========== -->
+  <section id="proof-of-work" class="relative py-20 sm:py-28 section-glow">
+    <div class="max-w-6xl mx-auto px-6">
+      <h2 class="text-2xl sm:text-3xl font-semibold text-white text-center mb-4">Proof of Work</h2>
+      <p class="text-gray-500 text-center max-w-xl mx-auto mb-12">Cosa offriamo: formazione, approfondimento e supporto tecnico.</p>
+      <div class="grid md:grid-cols-3 gap-6">
+        <!-- Card 1: Bitcoin Academy -->
+        <article class="group rounded-xl card-border bg-darkCard/60 p-6 card-hover transition-all duration-300">
+          <div class="w-12 h-12 rounded-lg bg-bitcoin/15 flex items-center justify-center mb-4">
+            <i data-lucide="graduation-cap" class="w-6 h-6 text-bitcoin"></i>
+          </div>
+          <h3 class="text-xl font-semibold text-white mb-2">Bitcoin Academy</h3>
+          <p class="text-gray-400 text-sm leading-relaxed">Percorso strutturato per capire Bitcoin dalla base: economia, tecnologia e sovranità. Per chi parte da zero o vuole sistematizzare.</p>
+          <a href="#" class="inline-flex items-center gap-1 mt-4 text-bitcoin text-sm font-medium hover:underline">
+            Scopri di più <i data-lucide="arrow-right" class="w-4 h-4"></i>
+          </a>
+        </article>
+        <!-- Card 2: Masterclass -->
+        <article class="group rounded-xl card-border bg-darkCard/60 p-6 card-hover transition-all duration-300">
+          <div class="w-12 h-12 rounded-lg bg-bitcoin/15 flex items-center justify-center mb-4">
+            <i data-lucide="layers" class="w-6 h-6 text-bitcoin"></i>
+          </div>
+          <h3 class="text-xl font-semibold text-white mb-2">Masterclass</h3>
+          <p class="text-gray-400 text-sm leading-relaxed">Sessioni intensive su temi avanzati: Lightning, self-custody, privacy. Per chi vuole andare oltre le basi con hands-on.</p>
+          <a href="#" class="inline-flex items-center gap-1 mt-4 text-bitcoin text-sm font-medium hover:underline">
+            Scopri di più <i data-lucide="arrow-right" class="w-4 h-4"></i>
+          </a>
+        </article>
+        <!-- Card 3: Consulenza Tecnica -->
+        <article class="group rounded-xl card-border bg-darkCard/60 p-6 card-hover transition-all duration-300">
+          <div class="w-12 h-12 rounded-lg bg-bitcoin/15 flex items-center justify-center mb-4">
+            <i data-lucide="wrench" class="w-6 h-6 text-bitcoin"></i>
+          </div>
+          <h3 class="text-xl font-semibold text-white mb-2">Consulenza Tecnica</h3>
+          <p class="text-gray-400 text-sm leading-relaxed">Supporto one-to-one per nodi, wallet, setup e best practice. Consulenza su misura per aziende e privati.</p>
+          <a href="#" class="inline-flex items-center gap-1 mt-4 text-bitcoin text-sm font-medium hover:underline">
+            Scopri di più <i data-lucide="arrow-right" class="w-4 h-4"></i>
+          </a>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- ========== NODI (Team) ========== -->
+  <section id="nodi" class="relative py-20 sm:py-28">
+    <div class="max-w-6xl mx-auto px-6">
+      <h2 class="text-2xl sm:text-3xl font-semibold text-white text-center mb-4">Nodi</h2>
+      <p class="text-gray-500 text-center max-w-xl mx-auto mb-12">Il team dietro Bailout: chi fa proof of work ogni giorno.</p>
+      <div class="grid sm:grid-cols-2 lg:grid-cols-4 gap-6">
+        <!-- Pierluigi Turla -->
+        <article class="rounded-xl card-border bg-darkCard/60 p-6 flex flex-col items-center text-center card-hover transition-all duration-300">
+          <div class="w-24 h-24 rounded-full bg-gray-600 overflow-hidden mb-4 ring-2 ring-white/10">
+            <img src="https://placehold.co/96x96/2a2a2a/6b7280?text=PT" alt="Pierluigi Turla" class="w-full h-full object-cover">
+          </div>
+          <h3 class="text-lg font-semibold text-white">Pierluigi Turla</h3>
+          <p class="text-gray-500 text-sm mt-1 mb-4">Nodo & formazione</p>
+          <p class="text-gray-400 text-sm leading-relaxed flex-1">Bitcoin educator e operatore di nodo. Focus su self-custody e privacy.</p>
+          <div class="flex gap-3 mt-4">
+            <a href="#" class="p-2 rounded-lg bg-white/5 hover:bg-bitcoin/20 text-gray-400 hover:text-bitcoin transition-colors" aria-label="Twitter"><i data-lucide="twitter" class="w-4 h-4"></i></a>
+            <a href="#" class="p-2 rounded-lg bg-white/5 hover:bg-bitcoin/20 text-gray-400 hover:text-bitcoin transition-colors" aria-label="LinkedIn"><i data-lucide="linkedin" class="w-4 h-4"></i></a>
+          </div>
+        </article>
+        <!-- Turtlecute -->
+        <article class="rounded-xl card-border bg-darkCard/60 p-6 flex flex-col items-center text-center card-hover transition-all duration-300">
+          <div class="w-24 h-24 rounded-full bg-gray-600 overflow-hidden mb-4 ring-2 ring-white/10">
+            <img src="https://placehold.co/96x96/2a2a2a/6b7280?text=TC" alt="Turtlecute" class="w-full h-full object-cover">
+          </div>
+          <h3 class="text-lg font-semibold text-white">Turtlecute</h3>
+          <p class="text-gray-500 text-sm mt-1 mb-4">Tech & content</p>
+          <p class="text-gray-400 text-sm leading-relaxed flex-1">Developer e creator. Bitcoin, privacy e tooling per la sovranità.</p>
+          <div class="flex gap-3 mt-4">
+            <a href="#" class="p-2 rounded-lg bg-white/5 hover:bg-bitcoin/20 text-gray-400 hover:text-bitcoin transition-colors" aria-label="Twitter"><i data-lucide="twitter" class="w-4 h-4"></i></a>
+            <a href="#" class="p-2 rounded-lg bg-white/5 hover:bg-bitcoin/20 text-gray-400 hover:text-bitcoin transition-colors" aria-label="GitHub"><i data-lucide="github" class="w-4 h-4"></i></a>
+          </div>
+        </article>
+        <!-- Riccardo Aran -->
+        <article class="rounded-xl card-border bg-darkCard/60 p-6 flex flex-col items-center text-center card-hover transition-all duration-300">
+          <div class="w-24 h-24 rounded-full bg-gray-600 overflow-hidden mb-4 ring-2 ring-white/10">
+            <img src="https://placehold.co/96x96/2a2a2a/6b7280?text=RA" alt="Riccardo Aran" class="w-full h-full object-cover">
+          </div>
+          <h3 class="text-lg font-semibold text-white">Riccardo Aran</h3>
+          <p class="text-gray-500 text-sm mt-1 mb-4">Consulenza & nodi</p>
+          <p class="text-gray-400 text-sm leading-relaxed flex-1">Esperto di infrastruttura e self-custody. Nodi e best practice.</p>
+          <div class="flex gap-3 mt-4">
+            <a href="#" class="p-2 rounded-lg bg-white/5 hover:bg-bitcoin/20 text-gray-400 hover:text-bitcoin transition-colors" aria-label="Twitter"><i data-lucide="twitter" class="w-4 h-4"></i></a>
+            <a href="#" class="p-2 rounded-lg bg-white/5 hover:bg-bitcoin/20 text-gray-400 hover:text-bitcoin transition-colors" aria-label="Link"><i data-lucide="link" class="w-4 h-4"></i></a>
+          </div>
+        </article>
+        <!-- Marco Costanza -->
+        <article class="rounded-xl card-border bg-darkCard/60 p-6 flex flex-col items-center text-center card-hover transition-all duration-300">
+          <div class="w-24 h-24 rounded-full bg-gray-600 overflow-hidden mb-4 ring-2 ring-white/10">
+            <img src="https://placehold.co/96x96/2a2a2a/6b7280?text=MC" alt="Marco Costanza" class="w-full h-full object-cover">
+          </div>
+          <h3 class="text-lg font-semibold text-white">Marco Costanza</h3>
+          <p class="text-gray-500 text-sm mt-1 mb-4">Founder & formazione</p>
+          <p class="text-gray-400 text-sm leading-relaxed flex-1">Ideatore di Bailout. Formazione Bitcoin e sovranità digitale.</p>
+          <div class="flex gap-3 mt-4">
+            <a href="#" class="p-2 rounded-lg bg-white/5 hover:bg-bitcoin/20 text-gray-400 hover:text-bitcoin transition-colors" aria-label="Twitter"><i data-lucide="twitter" class="w-4 h-4"></i></a>
+            <a href="#" class="p-2 rounded-lg bg-white/5 hover:bg-bitcoin/20 text-gray-400 hover:text-bitcoin transition-colors" aria-label="Sito"><i data-lucide="globe" class="w-4 h-4"></i></a>
+          </div>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- ========== MEMPOOL (Collaboratori) ========== -->
+  <section id="mempool" class="relative py-20 sm:py-28">
+    <div class="max-w-6xl mx-auto px-6">
+      <h2 class="text-2xl sm:text-3xl font-semibold text-white text-center mb-4">Mempool</h2>
+      <p class="text-gray-500 text-center max-w-xl mx-auto mb-12">Collaboratori e amici che contribuiscono al progetto.</p>
+      <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
+        <article class="rounded-xl card-border bg-darkCard/60 p-6 flex flex-col items-center text-center card-hover transition-all duration-300">
+          <div class="w-20 h-20 rounded-full bg-gray-600 overflow-hidden mb-4 ring-2 ring-white/10">
+            <img src="https://placehold.co/80x80/2a2a2a/6b7280?text=GV" alt="Gabriele Vernetti" class="w-full h-full object-cover">
+          </div>
+          <h3 class="text-lg font-semibold text-white">Gabriele Vernetti</h3>
+          <p class="text-gray-500 text-sm mt-1 mb-3">Collaboratore</p>
+          <p class="text-gray-400 text-sm leading-relaxed">Contributi su contenuti e community. Amico del mempool.</p>
+          <div class="flex gap-3 mt-4">
+            <a href="#" class="p-2 rounded-lg bg-white/5 hover:bg-bitcoin/20 text-gray-400 hover:text-bitcoin transition-colors" aria-label="Social"><i data-lucide="twitter" class="w-4 h-4"></i></a>
+          </div>
+        </article>
+        <!-- Placeholder per altri collaboratori -->
+        <article class="rounded-xl card-border bg-darkCard/40 p-6 flex flex-col items-center justify-center text-center border-dashed opacity-80">
+          <div class="w-12 h-12 rounded-full bg-white/5 flex items-center justify-center mb-3">
+            <i data-lucide="user-plus" class="w-6 h-6 text-gray-500"></i>
+          </div>
+          <p class="text-gray-500 text-sm">Altri collaboratori in arrivo</p>
+        </article>
+        <article class="rounded-xl card-border bg-darkCard/40 p-6 flex flex-col items-center justify-center text-center border-dashed opacity-80 sm:col-span-2 lg:col-span-1">
+          <div class="w-12 h-12 rounded-full bg-white/5 flex items-center justify-center mb-3">
+            <i data-lucide="users" class="w-6 h-6 text-gray-500"></i>
+          </div>
+          <p class="text-gray-500 text-sm">Vuoi entrare nel mempool?</p>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- ========== TIMECHAIN (Contatti) ========== -->
+  <section id="timechain" class="relative py-20 sm:py-28">
+    <div class="absolute inset-0 bg-gradient-to-t from-bitcoin/5 via-transparent to-transparent pointer-events-none"></div>
+    <div class="relative max-w-xl mx-auto px-6">
+      <h2 class="text-2xl sm:text-3xl font-semibold text-white text-center mb-4">Timechain</h2>
+      <p class="text-gray-500 text-center mb-10">Scrivi nel timechain: ti rispondiamo.</p>
+      <form class="rounded-xl card-border bg-darkCard/60 p-6 sm:p-8 space-y-5 shadow-glowSm">
+        <div>
+          <label for="name" class="block text-sm font-medium text-gray-400 mb-2">Nome</label>
+          <input type="text" id="name" name="name" placeholder="Il tuo nome" class="w-full px-4 py-3 rounded-lg bg-white/5 border border-white/10 text-white placeholder-gray-500 focus:border-bitcoin/50 focus:ring-1 focus:ring-bitcoin/30 outline-none transition" required>
+        </div>
+        <div>
+          <label for="email" class="block text-sm font-medium text-gray-400 mb-2">Email</label>
+          <input type="email" id="email" name="email" placeholder="tu@email.com" class="w-full px-4 py-3 rounded-lg bg-white/5 border border-white/10 text-white placeholder-gray-500 focus:border-bitcoin/50 focus:ring-1 focus:ring-bitcoin/30 outline-none transition" required>
+        </div>
+        <div>
+          <label for="message" class="block text-sm font-medium text-gray-400 mb-2">Messaggio</label>
+          <textarea id="message" name="message" rows="4" placeholder="Come possiamo aiutarti?" class="w-full px-4 py-3 rounded-lg bg-white/5 border border-white/10 text-white placeholder-gray-500 focus:border-bitcoin/50 focus:ring-1 focus:ring-bitcoin/30 outline-none transition resize-none" required></textarea>
+        </div>
+        <div class="pt-2">
+          <button type="submit" class="w-full sm:w-auto inline-flex items-center justify-center gap-2 px-8 py-4 rounded-lg btn-bitcoin font-medium">
+            <i data-lucide="send" class="w-4 h-4"></i>
+            Invia messaggio
+          </button>
+        </div>
+      </form>
+    </div>
+  </section>
+
+  <!-- ========== FOOTER ========== -->
+  <footer class="border-t border-white/5 py-8">
+    <div class="max-w-6xl mx-auto px-6 flex flex-col sm:flex-row items-center justify-between gap-4">
+      <p class="text-gray-500 text-sm">© Bailout — Proof of Work, non promesse.</p>
+      <div class="flex gap-6">
+        <a href="#proof-of-work" class="text-gray-500 hover:text-bitcoin text-sm transition-colors">Servizi</a>
+        <a href="#nodi" class="text-gray-500 hover:text-bitcoin text-sm transition-colors">Team</a>
+        <a href="#timechain" class="text-gray-500 hover:text-bitcoin text-sm transition-colors">Contatti</a>
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    lucide.createIcons();
+  </script>
+</body>
+</html>
