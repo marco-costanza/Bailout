@@ -5,6 +5,8 @@ alwaysApply: true
 
 # Workflow e convenzioni progetto Bailout
 
+**Regola prioritaria (Bailout):** dopo le modifiche fare **solo commit** (messaggio in italiano). **Non fare push** a meno che l’utente non lo chieda esplicitamente (es. "pusha", "pubblica", "sono pronto"). Il push aggiorna il sito online; fino ad allora tutto resta in locale.
+
 ## Contesto
 Progetto landing page (HTML/CSS/JS). Modifiche in Cursor → commit in locale (backup) → push su GitHub solo quando richiesto → deploy automatico su Vercel. L’utente non è programmatore; preferisce spiegazioni chiare e procedure semplici.
 

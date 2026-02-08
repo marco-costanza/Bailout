@@ -16,6 +16,6 @@ alwaysApply: true
 Dopo **ogni modifica** che l'utente ti chiede di fare:
 
 1. **Commit**: fare `git add` dei file modificati e `git commit` con messaggio chiaro e descrittivo (es. "Aggiunto X", "Corretto Y in Z").
-2. **Push**: fare `git push` per pubblicare i cambiamenti sul remoto (GitHub).
+2. **Push**: fare `git push` solo quando l'utente lo chiede esplicitamente (es. "pusha", "pubblica", "sono pronto"). In questo progetto (Bailout) **non** fare push automatico dopo ogni modifica — vedi `bailout-workflow.mdc`.
 
-Se il contesto è un sottoprogetto con suo `.git` (es. WhaleStreet, Bailout), eseguire commit e push **in quella cartella**. Se non c'è repo inizializzato o remoto configurato, segnalarlo all'utente invece di forzare il push.
+Se il contesto è un sottoprogetto con suo `.git` (es. WhaleStreet, Bailout), eseguire commit (e push solo se richiesto) **in quella cartella**. Se non c'è repo inizializzato o remoto configurato, segnalarlo all'utente invece di forzare il push.
