@@ -1,8 +1,6 @@
 # macOS
 .DS_Store
 
-# Template email (solo archivio locale, non per il sito)
-mail/
 
 # Documenti interni branding
 branding/
