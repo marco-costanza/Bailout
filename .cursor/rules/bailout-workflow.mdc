@@ -1,17 +1,26 @@
 ---
-description: Workflow Bailout: commit, messaggi, backup e tracciamento modifiche
+description: Workflow Bailout: commit sempre, push solo su richiesta, anteprima locale porta 3001
 alwaysApply: true
 ---
 
 # Workflow e convenzioni progetto Bailout
 
 ## Contesto
-Progetto landing page (HTML/CSS/JS). Modifiche in Cursor → commit → push su GitHub → deploy automatico su Vercel. L’utente non è programmatore; preferisce spiegazioni chiare e procedure semplici.
+Progetto landing page (HTML/CSS/JS). Modifiche in Cursor → commit in locale (backup) → push su GitHub solo quando richiesto → deploy automatico su Vercel. L’utente non è programmatore; preferisce spiegazioni chiare e procedure semplici.
+
+## Commit e push
+- **Commit:** sempre dopo ogni modifica logica. Messaggio in italiano, chiaro e descrittivo (es. "Aggiorna testo hero", "Aggiungi logo Bailout"). I commit sono il backup locale.
+- **Push:** solo quando l’utente lo chiede esplicitamente (es. "pusha", "pubblica", "sono contento pubblica"). Non fare push automatico dopo ogni modifica: così il sito online si aggiorna solo quando decide l’utente; fino ad allora tutto resta in locale.
+
+## Anteprima in tempo reale (senza push)
+- Dalla cartella del progetto: `npx serve -l 3001` (Bailout è il secondo progetto, porta 3001).
+- Apri nel browser: http://localhost:3001 (o la porta indicata dal comando).
+- Dopo ogni salvataggio, ricaricare la pagina per vedere le modifiche.
+- Per altri progetti sulla stessa macchina: usare porte diverse (es. 3000, 3002) per evitare conflitti.
 
 ## Quando modifichi file
-1. **Messaggio di commit:** dopo aver applicato modifiche, suggerisci sempre un messaggio di commit in italiano, chiaro e descrittivo (es. "Aggiungi logo Bailout al sito", "Aggiorna testo hero").
-2. **Un commit per modifica logica:** invita a fare commit piccoli e frequenti, uno per ogni cambiamento comprensibile.
-3. **Backup:** i commit sono i backup; non serve creare cartelle "backup" a mano. Ricorda all’utente che può fare commit prima di modifiche grosse per avere un punto di ripristino.
+1. **Un commit per modifica logica:** commit piccoli e frequenti, uno per ogni cambiamento comprensibile.
+2. **Backup:** i commit sono i backup; non serve creare cartelle "backup" a mano. Commit prima di modifiche grosse per avere un punto di ripristino.
 
 ## Descrizioni
 - Preferisci risposte e messaggi in **italiano** se l’utente scrive in italiano.
