@@ -63,7 +63,7 @@ Se serve più contesto, puoi usare una seconda riga vuota e poi un paragrafo (mo
 
 - [ ] Le modifiche che vedi in **Changes** sono quelle che volevi?
 - [ ] Hai scritto un messaggio di commit che descrive bene cosa hai fatto?
-- [ ] Se è una modifica grossa, hai controllato il sito in locale (apri `index.html` nel browser)?
+- [ ] Se è una modifica grossa, hai controllato il sito in locale (apri la Homepage `index.html` nel browser)?
 
 Dopo il commit puoi fare **Push** per aggiornare GitHub e quindi Vercel.
 

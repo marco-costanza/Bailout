@@ -6,7 +6,7 @@ Landing page del sito **Bailout**: formazione, masterclass e consulenza Bitcoin.
 
 ## Cosa c’è in questo progetto
 
-- **index.html** — Pagina principale del sito (hero, servizi, team, contatti).
+- **index.html** — Homepage del sito (hero, servizi, team, contatti).
 - **Bailout logo.png** — Logo Bailout.
 - **docs/** — Guide per lavorare sul progetto (workflow, commit, dove cliccare).
 - **CHANGELOG.md** — Registro delle modifiche importanti al sito.
