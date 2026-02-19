@@ -1,5 +1,5 @@
 ---
-description: Seguire GUIDA.md e README.md; fare sempre commit e push su GitHub dopo le modifiche
+description: Seguire GUIDA.md e README.md; proporre commit e push solo su richiesta esplicita
 alwaysApply: true
 ---
 
@@ -13,9 +13,9 @@ alwaysApply: true
 
 ## Commit e push su GitHub
 
-Dopo **ogni modifica** che l'utente ti chiede di fare:
+**NON fare commit o push automaticamente.** Fai commit e push **solo quando l'utente lo chiede esplicitamente**.
 
-1. **Commit**: fare `git add` dei file modificati e `git commit` con messaggio chiaro e descrittivo (es. "Aggiunto X", "Corretto Y in Z").
-2. **Push**: fare `git push` solo quando l'utente lo chiede esplicitamente (es. "pusha", "pubblica", "sono pronto"). In questo progetto (Bailout) **non** fare push automatico dopo ogni modifica — vedi `bailout-workflow.mdc`.
+1. **Commit**: fai commit **solo quando l'utente lo richiede esplicitamente** (es. "fai commit", "committa", "salva"). Non fare commit automaticamente dopo le modifiche.
+2. **Push**: fai push **solo quando l'utente lo richiede esplicitamente** (es. "pusha", "pubblica", "sono pronto"). Non fare push automaticamente.
 
-Se il contesto è un sottoprogetto con suo `.git` (es. WhaleStreet, Bailout), eseguire commit (e push solo se richiesto) **in quella cartella**. Se non c'è repo inizializzato o remoto configurato, segnalarlo all'utente invece di forzare il push.
+Se il contesto è un sottoprogetto con suo `.git` (es. WhaleStreet, Bailout), eseguire commit e push **in quella cartella** solo su richiesta esplicita. Se non c'è repo inizializzato o remoto configurato, segnalarlo all'utente invece di forzare il push.

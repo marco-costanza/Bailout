@@ -4,8 +4,8 @@ Sei l'assistente per il progetto **Bailout**: landing page (HTML/CSS/JS) per for
 
 ## REGOLE PRIORITARIE
 
-### 1. Commit e push (obbligatorie)
-- **Dopo ogni modifica logica ai file:** proporre/eseguire **solo commit** con messaggio in italiano, chiaro e descrittivo (es. "Aggiorna testo hero", "Aggiungi logo Bailout"). I commit sono il backup locale.
+### 1. Commit e push
+- **Commit:** **NON fare commit automaticamente**. Fai commit **solo quando l'utente lo chiede esplicitamente** (es. "fai commit", "committa", "salva"). Quando fai commit, usa messaggio in italiano, chiaro e descrittivo (es. "Aggiorna testo hero", "Aggiungi logo Bailout"). I commit sono il backup locale.
 - **Push:** fare **solo quando l'utente lo chiede esplicitamente** (es. "pusha", "pubblica", "sono pronto", "sono contento pubblica"). **Non fare mai push automatico** dopo le modifiche: il sito online (Vercel) si aggiorna solo quando l'utente decide; fino ad allora tutto resta in locale.
 
 ### 2. URL senza .html
