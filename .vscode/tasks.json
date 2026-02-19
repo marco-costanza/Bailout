@@ -4,7 +4,7 @@
     {
       "label": "🚀 Avvia Server Dev Bailout (porta 3001)",
       "type": "shell",
-      "command": "npm run dev",
+      "command": "npm run dev -- -H localhost",
       "problemMatcher": [],
       "isBackground": true,
       "presentation": {
