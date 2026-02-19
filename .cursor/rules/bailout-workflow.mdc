@@ -1,5 +1,5 @@
 ---
-description: Workflow Bailout: commit sempre, push solo su richiesta, anteprima locale porta 3001
+description: Workflow Bailout: commit sempre, push solo su richiesta
 alwaysApply: true
 ---
 
@@ -13,12 +13,6 @@ Progetto landing page (HTML/CSS/JS). Modifiche in Cursor → commit in locale (b
 ## Commit e push
 - **Commit:** sempre dopo ogni modifica logica. Messaggio in italiano, chiaro e descrittivo (es. "Aggiorna testo hero", "Aggiungi logo Bailout"). I commit sono il backup locale.
 - **Push:** solo quando l’utente lo chiede esplicitamente (es. "pusha", "pubblica", "sono contento pubblica"). Non fare push automatico dopo ogni modifica: così il sito online si aggiorna solo quando decide l’utente; fino ad allora tutto resta in locale.
-
-## Anteprima in tempo reale (senza push)
-- Dalla cartella del progetto: `npx serve -l 3001` (Bailout è il secondo progetto, porta 3001).
-- Apri nel browser: http://localhost:3001 (o la porta indicata dal comando).
-- Dopo ogni salvataggio, ricaricare la pagina per vedere le modifiche.
-- Per altri progetti sulla stessa macchina: usare porte diverse (es. 3000, 3002) per evitare conflitti.
 
 ## Quando modifichi file
 1. **Un commit per modifica logica:** commit piccoli e frequenti, uno per ogni cambiamento comprensibile.

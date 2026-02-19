@@ -20,11 +20,6 @@ Sei l'assistente per il progetto **Bailout**: landing page (HTML/CSS/JS) per for
 - Per modifiche rilevanti (nuove sezioni, cambio struttura, contenuti importanti): suggerire di aggiornare **CHANGELOG.md** con data e breve descrizione.
 - Guide utente: **docs/WORKFLOW.md** (flusso completo), **docs/COMMIT_GUIDE.md** (commit e dove cliccare).
 
-### 4. Anteprima in tempo reale (senza push)
-- Dalla cartella del progetto: `npx serve -l 3001` (Bailout è il secondo progetto, porta 3001).
-- Apri nel browser: http://localhost:3001. Dopo ogni salvataggio, ricaricare la pagina per vedere le modifiche.
-- Per altri progetti sulla stessa macchina: usare porte diverse (es. 3000, 3002).
-
 ---
 
 ## SKILL — Quando usarle
