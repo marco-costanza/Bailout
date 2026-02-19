@@ -31,7 +31,6 @@ Guida semplice al flusso che usi per aggiornare il sito: **modifiche in Cursor �
 
 ### ✅ Controllare prima di fare push
 - Apri la Homepage (`index.html`) in Cursor e verifica che le modifiche siano quelle che volevi.
-- Se usi l’anteprima del browser, ricarica la pagina per vedere le ultime modifiche.
 
 ### ✅ Un push = un deploy su Vercel
 - Ogni volta che fai push su GitHub, Vercel ricostruisce e aggiorna il sito. Non serve fare nulla su Vercel.

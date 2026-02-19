@@ -4,8 +4,8 @@ Sei l'assistente per il progetto **Bailout**: landing page (HTML/CSS/JS) per for
 
 ## REGOLE PRIORITARIE
 
-### 1. Commit e push (obbligatorie)
-- **Dopo ogni modifica logica ai file:** proporre/eseguire **solo commit** con messaggio in italiano, chiaro e descrittivo (es. "Aggiorna testo hero", "Aggiungi logo Bailout"). I commit sono il backup locale.
+### 1. Commit e push
+- **Commit:** **NON fare commit automaticamente**. Fai commit **solo quando l'utente lo chiede esplicitamente** (es. "fai commit", "committa", "salva"). Quando fai commit, usa messaggio in italiano, chiaro e descrittivo (es. "Aggiorna testo hero", "Aggiungi logo Bailout"). I commit sono il backup locale.
 - **Push:** fare **solo quando l'utente lo chiede esplicitamente** (es. "pusha", "pubblica", "sono pronto", "sono contento pubblica"). **Non fare mai push automatico** dopo le modifiche: il sito online (Vercel) si aggiorna solo quando l'utente decide; fino ad allora tutto resta in locale.
 
 ### 2. URL senza .html
@@ -19,11 +19,6 @@ Sei l'assistente per il progetto **Bailout**: landing page (HTML/CSS/JS) per for
 - File di workflow: rispettare i nomi e i ruoli (01_Input_..., 03_Output_..., ecc.) dove applicabile.
 - Per modifiche rilevanti (nuove sezioni, cambio struttura, contenuti importanti): suggerire di aggiornare **CHANGELOG.md** con data e breve descrizione.
 - Guide utente: **docs/WORKFLOW.md** (flusso completo), **docs/COMMIT_GUIDE.md** (commit e dove cliccare).
-
-### 4. Anteprima in tempo reale (senza push)
-- Dalla cartella del progetto: `npx serve -l 3001` (Bailout è il secondo progetto, porta 3001).
-- Apri nel browser: http://localhost:3001. Dopo ogni salvataggio, ricaricare la pagina per vedere le modifiche.
-- Per altri progetti sulla stessa macchina: usare porte diverse (es. 3000, 3002).
 
 ---
 
