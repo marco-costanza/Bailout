@@ -1,1 +1,6 @@
-{"rewrites":[{"source":"/conferma-iscrizione","destination":"/conferma-iscrizione/index.html"},{"source":"/aggiorna-profilo","destination":"/aggiorna-profilo/index.html"},{"source":"/arrivederci","destination":"/arrivederci/index.html"}]}
+{
+  "buildCommand": "npm run build",
+  "outputDirectory": ".next",
+  "framework": "nextjs",
+  "installCommand": "npm install"
+}

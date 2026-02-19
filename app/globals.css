@@ -1,0 +1,44 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --font-lexend: 'Lexend', sans-serif;
+    --font-inter: 'Inter', sans-serif;
+  }
+
+  * {
+    @apply border-white/10;
+  }
+
+  body {
+    @apply bg-background-dark text-text-primary font-sans antialiased;
+  }
+
+  h1, h2, h3, h4, h5, h6 {
+    @apply font-heading;
+  }
+}
+
+@layer utilities {
+  .text-balance {
+    text-wrap: balance;
+  }
+  
+  .glow-effect {
+    @apply transition-shadow duration-300;
+  }
+  
+  .glow-effect:hover {
+    @apply shadow-glow;
+  }
+  
+  .card-border {
+    @apply border border-white/10;
+  }
+  
+  .card-hover:hover {
+    @apply border-bitcoin/40 shadow-glow-sm;
+  }
+}
