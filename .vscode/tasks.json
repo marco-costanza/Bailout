@@ -1,0 +1,27 @@
+{
+  "version": "2.0.0",
+  "tasks": [
+    {
+      "label": "🚀 Avvia Server Dev Bailout (porta 3001)",
+      "type": "shell",
+      "command": "npm run dev",
+      "problemMatcher": [],
+      "isBackground": true,
+      "presentation": {
+        "reveal": "always",
+        "panel": "dedicated",
+        "focus": false,
+        "clear": false
+      },
+      "runOptions": {
+        "runOn": "folderOpen"
+      }
+    },
+    {
+      "label": "🛑 Ferma Server Dev Bailout",
+      "type": "shell",
+      "command": "pkill -f 'next dev.*3001' || pkill -f 'next dev' || true",
+      "problemMatcher": []
+    }
+  ]
+}
