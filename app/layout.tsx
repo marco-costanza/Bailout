@@ -21,7 +21,7 @@ const inter = Inter({
 export const metadata: Metadata = {
   title: "Bailout – La Tua Ancora di Salvezza nel Mondo Bitcoin",
   description:
-    "Bailout: formazione seria, masterclass pratiche e consulenza tecnica per chi vuole diventare sovrano del proprio stack Bitcoin. Niente fuffa, solo proof of work.",
+    "Bailout: formazione, masterclass pratiche e consulenza tecnica per chi vuole diventare sovrano del proprio stack Bitcoin. Niente fuffa, solo proof of work.",
   keywords: [
     "bitcoin",
     "formazione bitcoin",
@@ -36,7 +36,7 @@ export const metadata: Metadata = {
   openGraph: {
     title: "Bailout – Formazione e Consulenza Bitcoin",
     description:
-      "Formazione seria, masterclass pratiche e consulenza tecnica Bitcoin",
+      "Formazione, masterclass pratiche e consulenza tecnica Bitcoin",
     type: "website",
     locale: "it_IT",
   },
