@@ -4,6 +4,17 @@ Guida semplice al flusso che usi per aggiornare il sito: **modifiche in Cursor �
 
 ---
 
+## Branch: editing e main (lavoro in team)
+
+Se lavorate in più persone sul sito:
+
+- **Tutti** lavorano sul branch **editing** (pull prima di iniziare, commit e push su editing).
+- **Solo il maintainer** unisce **editing** in **main** quando le modifiche sono pronte; da **main** Vercel pubblica il sito.
+
+Guida completa: **[BRANCHES.md](BRANCHES.md)** — leggila se sei un collaboratore o se fai il merge editing → main.
+
+---
+
 ## Il flusso in 4 passi
 
 ```
@@ -69,5 +80,6 @@ Se in futuro vorrai “tornare indietro” a una versione precedente, potrai far
 
 ## Riferimenti rapidi
 
+- **Branch editing/main e chi fa il merge:** [BRANCHES.md](BRANCHES.md)
 - **Guida ai commit (messaggi, esempi):** [COMMIT_GUIDE.md](COMMIT_GUIDE.md)
 - **Registro delle modifiche del sito:** [../CHANGELOG.md](../CHANGELOG.md)
