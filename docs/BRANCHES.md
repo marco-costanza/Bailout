@@ -67,9 +67,20 @@ Solo tu (il maintainer) esegui questi passi di merge e push su **main**.
 
 ---
 
-## Proteggere main su GitHub (solo maintainer)
+## Proteggere main e editing con Rulesets (consigliato)
 
-Per evitare che qualcuno faccia per sbaglio push o merge su **main**, puoi proteggere il branch su GitHub:
+In questo repo trovi **regole pronte da importare** come JSON:
+
+- **Cartella:** [docs/github-rulesets/](github-rulesets/README.md)
+- **File:** `main-protection.json` (solo tu su main) e `editing-protection.json` (tutti su editing, niente force push né cancellazione branch).
+
+**Come fare:** GitHub → repo **Bailout** → **Settings** → **Rules** → **Rulesets** → **New ruleset** → **Import a ruleset** → scegli il file JSON. Importa prima `main-protection.json`, poi `editing-protection.json`.
+
+Risultato: solo tu (ruolo Admin) puoi pushare/merge su **main**; tutti possono lavorare su **editing** ma non possono fare force push né cancellare il branch, così la storia resta tracciata e non si possono nascondere modifiche strane. Dettagli e note di sicurezza nel [README dei ruleset](github-rulesets/README.md).
+
+### Alternativa: Branch protection classica
+
+Se preferisci non usare i Rulesets, puoi usare la protezione branch:
 
 1. Vai su **GitHub** → repository **Bailout**.
 2. **Settings** → **Branches** → **Add branch protection rule** (o modifica la regola esistente).
@@ -78,8 +89,6 @@ Per evitare che qualcuno faccia per sbaglio push o merge su **main**, puoi prote
    - **Require a pull request before merging** (così nessuno mergea per sbaglio da solo), e/o  
    - **Restrict who can push to matching branches** e aggiungi solo il tuo account.
 5. Salva.
-
-In questo modo solo tu (o chi aggiungi) può unire **editing** in **main** e pubblicare il sito.
 
 ---
 
