@@ -83,7 +83,7 @@ export default function HomePage() {
             Proof of Work
           </h2>
           <p className="text-text-muted text-center max-w-xl mx-auto mb-12">
-            Cosa offriamo: formazione, approfondimento e supporto tecnico.
+            Offriamo: formazione, approfondimento e supporto tecnico
           </p>
           <div className="grid md:grid-cols-3 gap-6">
             {/* Card 1: Bitcoin Academy */}
