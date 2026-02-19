@@ -46,7 +46,7 @@ export default function HomePage() {
               Bailout: La Tua Ancora di Salvezza nel Mondo Bitcoin
             </h1>
             <p className="mt-6 text-lg sm:text-xl text-text-secondary max-w-2xl mx-auto leading-relaxed">
-              Formazione seria, masterclass pratiche e consulenza tecnica per chi vuole diventare sovrano del proprio stack Bitcoin. Niente fuffa, solo proof of work.
+              Formazione, masterclass pratiche e consulenza tecnica per chi vuole diventare sovrano del proprio stack Bitcoin. Niente fuffa, solo proof of work.
             </p>
             <div className="mt-10">
               <Button
