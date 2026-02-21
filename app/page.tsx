@@ -164,23 +164,34 @@ export default function HomePage() {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ duration: 0.5, delay: 0.2 }}
-              className="group rounded-xl card-border bg-background-card/60 p-6 card-hover transition-all duration-300"
+              className="group rounded-xl card-border bg-background-card/60 overflow-hidden card-hover transition-all duration-300"
             >
-              <div className="w-12 h-12 rounded-lg bg-bitcoin-light flex items-center justify-center mb-4">
-                <Wrench className="w-6 h-6 text-bitcoin" />
+              <div className="relative w-full aspect-[16/10] overflow-hidden">
+                <Image
+                  src="/images/Foto-di-gruppo.jpg"
+                  alt="Il team Bailout"
+                  fill
+                  className="object-cover"
+                  sizes="(max-width: 768px) 100vw, 33vw"
+                />
               </div>
-              <h3 className="text-xl font-semibold text-white mb-2">
-                Consulenza Tecnica
-              </h3>
-              <p className="text-text-secondary text-sm leading-relaxed">
-                Supporto one-to-one per nodi, wallet, setup e best practice. Consulenza su misura per aziende e privati.
-              </p>
-              <Link
-                href="#"
-                className="inline-flex items-center gap-1 mt-4 text-bitcoin text-sm font-medium hover:underline"
-              >
-                Scopri di più <ArrowRight className="w-4 h-4" />
-              </Link>
+              <div className="p-6">
+                <div className="w-12 h-12 rounded-lg bg-bitcoin-light flex items-center justify-center mb-4">
+                  <Wrench className="w-6 h-6 text-bitcoin" />
+                </div>
+                <h3 className="text-xl font-semibold text-white mb-2">
+                  Consulenza Tecnica
+                </h3>
+                <p className="text-text-secondary text-sm leading-relaxed">
+                  Supporto one-to-one per nodi, wallet, setup e best practice. Consulenza su misura per aziende e privati.
+                </p>
+                <Link
+                  href="#"
+                  className="inline-flex items-center gap-1 mt-4 text-bitcoin text-sm font-medium hover:underline"
+                >
+                  Scopri di più <ArrowRight className="w-4 h-4" />
+                </Link>
+              </div>
             </motion.article>
           </div>
         </div>
@@ -192,18 +203,9 @@ export default function HomePage() {
           <h2 className="text-2xl sm:text-3xl font-semibold text-white text-center mb-4">
             Nodi
           </h2>
-          <p className="text-text-muted text-center max-w-xl mx-auto mb-8">
+          <p className="text-text-muted text-center max-w-xl mx-auto mb-12">
             Il team dietro Bailout: chi fa proof of work ogni giorno.
           </p>
-          <div className="relative w-full max-w-4xl mx-auto aspect-[2/1] rounded-xl overflow-hidden card-border mb-12">
-            <Image
-              src="/images/Foto-di-gruppo.jpg"
-              alt="Il team Bailout"
-              fill
-              className="object-cover"
-              sizes="(max-width: 768px) 100vw, 1024px"
-            />
-          </div>
           <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-6">
             {/* Pierluigi Turla */}
             <motion.article
