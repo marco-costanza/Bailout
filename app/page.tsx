@@ -92,14 +92,24 @@ export default function HomePage() {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ duration: 0.5 }}
-              className="group rounded-xl card-border bg-background-card/60 p-6 card-hover transition-all duration-300"
+              className="group rounded-xl card-border bg-background-card/60 overflow-hidden card-hover transition-all duration-300"
             >
-              <div className="w-12 h-12 rounded-lg bg-bitcoin-light flex items-center justify-center mb-4">
-                <GraduationCap className="w-6 h-6 text-bitcoin" />
+              <div className="relative w-full aspect-[16/10] overflow-hidden">
+                <Image
+                  src="/images/Academy.jpg"
+                  alt="Bitcoin Academy"
+                  fill
+                  className="object-cover"
+                  sizes="(max-width: 768px) 100vw, 33vw"
+                />
               </div>
-              <h3 className="text-xl font-semibold text-white mb-2">
-                Bitcoin Academy
-              </h3>
+              <div className="p-6">
+                <div className="w-12 h-12 rounded-lg bg-bitcoin-light flex items-center justify-center mb-4">
+                  <GraduationCap className="w-6 h-6 text-bitcoin" />
+                </div>
+                <h3 className="text-xl font-semibold text-white mb-2">
+                  Bitcoin Academy
+                </h3>
               <p className="text-text-secondary text-sm leading-relaxed">
                 Percorso strutturato per capire Bitcoin dalla base: economia, tecnologia e sovranità. Per chi parte da zero o vuole sistematizzare.
               </p>
@@ -109,6 +119,7 @@ export default function HomePage() {
               >
                 Scopri di più <ArrowRight className="w-4 h-4" />
               </Link>
+              </div>
             </motion.article>
 
             {/* Card 2: Masterclass */}
@@ -117,14 +128,24 @@ export default function HomePage() {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ duration: 0.5, delay: 0.1 }}
-              className="group rounded-xl card-border bg-background-card/60 p-6 card-hover transition-all duration-300"
+              className="group rounded-xl card-border bg-background-card/60 overflow-hidden card-hover transition-all duration-300"
             >
-              <div className="w-12 h-12 rounded-lg bg-bitcoin-light flex items-center justify-center mb-4">
-                <Layers className="w-6 h-6 text-bitcoin" />
+              <div className="relative w-full aspect-[16/10] overflow-hidden">
+                <Image
+                  src="/images/Masterclass-BTC.jpg"
+                  alt="Masterclass Bitcoin"
+                  fill
+                  className="object-cover"
+                  sizes="(max-width: 768px) 100vw, 33vw"
+                />
               </div>
-              <h3 className="text-xl font-semibold text-white mb-2">
-                Masterclass
-              </h3>
+              <div className="p-6">
+                <div className="w-12 h-12 rounded-lg bg-bitcoin-light flex items-center justify-center mb-4">
+                  <Layers className="w-6 h-6 text-bitcoin" />
+                </div>
+                <h3 className="text-xl font-semibold text-white mb-2">
+                  Masterclass
+                </h3>
               <p className="text-text-secondary text-sm leading-relaxed">
                 Sessioni intensive su temi avanzati: Lightning, self-custody, privacy. Per chi vuole andare oltre le basi con hands-on.
               </p>
@@ -134,6 +155,7 @@ export default function HomePage() {
               >
                 Scopri di più <ArrowRight className="w-4 h-4" />
               </Link>
+              </div>
             </motion.article>
 
             {/* Card 3: Consulenza Tecnica */}
@@ -142,23 +164,34 @@ export default function HomePage() {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ duration: 0.5, delay: 0.2 }}
-              className="group rounded-xl card-border bg-background-card/60 p-6 card-hover transition-all duration-300"
+              className="group rounded-xl card-border bg-background-card/60 overflow-hidden card-hover transition-all duration-300"
             >
-              <div className="w-12 h-12 rounded-lg bg-bitcoin-light flex items-center justify-center mb-4">
-                <Wrench className="w-6 h-6 text-bitcoin" />
+              <div className="relative w-full aspect-[16/10] overflow-hidden">
+                <Image
+                  src="/images/Foto-di-gruppo.jpg"
+                  alt="Il team Bailout"
+                  fill
+                  className="object-cover"
+                  sizes="(max-width: 768px) 100vw, 33vw"
+                />
               </div>
-              <h3 className="text-xl font-semibold text-white mb-2">
-                Consulenza Tecnica
-              </h3>
-              <p className="text-text-secondary text-sm leading-relaxed">
-                Supporto one-to-one per nodi, wallet, setup e best practice. Consulenza su misura per aziende e privati.
-              </p>
-              <Link
-                href="#"
-                className="inline-flex items-center gap-1 mt-4 text-bitcoin text-sm font-medium hover:underline"
-              >
-                Scopri di più <ArrowRight className="w-4 h-4" />
-              </Link>
+              <div className="p-6">
+                <div className="w-12 h-12 rounded-lg bg-bitcoin-light flex items-center justify-center mb-4">
+                  <Wrench className="w-6 h-6 text-bitcoin" />
+                </div>
+                <h3 className="text-xl font-semibold text-white mb-2">
+                  Consulenza Tecnica
+                </h3>
+                <p className="text-text-secondary text-sm leading-relaxed">
+                  Supporto one-to-one per nodi, wallet, setup e best practice. Consulenza su misura per aziende e privati.
+                </p>
+                <Link
+                  href="#"
+                  className="inline-flex items-center gap-1 mt-4 text-bitcoin text-sm font-medium hover:underline"
+                >
+                  Scopri di più <ArrowRight className="w-4 h-4" />
+                </Link>
+              </div>
             </motion.article>
           </div>
         </div>
@@ -182,10 +215,14 @@ export default function HomePage() {
               transition={{ duration: 0.5 }}
               className="rounded-xl card-border bg-background-card/60 p-6 flex flex-col items-center text-center card-hover transition-all duration-300"
             >
-              <div className="w-24 h-24 rounded-full bg-gray-600 overflow-hidden mb-4 ring-2 ring-white/10">
-                <div className="w-full h-full bg-background-card flex items-center justify-center text-text-muted text-xl font-semibold">
-                  PT
-                </div>
+              <div className="w-24 h-24 rounded-full bg-gray-600 overflow-hidden mb-4 ring-2 ring-white/10 relative">
+                <Image
+                  src="/images/Gigi-Turla-Circle.png"
+                  alt="Pierluigi Turla"
+                  fill
+                  className="object-cover"
+                  sizes="96px"
+                />
               </div>
               <h3 className="text-lg font-semibold text-white">
                 Pierluigi Turla
@@ -222,10 +259,14 @@ export default function HomePage() {
               transition={{ duration: 0.5, delay: 0.1 }}
               className="rounded-xl card-border bg-background-card/60 p-6 flex flex-col items-center text-center card-hover transition-all duration-300"
             >
-              <div className="w-24 h-24 rounded-full bg-gray-600 overflow-hidden mb-4 ring-2 ring-white/10">
-                <div className="w-full h-full bg-background-card flex items-center justify-center text-text-muted text-xl font-semibold">
-                  TC
-                </div>
+              <div className="w-24 h-24 rounded-full bg-gray-600 overflow-hidden mb-4 ring-2 ring-white/10 relative">
+                <Image
+                  src="/images/turtlecute-Circle.png"
+                  alt="Turtlecute"
+                  fill
+                  className="object-cover"
+                  sizes="96px"
+                />
               </div>
               <h3 className="text-lg font-semibold text-white">Turtlecute</h3>
               <p className="text-text-muted text-sm mt-1 mb-4">
@@ -260,10 +301,14 @@ export default function HomePage() {
               transition={{ duration: 0.5, delay: 0.2 }}
               className="rounded-xl card-border bg-background-card/60 p-6 flex flex-col items-center text-center card-hover transition-all duration-300"
             >
-              <div className="w-24 h-24 rounded-full bg-gray-600 overflow-hidden mb-4 ring-2 ring-white/10">
-                <div className="w-full h-full bg-background-card flex items-center justify-center text-text-muted text-xl font-semibold">
-                  RA
-                </div>
+              <div className="w-24 h-24 rounded-full bg-gray-600 overflow-hidden mb-4 ring-2 ring-white/10 relative">
+                <Image
+                  src="/images/Riccardo-Circle.png"
+                  alt="Riccardo Aran"
+                  fill
+                  className="object-cover"
+                  sizes="96px"
+                />
               </div>
               <h3 className="text-lg font-semibold text-white">
                 Riccardo Aran
@@ -300,10 +345,14 @@ export default function HomePage() {
               transition={{ duration: 0.5, delay: 0.3 }}
               className="rounded-xl card-border bg-background-card/60 p-6 flex flex-col items-center text-center card-hover transition-all duration-300"
             >
-              <div className="w-24 h-24 rounded-full bg-gray-600 overflow-hidden mb-4 ring-2 ring-white/10">
-                <div className="w-full h-full bg-background-card flex items-center justify-center text-text-muted text-xl font-semibold">
-                  MC
-                </div>
+              <div className="w-24 h-24 rounded-full bg-gray-600 overflow-hidden mb-4 ring-2 ring-white/10 relative">
+                <Image
+                  src="/images/Marco-Costanza-Circle.png"
+                  alt="Marco Costanza"
+                  fill
+                  className="object-cover"
+                  sizes="96px"
+                />
               </div>
               <h3 className="text-lg font-semibold text-white">
                 Marco Costanza
@@ -352,10 +401,14 @@ export default function HomePage() {
               transition={{ duration: 0.5 }}
               className="rounded-xl card-border bg-background-card/60 p-6 flex flex-col items-center text-center card-hover transition-all duration-300"
             >
-              <div className="w-20 h-20 rounded-full bg-gray-600 overflow-hidden mb-4 ring-2 ring-white/10">
-                <div className="w-full h-full bg-background-card flex items-center justify-center text-text-muted text-lg font-semibold">
-                  GV
-                </div>
+              <div className="w-20 h-20 rounded-full bg-gray-600 overflow-hidden mb-4 ring-2 ring-white/10 relative">
+                <Image
+                  src="/images/Gabirle-Vernetti.png"
+                  alt="Gabriele Vernetti"
+                  fill
+                  className="object-cover"
+                  sizes="80px"
+                />
               </div>
               <h3 className="text-lg font-semibold text-white">
                 Gabriele Vernetti
