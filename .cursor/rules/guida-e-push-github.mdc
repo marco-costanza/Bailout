@@ -1,5 +1,5 @@
 ---
-description: Seguire GUIDA.md e README.md; fare sempre commit e push su GitHub dopo le modifiche
+description: Seguire GUIDA.md e README.md; commit sempre, push solo su richiesta esplicita (Bailout)
 alwaysApply: true
 ---
 

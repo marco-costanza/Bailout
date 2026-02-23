@@ -1,14 +1,12 @@
 ---
-description: URL puliti senza .html — applica sempre (WhaleStreet, Bailout, tutti i progetti)
-alwaysApply: true
+description: Riferimento regola URL — vedi regola centrale in radice workspace
+alwaysApply: false
 ---
 
-# URL senza estensione .html
+# URL senza .html (riferimento)
 
-**SEMPRE** usare URL puliti, mai `.html` nei link.
+La regola completa **URL senza estensione .html** è definita in:
 
-- Struttura file: `nome-pagina/index.html` → URL `/nome-pagina`
-- Link: `/aggiorna-profilo` ✅ — `aggiorna-profilo.html` ❌
-- La home resta `index.html` nel root, accessibile come `/`
+**`.cursor/rules/no-html-urls.mdc`** (radice workspace `~/Workspace/`).
 
-Valido per tutti i progetti (WhaleStreet, Bailout, ecc.).
+Applicare sempre: link puliti (`/nome-pagina`), mai `.html`; struttura `nome-pagina/index.html`.
