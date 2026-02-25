@@ -1,5 +1,1 @@
-{
-  "task.allowAutomaticTasks": "on",
-  "task.quickOpen.history": 10,
-  "task.quickOpen.detail": true
-}
+{"task.allowAutomaticTasks":"off","task.quickOpen.history":10,"task.quickOpen.detail":true}

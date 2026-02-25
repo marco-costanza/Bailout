@@ -1,5 +1,6 @@
 "use client";
 
+import { useState } from "react";
 import Image from "next/image";
 import Link from "next/link";
 import { motion } from "framer-motion";
@@ -15,12 +16,47 @@ import {
   Globe,
   Link as LinkIcon,
   UserPlus,
-  Users,
   Mail,
+  Instagram,
+  Youtube,
+  BookOpen,
 } from "lucide-react";
 import { Button } from "@/components/ui/button";
+import { BioModal } from "@/components/BioModal";
+
+const GABRIELE_VERNETTI_BIO = (
+  <>
+    Gabriele Vernetti è uno sviluppatore internazionale e project manager attivo nell&apos;ecosistema Bitcoin, con un focus particolare su mining e protocolli di comunicazione. Nel 2023 consegue il Master in Cybersecurity al Politecnico di Torino con una tesi dedicata a Bitcoin, mining e Stratum V2; gli anni universitari in ingegneria informatica lo portano ad appassionarsi alla tecnologia Bitcoin, che racchiude gran parte di ciò che ha studiato in cinque anni. Nel 2020 co-fonda con Giorgio e Salvatore BitPolito al Politecnico di Torino, per promuovere ricerca e divulgazione su Bitcoin. In fase di tesi, a fine 2022, inizia a contribuire attivamente allo sviluppo di Stratum V2, protocollo di riferimento per l&apos;evoluzione del mining distribuito. Nel 2024 co-fonda con Riccardo Aran Edge Mining, progetto open-source per l&apos;automazione e l&apos;ottimizzazione del mining domestico e industriale integrato alle rinnovabili. Ha tenuto una lezione su open source per l&apos;Executive Master del Politecnico (Bitcoin, Lightning Network, tecnologie dei sistemi distribuiti). Oggi si occupa soprattutto di project management: revisioni tecniche, milestone, release software e supporto early adopter; partecipa alla scena internazionale con interventi su mining, open source e Stratum V2. Unisce sviluppo software, ricerca accademica e divulgazione con l&apos;obiettivo di contribuire a un&apos;adozione sempre più consapevole e decentralizzata delle tecnologie Bitcoin.
+  </>
+);
+
+const MARCO_COSTANZA_BIO = (
+  <>
+    Marco Costanza, classe 1994, si dedica all&apos;educazione finanziaria dal 2016. Nel 2020 si licenzia dal suo lavoro dipendente per dedicarsi full time alla divulgazione finanziaria e a Bitcoin. Dal 2021 al 2023 partecipa inoltre a tutte le principali conferenze Bitcoin-Only internazionali e realizza i primi video-reportage italiani di questi eventi. Nel 2024 entra nell&apos;intergruppo parlamentare &quot;Asset Digitali, Blockchain e Bitcoin&quot;, portando il tema &quot;Bitcoin è diritto al risparmio&quot; alla Camera dei Deputati. Nel 2025 fonda Bailout, la realtà di riferimento in Italia per consulenza e formazione Bitcoin, con formatori riconosciuti anche a livello internazionale. Ad oggi vanta un pubblico di oltre 100.000 persone distribuite sui principali social network.
+  </>
+);
+
+const RICCARDO_ARAN_BIO = (
+  <>
+    Riccardo Aran (classe 1986) nasce professionalmente tra fotografia, video, design e architettura, sviluppando un approccio che unisce estetica, funzionalità e racconto visivo. Nel 2018 approfondisce Bitcoin, trovando una forte coerenza con i principi di sovranità individuale e responsabilità personale. Dallo studio passa alla pratica: avvia un percorso di home mining in un contesto off-grid ispirato alla permacultura, sperimentando l&apos;integrazione tra mining e fotovoltaico domestico. Dal 2022 viaggia tra conferenze Bitcoin-only per raccogliere video e interviste sul proprio canale YouTube Aran Circle, esperienza che lo porterà a conoscere e collaborare con professionisti e aziende dell&apos;ecosistema (tra cui BitBox, BitCare Forum, Anita Posh). Nel 2024 co-avvia con Gabriele Vernetti Edge Mining, progetto open-source per l&apos;automazione e l&apos;ottimizzazione del mining domestico e industriale integrato all&apos;energia rinnovabile. In Edge Mining cura project management e UI/UX, progettando design system, dashboard e flussi d&apos;uso testati su casi reali. Oggi unisce progettazione, software libero ed energia distribuita con l&apos;obiettivo di rendere l&apos;home mining accessibile e sostenibile e di raccontare Bitcoin attraverso immagini e storie.
+  </>
+);
+
+const TURTLECUTE_BIO = (
+  <>
+    Si avvicina al mondo Bitcoin spinto da una passione profonda per privacy e anonimato, principi che considera imprescindibili nella vita digitale e finanziaria. Nel 2020 fonda il gruppo Telegram Privacy Folder, una comunità dedicata alla condivisione di soluzioni e curiosità orientate alla tutela della riservatezza online. Alla fine del 2022 dà vita al podcast Il Priorato del Bitcoin, che ottiene grande seguito grazie a contenuti densi e diretti, capaci di unire divulgazione tecnica e riflessioni di ampio respiro sulla centralità di Bitcoin. Nel 2024 inizia a lavorare con Braiins, realtà di riferimento nel mining, portando la sua esperienza e la sua visione in un contesto internazionale. Oggi continua a coniugare ricerca, divulgazione e pratica quotidiana, con l&apos;obiettivo di rafforzare la cultura della privacy e raccontare Bitcoin come strumento di libertà individuale.
+  </>
+);
+
+const GIGI_TURLA_BIO = (
+  <>
+    Dottore commercialista e revisore contabile (Brescia), quasi 40 anni di consulenza societaria, contabile e fiscale. Co-fondatore Tax Care (2014, Metodo C.A.R.E.), partner SmartyCompany (2015), fondatore Educash (2018). Scopre Bitcoin nel luglio 2021. Nel 2022 crea CriptoCare (consulenza fiscale criptovalute). Nel 2023 concepisce e organizza il BitCare Forum, prima conferenza italiana interamente dedicata a Bitcoin (cresciuta da 150 a oltre 1.200 partecipanti nel 2025).
+  </>
+);
 
 export default function HomePage() {
+  const [openBioId, setOpenBioId] = useState<string | null>(null);
+
   return (
     <div className="min-h-screen">
       {/* Hero Section */}
@@ -114,7 +150,7 @@ export default function HomePage() {
                 Percorso strutturato per capire Bitcoin dalla base: economia, tecnologia e sovranità. Per chi parte da zero o vuole sistematizzare.
               </p>
               <Link
-                href="#"
+                href="/bitcoin-academy"
                 className="inline-flex items-center gap-1 mt-4 text-bitcoin text-sm font-medium hover:underline"
               >
                 Scopri di più <ArrowRight className="w-4 h-4" />
@@ -150,7 +186,7 @@ export default function HomePage() {
                 Sessioni intensive su temi avanzati: Lightning, self-custody, privacy. Per chi vuole andare oltre le basi con hands-on.
               </p>
               <Link
-                href="#"
+                href="/masterclass"
                 className="inline-flex items-center gap-1 mt-4 text-bitcoin text-sm font-medium hover:underline"
               >
                 Scopri di più <ArrowRight className="w-4 h-4" />
@@ -186,7 +222,7 @@ export default function HomePage() {
                   Supporto one-to-one per nodi, wallet, setup e best practice. Consulenza su misura per aziende e privati.
                 </p>
                 <Link
-                  href="#"
+                  href="/consulenza"
                   className="inline-flex items-center gap-1 mt-4 text-bitcoin text-sm font-medium hover:underline"
                 >
                   Scopri di più <ArrowRight className="w-4 h-4" />
@@ -215,39 +251,37 @@ export default function HomePage() {
               transition={{ duration: 0.5 }}
               className="rounded-xl card-border bg-background-card/60 p-6 flex flex-col items-center text-center card-hover transition-all duration-300"
             >
-              <div className="w-24 h-24 rounded-full bg-gray-600 overflow-hidden mb-4 ring-2 ring-white/10 relative">
-                <Image
-                  src="/images/Gigi-Turla-Circle.png"
-                  alt="Pierluigi Turla"
-                  fill
-                  className="object-cover"
-                  sizes="96px"
-                />
+              <div className="relative w-24 h-24 shrink-0 mb-4">
+                <div className="w-24 h-24 rounded-full bg-gray-600 overflow-hidden ring-2 ring-white/10">
+                  <Image
+                    src="/images/Gigi-Turla-Circle.png"
+                    alt="Pierluigi Turla"
+                    fill
+                    className="object-cover"
+                    sizes="96px"
+                  />
+                </div>
+                <button
+                  type="button"
+                  onClick={() => setOpenBioId("gigi")}
+                  className="absolute -top-0.5 -right-0.5 z-10 p-1.5 rounded-lg bg-black/70 hover:bg-bitcoin text-text-secondary hover:text-bitcoin transition-colors shadow-lg"
+                  aria-label="La sua storia"
+                >
+                  <BookOpen className="w-4 h-4" />
+                </button>
               </div>
               <h3 className="text-lg font-semibold text-white">
                 Pierluigi Turla
               </h3>
               <p className="text-text-muted text-sm mt-1 mb-4">
-                Nodo & formazione
+                Fiscalità
               </p>
-              <p className="text-text-secondary text-sm leading-relaxed flex-1">
-                Bitcoin educator e operatore di nodo. Focus su self-custody e privacy.
-              </p>
-              <div className="flex gap-3 mt-4">
-                <a
-                  href="#"
-                  className="p-2 rounded-lg bg-white/5 hover:bg-bitcoin-light text-text-secondary hover:text-bitcoin transition-colors"
-                  aria-label="Twitter"
-                >
-                  <Twitter className="w-4 h-4" />
-                </a>
-                <a
-                  href="#"
-                  className="p-2 rounded-lg bg-white/5 hover:bg-bitcoin-light text-text-secondary hover:text-bitcoin transition-colors"
-                  aria-label="LinkedIn"
-                >
-                  <Linkedin className="w-4 h-4" />
-                </a>
+              <div className="flex flex-wrap gap-2 mt-4 justify-center">
+                <a href="https://educash.it/" target="_blank" rel="noopener noreferrer" className="p-2 rounded-lg bg-white/5 hover:bg-bitcoin-light text-text-secondary hover:text-bitcoin transition-colors text-xs">Educash</a>
+                <a href="https://www.smartycompany.it/" target="_blank" rel="noopener noreferrer" className="p-2 rounded-lg bg-white/5 hover:bg-bitcoin-light text-text-secondary hover:text-bitcoin transition-colors text-xs">SmartyCompany</a>
+                <a href="https://www.taxcare.it/" target="_blank" rel="noopener noreferrer" className="p-2 rounded-lg bg-white/5 hover:bg-bitcoin-light text-text-secondary hover:text-bitcoin transition-colors text-xs">TaxCare</a>
+                <a href="https://www.taxcare.it/criptocare/" target="_blank" rel="noopener noreferrer" className="p-2 rounded-lg bg-white/5 hover:bg-bitcoin-light text-text-secondary hover:text-bitcoin transition-colors text-xs">CriptoCare</a>
+                <a href="https://bitcareforum.it/" target="_blank" rel="noopener noreferrer" className="p-2 rounded-lg bg-white/5 hover:bg-bitcoin-light text-text-secondary hover:text-bitcoin transition-colors text-xs">BitCare Forum</a>
               </div>
             </motion.article>
 
@@ -259,37 +293,33 @@ export default function HomePage() {
               transition={{ duration: 0.5, delay: 0.1 }}
               className="rounded-xl card-border bg-background-card/60 p-6 flex flex-col items-center text-center card-hover transition-all duration-300"
             >
-              <div className="w-24 h-24 rounded-full bg-gray-600 overflow-hidden mb-4 ring-2 ring-white/10 relative">
-                <Image
-                  src="/images/turtlecute-Circle.png"
-                  alt="Turtlecute"
-                  fill
-                  className="object-cover"
-                  sizes="96px"
-                />
+              <div className="relative w-24 h-24 shrink-0 mb-4">
+                <div className="w-24 h-24 rounded-full bg-gray-600 overflow-hidden ring-2 ring-white/10">
+                  <Image
+                    src="/images/turtlecute-Circle.png"
+                    alt="Turtlecute"
+                    fill
+                    className="object-cover"
+                    sizes="96px"
+                  />
+                </div>
+                <button
+                  type="button"
+                  onClick={() => setOpenBioId("turtlecute")}
+                  className="absolute -top-0.5 -right-0.5 z-10 p-1.5 rounded-lg bg-black/70 hover:bg-bitcoin text-text-secondary hover:text-bitcoin transition-colors shadow-lg"
+                  aria-label="La sua storia"
+                >
+                  <BookOpen className="w-4 h-4" />
+                </button>
               </div>
               <h3 className="text-lg font-semibold text-white">Turtlecute</h3>
               <p className="text-text-muted text-sm mt-1 mb-4">
-                Tech & content
+                Privacy e Sicurezza
               </p>
-              <p className="text-text-secondary text-sm leading-relaxed flex-1">
-                Developer e creator. Bitcoin, privacy e tooling per la sovranità.
-              </p>
-              <div className="flex gap-3 mt-4">
-                <a
-                  href="#"
-                  className="p-2 rounded-lg bg-white/5 hover:bg-bitcoin-light text-text-secondary hover:text-bitcoin transition-colors"
-                  aria-label="Twitter"
-                >
-                  <Twitter className="w-4 h-4" />
-                </a>
-                <a
-                  href="#"
-                  className="p-2 rounded-lg bg-white/5 hover:bg-bitcoin-light text-text-secondary hover:text-bitcoin transition-colors"
-                  aria-label="GitHub"
-                >
-                  <Github className="w-4 h-4" />
-                </a>
+              <div className="flex flex-wrap gap-2 mt-4 justify-center">
+                <a href="https://priorato.org/" target="_blank" rel="noopener noreferrer" className="p-2 rounded-lg bg-white/5 hover:bg-bitcoin-light text-text-secondary hover:text-bitcoin transition-colors text-xs">Priorato</a>
+                <a href="https://open.spotify.com/show/51jZKEaXaYKypCICVHkkZE" target="_blank" rel="noopener noreferrer" className="p-2 rounded-lg bg-white/5 hover:bg-bitcoin-light text-text-secondary hover:text-bitcoin transition-colors text-xs">Podcast</a>
+                <a href="https://t.me/privacyfolder" target="_blank" rel="noopener noreferrer" className="p-2 rounded-lg bg-white/5 hover:bg-bitcoin-light text-text-secondary hover:text-bitcoin transition-colors text-xs">Privacy Folder</a>
               </div>
             </motion.article>
 
@@ -301,39 +331,34 @@ export default function HomePage() {
               transition={{ duration: 0.5, delay: 0.2 }}
               className="rounded-xl card-border bg-background-card/60 p-6 flex flex-col items-center text-center card-hover transition-all duration-300"
             >
-              <div className="w-24 h-24 rounded-full bg-gray-600 overflow-hidden mb-4 ring-2 ring-white/10 relative">
-                <Image
-                  src="/images/Riccardo-Circle.png"
-                  alt="Riccardo Aran"
-                  fill
-                  className="object-cover"
-                  sizes="96px"
-                />
+              <div className="relative w-24 h-24 shrink-0 mb-4">
+                <div className="w-24 h-24 rounded-full bg-gray-600 overflow-hidden ring-2 ring-white/10">
+                  <Image
+                    src="/images/Riccardo-Circle.png"
+                    alt="Riccardo Aran"
+                    fill
+                    className="object-cover"
+                    sizes="96px"
+                  />
+                </div>
+                <button
+                  type="button"
+                  onClick={() => setOpenBioId("riccardo")}
+                  className="absolute -top-0.5 -right-0.5 z-10 p-1.5 rounded-lg bg-black/70 hover:bg-bitcoin text-text-secondary hover:text-bitcoin transition-colors shadow-lg"
+                  aria-label="La sua storia"
+                >
+                  <BookOpen className="w-4 h-4" />
+                </button>
               </div>
               <h3 className="text-lg font-semibold text-white">
                 Riccardo Aran
               </h3>
               <p className="text-text-muted text-sm mt-1 mb-4">
-                Consulenza & nodi
+                Mining
               </p>
-              <p className="text-text-secondary text-sm leading-relaxed flex-1">
-                Esperto di infrastruttura e self-custody. Nodi e best practice.
-              </p>
-              <div className="flex gap-3 mt-4">
-                <a
-                  href="#"
-                  className="p-2 rounded-lg bg-white/5 hover:bg-bitcoin-light text-text-secondary hover:text-bitcoin transition-colors"
-                  aria-label="Twitter"
-                >
-                  <Twitter className="w-4 h-4" />
-                </a>
-                <a
-                  href="#"
-                  className="p-2 rounded-lg bg-white/5 hover:bg-bitcoin-light text-text-secondary hover:text-bitcoin transition-colors"
-                  aria-label="Link"
-                >
-                  <LinkIcon className="w-4 h-4" />
-                </a>
+              <div className="flex flex-wrap gap-2 mt-4 justify-center">
+                <a href="https://edgemining.energy/" target="_blank" rel="noopener noreferrer" className="p-2 rounded-lg bg-white/5 hover:bg-bitcoin-light text-text-secondary hover:text-bitcoin transition-colors text-xs">Edge Mining</a>
+                <a href="https://www.youtube.com/@arancircle/videos" target="_blank" rel="noopener noreferrer" className="p-2 rounded-lg bg-white/5 hover:bg-bitcoin-light text-text-secondary hover:text-bitcoin transition-colors text-xs">Aran Circle</a>
               </div>
             </motion.article>
 
@@ -345,39 +370,38 @@ export default function HomePage() {
               transition={{ duration: 0.5, delay: 0.3 }}
               className="rounded-xl card-border bg-background-card/60 p-6 flex flex-col items-center text-center card-hover transition-all duration-300"
             >
-              <div className="w-24 h-24 rounded-full bg-gray-600 overflow-hidden mb-4 ring-2 ring-white/10 relative">
-                <Image
-                  src="/images/Marco-Costanza-Circle.png"
-                  alt="Marco Costanza"
-                  fill
-                  className="object-cover"
-                  sizes="96px"
-                />
+              <div className="relative w-24 h-24 shrink-0 mb-4">
+                <div className="w-24 h-24 rounded-full bg-gray-600 overflow-hidden ring-2 ring-white/10">
+                  <Image
+                    src="/images/Marco-Costanza-Circle.png"
+                    alt="Marco Costanza"
+                    fill
+                    className="object-cover"
+                    sizes="96px"
+                  />
+                </div>
+                <button
+                  type="button"
+                  onClick={() => setOpenBioId("marco")}
+                  className="absolute -top-0.5 -right-0.5 z-10 p-1.5 rounded-lg bg-black/70 hover:bg-bitcoin text-text-secondary hover:text-bitcoin transition-colors shadow-lg"
+                  aria-label="La sua storia"
+                >
+                  <BookOpen className="w-4 h-4" />
+                </button>
               </div>
               <h3 className="text-lg font-semibold text-white">
                 Marco Costanza
               </h3>
               <p className="text-text-muted text-sm mt-1 mb-4">
-                Founder & formazione
+                Asset e Protocollo
               </p>
-              <p className="text-text-secondary text-sm leading-relaxed flex-1">
-                Ideatore di Bailout. Formazione Bitcoin e sovranità digitale.
-              </p>
-              <div className="flex gap-3 mt-4">
-                <a
-                  href="#"
-                  className="p-2 rounded-lg bg-white/5 hover:bg-bitcoin-light text-text-secondary hover:text-bitcoin transition-colors"
-                  aria-label="Twitter"
-                >
-                  <Twitter className="w-4 h-4" />
-                </a>
-                <a
-                  href="#"
-                  className="p-2 rounded-lg bg-white/5 hover:bg-bitcoin-light text-text-secondary hover:text-bitcoin transition-colors"
-                  aria-label="Sito"
-                >
-                  <Globe className="w-4 h-4" />
-                </a>
+              <div className="flex flex-wrap gap-2 mt-4 justify-center items-center">
+                <a href="https://www.instagram.com/marcocostanza_/" target="_blank" rel="noopener noreferrer" className="p-2 rounded-lg bg-white/5 hover:bg-bitcoin-light text-text-secondary hover:text-bitcoin transition-colors text-xs">Instagram</a>
+                <a href="https://t.me/MarcoCostanzaTelegram/" target="_blank" rel="noopener noreferrer" className="p-2 rounded-lg bg-white/5 hover:bg-bitcoin-light text-text-secondary hover:text-bitcoin transition-colors text-xs">Telegram</a>
+                <a href="https://twitter.com/marcocostanza_" target="_blank" rel="noopener noreferrer" className="p-2 rounded-lg bg-white/5 hover:bg-bitcoin-light text-text-secondary hover:text-bitcoin transition-colors text-xs">Twitter</a>
+                <a href="https://www.youtube.com/c/MarcoCostanza94" target="_blank" rel="noopener noreferrer" className="p-2 rounded-lg bg-white/5 hover:bg-bitcoin-light text-text-secondary hover:text-bitcoin transition-colors text-xs">YouTube</a>
+                <a href="https://www.tiktok.com/@marcocostanza_" target="_blank" rel="noopener noreferrer" className="p-2 rounded-lg bg-white/5 hover:bg-bitcoin-light text-text-secondary hover:text-bitcoin transition-colors text-xs">TikTok</a>
+                <a href="https://marcocostanza.it" target="_blank" rel="noopener noreferrer" className="p-2 rounded-lg bg-white/5 hover:bg-bitcoin-light text-text-secondary hover:text-bitcoin transition-colors text-xs">marcocostanza.it</a>
               </div>
             </motion.article>
           </div>
@@ -401,29 +425,37 @@ export default function HomePage() {
               transition={{ duration: 0.5 }}
               className="rounded-xl card-border bg-background-card/60 p-6 flex flex-col items-center text-center card-hover transition-all duration-300"
             >
-              <div className="w-20 h-20 rounded-full bg-gray-600 overflow-hidden mb-4 ring-2 ring-white/10 relative">
-                <Image
-                  src="/images/Gabirle-Vernetti.png"
-                  alt="Gabriele Vernetti"
-                  fill
-                  className="object-cover"
-                  sizes="80px"
-                />
+              <div className="relative w-20 h-20 shrink-0 mb-4">
+                <div className="w-20 h-20 rounded-full bg-gray-600 overflow-hidden ring-2 ring-white/10">
+                  <Image
+                    src="/images/Gabirle-Vernetti.png"
+                    alt="Gabriele Vernetti"
+                    fill
+                    className="object-cover"
+                    sizes="80px"
+                  />
+                </div>
+                <button
+                  type="button"
+                  onClick={() => setOpenBioId("gabriele")}
+                  className="absolute -top-0.5 -right-0.5 z-10 p-1.5 rounded-lg bg-black/70 hover:bg-bitcoin text-text-secondary hover:text-bitcoin transition-colors shadow-lg"
+                  aria-label="La sua storia"
+                >
+                  <BookOpen className="w-4 h-4" />
+                </button>
               </div>
               <h3 className="text-lg font-semibold text-white">
                 Gabriele Vernetti
               </h3>
-              <p className="text-text-muted text-sm mt-1 mb-3">Collaboratore</p>
-              <p className="text-text-secondary text-sm leading-relaxed">
-                Contributi su contenuti e community. Amico del mempool.
-              </p>
-              <div className="flex gap-3 mt-4">
+              <p className="text-text-muted text-sm mt-1 mb-3">Mining</p>
+              <div className="flex flex-wrap gap-2 mt-4 justify-center">
                 <a
-                  href="#"
-                  className="p-2 rounded-lg bg-white/5 hover:bg-bitcoin-light text-text-secondary hover:text-bitcoin transition-colors"
-                  aria-label="Social"
+                  href="https://edgemining.energy/"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="p-2 rounded-lg bg-white/5 hover:bg-bitcoin-light text-text-secondary hover:text-bitcoin transition-colors text-xs"
                 >
-                  <Twitter className="w-4 h-4" />
+                  Edge Mining
                 </a>
               </div>
             </motion.article>
@@ -441,21 +473,6 @@ export default function HomePage() {
               </div>
               <p className="text-text-muted text-sm">
                 Altri collaboratori in arrivo
-              </p>
-            </motion.article>
-
-            <motion.article
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true }}
-              transition={{ duration: 0.5, delay: 0.2 }}
-              className="rounded-xl card-border bg-background-card/40 p-6 flex flex-col items-center justify-center text-center border-dashed opacity-80 sm:col-span-2 lg:col-span-1"
-            >
-              <div className="w-12 h-12 rounded-full bg-white/5 flex items-center justify-center mb-3">
-                <Users className="w-6 h-6 text-text-muted" />
-              </div>
-              <p className="text-text-muted text-sm">
-                Vuoi entrare nel mempool?
               </p>
             </motion.article>
           </div>
@@ -625,6 +642,42 @@ export default function HomePage() {
           }
         `}</style>
       </section>
+
+      <BioModal
+        open={openBioId === "gabriele"}
+        onClose={() => setOpenBioId(null)}
+        title="Gabriele Vernetti"
+      >
+        {GABRIELE_VERNETTI_BIO}
+      </BioModal>
+      <BioModal
+        open={openBioId === "gigi"}
+        onClose={() => setOpenBioId(null)}
+        title="Pierluigi Turla"
+      >
+        {GIGI_TURLA_BIO}
+      </BioModal>
+      <BioModal
+        open={openBioId === "turtlecute"}
+        onClose={() => setOpenBioId(null)}
+        title="Turtlecute"
+      >
+        {TURTLECUTE_BIO}
+      </BioModal>
+      <BioModal
+        open={openBioId === "riccardo"}
+        onClose={() => setOpenBioId(null)}
+        title="Riccardo Aran"
+      >
+        {RICCARDO_ARAN_BIO}
+      </BioModal>
+      <BioModal
+        open={openBioId === "marco"}
+        onClose={() => setOpenBioId(null)}
+        title="Marco Costanza"
+      >
+        {MARCO_COSTANZA_BIO}
+      </BioModal>
     </div>
   );
 }

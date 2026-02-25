@@ -1,5 +1,5 @@
 ---
-description: Seguire GUIDA.md e README.md; proporre commit e push solo su richiesta esplicita
+description: Seguire GUIDA.md e README.md; commit e push solo su richiesta esplicita (Bailout)
 alwaysApply: true
 ---
 
