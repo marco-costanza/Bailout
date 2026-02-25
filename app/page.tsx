@@ -19,6 +19,7 @@ import {
   Mail,
   Instagram,
   Youtube,
+  BookOpen,
 } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { BioModal } from "@/components/BioModal";
@@ -250,7 +251,7 @@ export default function HomePage() {
               transition={{ duration: 0.5 }}
               className="rounded-xl card-border bg-background-card/60 p-6 flex flex-col items-center text-center card-hover transition-all duration-300"
             >
-              <div className="w-24 h-24 rounded-full bg-gray-600 overflow-hidden mb-4 ring-2 ring-white/10 relative">
+              <div className="w-24 h-24 rounded-full bg-gray-600 overflow-hidden mb-4 ring-2 ring-white/10 relative shrink-0">
                 <Image
                   src="/images/Gigi-Turla-Circle.png"
                   alt="Pierluigi Turla"
@@ -258,23 +259,30 @@ export default function HomePage() {
                   className="object-cover"
                   sizes="96px"
                 />
+                <button
+                  type="button"
+                  onClick={() => setOpenBioId("gigi")}
+                  className="absolute top-0 right-0 p-1.5 rounded-lg bg-black/60 hover:bg-bitcoin text-text-secondary hover:text-bitcoin transition-colors"
+                  aria-label="La sua storia"
+                >
+                  <BookOpen className="w-4 h-4" />
+                </button>
               </div>
               <h3 className="text-lg font-semibold text-white">
                 Pierluigi Turla
               </h3>
               <p className="text-text-muted text-sm mt-1 mb-4">
-                Nodo & formazione
+                Fiscalità
               </p>
               <p className="text-text-secondary text-sm leading-relaxed flex-1">
                 Bitcoin educator e operatore di nodo. Focus su self-custody e privacy.
               </p>
               <div className="flex flex-wrap gap-2 mt-4 justify-center">
-                <a href="https://educash.it/" target="_blank" rel="noopener noreferrer" className="text-bitcoin text-xs font-medium hover:underline">Educash</a>
-                <a href="https://www.smartycompany.it/" target="_blank" rel="noopener noreferrer" className="text-bitcoin text-xs font-medium hover:underline">SmartyCompany</a>
-                <a href="https://www.taxcare.it/" target="_blank" rel="noopener noreferrer" className="text-bitcoin text-xs font-medium hover:underline">TaxCare</a>
-                <a href="https://www.taxcare.it/criptocare/" target="_blank" rel="noopener noreferrer" className="text-bitcoin text-xs font-medium hover:underline">CriptoCare</a>
-                <a href="https://bitcareforum.it/" target="_blank" rel="noopener noreferrer" className="text-bitcoin text-xs font-medium hover:underline">BitCare Forum</a>
-                <Button type="button" variant="link" size="sm" className="text-bitcoin text-xs h-auto p-0" onClick={() => setOpenBioId("gigi")}>La sua storia</Button>
+                <a href="https://educash.it/" target="_blank" rel="noopener noreferrer" className="p-2 rounded-lg bg-white/5 hover:bg-bitcoin-light text-text-secondary hover:text-bitcoin transition-colors text-xs">Educash</a>
+                <a href="https://www.smartycompany.it/" target="_blank" rel="noopener noreferrer" className="p-2 rounded-lg bg-white/5 hover:bg-bitcoin-light text-text-secondary hover:text-bitcoin transition-colors text-xs">SmartyCompany</a>
+                <a href="https://www.taxcare.it/" target="_blank" rel="noopener noreferrer" className="p-2 rounded-lg bg-white/5 hover:bg-bitcoin-light text-text-secondary hover:text-bitcoin transition-colors text-xs">TaxCare</a>
+                <a href="https://www.taxcare.it/criptocare/" target="_blank" rel="noopener noreferrer" className="p-2 rounded-lg bg-white/5 hover:bg-bitcoin-light text-text-secondary hover:text-bitcoin transition-colors text-xs">CriptoCare</a>
+                <a href="https://bitcareforum.it/" target="_blank" rel="noopener noreferrer" className="p-2 rounded-lg bg-white/5 hover:bg-bitcoin-light text-text-secondary hover:text-bitcoin transition-colors text-xs">BitCare Forum</a>
               </div>
             </motion.article>
 
@@ -286,7 +294,7 @@ export default function HomePage() {
               transition={{ duration: 0.5, delay: 0.1 }}
               className="rounded-xl card-border bg-background-card/60 p-6 flex flex-col items-center text-center card-hover transition-all duration-300"
             >
-              <div className="w-24 h-24 rounded-full bg-gray-600 overflow-hidden mb-4 ring-2 ring-white/10 relative">
+              <div className="w-24 h-24 rounded-full bg-gray-600 overflow-hidden mb-4 ring-2 ring-white/10 relative shrink-0">
                 <Image
                   src="/images/turtlecute-Circle.png"
                   alt="Turtlecute"
@@ -294,19 +302,26 @@ export default function HomePage() {
                   className="object-cover"
                   sizes="96px"
                 />
+                <button
+                  type="button"
+                  onClick={() => setOpenBioId("turtlecute")}
+                  className="absolute top-0 right-0 p-1.5 rounded-lg bg-black/60 hover:bg-bitcoin text-text-secondary hover:text-bitcoin transition-colors"
+                  aria-label="La sua storia"
+                >
+                  <BookOpen className="w-4 h-4" />
+                </button>
               </div>
               <h3 className="text-lg font-semibold text-white">Turtlecute</h3>
               <p className="text-text-muted text-sm mt-1 mb-4">
-                Tech & content
+                Privacy e Sicurezza
               </p>
               <p className="text-text-secondary text-sm leading-relaxed flex-1">
                 Developer e creator. Bitcoin, privacy e tooling per la sovranità.
               </p>
               <div className="flex flex-wrap gap-2 mt-4 justify-center">
-                <a href="https://priorato.org/" target="_blank" rel="noopener noreferrer" className="text-bitcoin text-xs font-medium hover:underline">Priorato</a>
-                <a href="https://open.spotify.com/show/51jZKEaXaYKypCICVHkkZE" target="_blank" rel="noopener noreferrer" className="text-bitcoin text-xs font-medium hover:underline">Podcast</a>
-                <a href="https://t.me/privacyfolder" target="_blank" rel="noopener noreferrer" className="text-bitcoin text-xs font-medium hover:underline">Privacy Folder</a>
-                <Button type="button" variant="link" size="sm" className="text-bitcoin text-xs h-auto p-0" onClick={() => setOpenBioId("turtlecute")}>La sua storia</Button>
+                <a href="https://priorato.org/" target="_blank" rel="noopener noreferrer" className="p-2 rounded-lg bg-white/5 hover:bg-bitcoin-light text-text-secondary hover:text-bitcoin transition-colors text-xs">Priorato</a>
+                <a href="https://open.spotify.com/show/51jZKEaXaYKypCICVHkkZE" target="_blank" rel="noopener noreferrer" className="p-2 rounded-lg bg-white/5 hover:bg-bitcoin-light text-text-secondary hover:text-bitcoin transition-colors text-xs">Podcast</a>
+                <a href="https://t.me/privacyfolder" target="_blank" rel="noopener noreferrer" className="p-2 rounded-lg bg-white/5 hover:bg-bitcoin-light text-text-secondary hover:text-bitcoin transition-colors text-xs">Privacy Folder</a>
               </div>
             </motion.article>
 
@@ -318,7 +333,7 @@ export default function HomePage() {
               transition={{ duration: 0.5, delay: 0.2 }}
               className="rounded-xl card-border bg-background-card/60 p-6 flex flex-col items-center text-center card-hover transition-all duration-300"
             >
-              <div className="w-24 h-24 rounded-full bg-gray-600 overflow-hidden mb-4 ring-2 ring-white/10 relative">
+              <div className="w-24 h-24 rounded-full bg-gray-600 overflow-hidden mb-4 ring-2 ring-white/10 relative shrink-0">
                 <Image
                   src="/images/Riccardo-Circle.png"
                   alt="Riccardo Aran"
@@ -326,20 +341,27 @@ export default function HomePage() {
                   className="object-cover"
                   sizes="96px"
                 />
+                <button
+                  type="button"
+                  onClick={() => setOpenBioId("riccardo")}
+                  className="absolute top-0 right-0 p-1.5 rounded-lg bg-black/60 hover:bg-bitcoin text-text-secondary hover:text-bitcoin transition-colors"
+                  aria-label="La sua storia"
+                >
+                  <BookOpen className="w-4 h-4" />
+                </button>
               </div>
               <h3 className="text-lg font-semibold text-white">
                 Riccardo Aran
               </h3>
               <p className="text-text-muted text-sm mt-1 mb-4">
-                Consulenza & nodi
+                Mining
               </p>
               <p className="text-text-secondary text-sm leading-relaxed flex-1">
                 Esperto di infrastruttura e self-custody. Nodi e best practice.
               </p>
               <div className="flex flex-wrap gap-2 mt-4 justify-center">
-                <a href="https://edgemining.energy/" target="_blank" rel="noopener noreferrer" className="text-bitcoin text-xs font-medium hover:underline">Edge Mining</a>
-                <a href="https://www.youtube.com/@arancircle/videos" target="_blank" rel="noopener noreferrer" className="text-bitcoin text-xs font-medium hover:underline">Aran Circle</a>
-                <Button type="button" variant="link" size="sm" className="text-bitcoin text-xs h-auto p-0" onClick={() => setOpenBioId("riccardo")}>La sua storia</Button>
+                <a href="https://edgemining.energy/" target="_blank" rel="noopener noreferrer" className="p-2 rounded-lg bg-white/5 hover:bg-bitcoin-light text-text-secondary hover:text-bitcoin transition-colors text-xs">Edge Mining</a>
+                <a href="https://www.youtube.com/@arancircle/videos" target="_blank" rel="noopener noreferrer" className="p-2 rounded-lg bg-white/5 hover:bg-bitcoin-light text-text-secondary hover:text-bitcoin transition-colors text-xs">Aran Circle</a>
               </div>
             </motion.article>
 
@@ -351,7 +373,7 @@ export default function HomePage() {
               transition={{ duration: 0.5, delay: 0.3 }}
               className="rounded-xl card-border bg-background-card/60 p-6 flex flex-col items-center text-center card-hover transition-all duration-300"
             >
-              <div className="w-24 h-24 rounded-full bg-gray-600 overflow-hidden mb-4 ring-2 ring-white/10 relative">
+              <div className="w-24 h-24 rounded-full bg-gray-600 overflow-hidden mb-4 ring-2 ring-white/10 relative shrink-0">
                 <Image
                   src="/images/Marco-Costanza-Circle.png"
                   alt="Marco Costanza"
@@ -359,12 +381,20 @@ export default function HomePage() {
                   className="object-cover"
                   sizes="96px"
                 />
+                <button
+                  type="button"
+                  onClick={() => setOpenBioId("marco")}
+                  className="absolute top-0 right-0 p-1.5 rounded-lg bg-black/60 hover:bg-bitcoin text-text-secondary hover:text-bitcoin transition-colors"
+                  aria-label="La sua storia"
+                >
+                  <BookOpen className="w-4 h-4" />
+                </button>
               </div>
               <h3 className="text-lg font-semibold text-white">
                 Marco Costanza
               </h3>
               <p className="text-text-muted text-sm mt-1 mb-4">
-                Founder & formazione
+                Asset e Protocollo
               </p>
               <p className="text-text-secondary text-sm leading-relaxed flex-1">
                 Ideatore di Bailout. Formazione Bitcoin e sovranità digitale.
@@ -374,9 +404,8 @@ export default function HomePage() {
                 <a href="https://t.me/MarcoCostanzaTelegram/" target="_blank" rel="noopener noreferrer" className="p-2 rounded-lg bg-white/5 hover:bg-bitcoin-light text-text-secondary hover:text-bitcoin transition-colors" aria-label="Telegram"><LinkIcon className="w-4 h-4" /></a>
                 <a href="https://twitter.com/marcocostanza_" target="_blank" rel="noopener noreferrer" className="p-2 rounded-lg bg-white/5 hover:bg-bitcoin-light text-text-secondary hover:text-bitcoin transition-colors" aria-label="Twitter"><Twitter className="w-4 h-4" /></a>
                 <a href="https://www.youtube.com/c/MarcoCostanza94" target="_blank" rel="noopener noreferrer" className="p-2 rounded-lg bg-white/5 hover:bg-bitcoin-light text-text-secondary hover:text-bitcoin transition-colors" aria-label="YouTube"><Youtube className="w-4 h-4" /></a>
-                <a href="https://www.tiktok.com/@marcocostanza_" target="_blank" rel="noopener noreferrer" className="text-bitcoin text-xs font-medium hover:underline">TikTok</a>
-                <a href="https://marcocostanza.it" target="_blank" rel="noopener noreferrer" className="text-bitcoin text-xs font-medium hover:underline">marcocostanza.it</a>
-                <Button type="button" variant="link" size="sm" className="text-bitcoin text-xs h-auto p-0" onClick={() => setOpenBioId("marco")}>La sua storia</Button>
+                <a href="https://www.tiktok.com/@marcocostanza_" target="_blank" rel="noopener noreferrer" className="p-2 rounded-lg bg-white/5 hover:bg-bitcoin-light text-text-secondary hover:text-bitcoin transition-colors text-xs">TikTok</a>
+                <a href="https://marcocostanza.it" target="_blank" rel="noopener noreferrer" className="p-2 rounded-lg bg-white/5 hover:bg-bitcoin-light text-text-secondary hover:text-bitcoin transition-colors text-xs">marcocostanza.it</a>
               </div>
             </motion.article>
           </div>
@@ -400,7 +429,7 @@ export default function HomePage() {
               transition={{ duration: 0.5 }}
               className="rounded-xl card-border bg-background-card/60 p-6 flex flex-col items-center text-center card-hover transition-all duration-300"
             >
-              <div className="w-20 h-20 rounded-full bg-gray-600 overflow-hidden mb-4 ring-2 ring-white/10 relative">
+              <div className="w-20 h-20 rounded-full bg-gray-600 overflow-hidden mb-4 ring-2 ring-white/10 relative shrink-0">
                 <Image
                   src="/images/Gabirle-Vernetti.png"
                   alt="Gabriele Vernetti"
@@ -408,32 +437,31 @@ export default function HomePage() {
                   className="object-cover"
                   sizes="80px"
                 />
+                <button
+                  type="button"
+                  onClick={() => setOpenBioId("gabriele")}
+                  className="absolute top-0 right-0 p-1.5 rounded-lg bg-black/60 hover:bg-bitcoin text-text-secondary hover:text-bitcoin transition-colors"
+                  aria-label="La sua storia"
+                >
+                  <BookOpen className="w-4 h-4" />
+                </button>
               </div>
               <h3 className="text-lg font-semibold text-white">
                 Gabriele Vernetti
               </h3>
-              <p className="text-text-muted text-sm mt-1 mb-3">Collaboratore</p>
+              <p className="text-text-muted text-sm mt-1 mb-3">Mining</p>
               <p className="text-text-secondary text-sm leading-relaxed">
                 Contributi su contenuti e community. Amico del mempool.
               </p>
-              <div className="flex flex-col gap-3 mt-4">
+              <div className="flex flex-wrap gap-2 mt-4 justify-center">
                 <a
                   href="https://edgemining.energy/"
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="text-bitcoin text-sm font-medium hover:underline"
+                  className="p-2 rounded-lg bg-white/5 hover:bg-bitcoin-light text-text-secondary hover:text-bitcoin transition-colors text-xs"
                 >
                   Edge Mining
                 </a>
-                <Button
-                  type="button"
-                  variant="link"
-                  size="sm"
-                  className="text-bitcoin"
-                  onClick={() => setOpenBioId("gabriele")}
-                >
-                  La sua storia
-                </Button>
               </div>
             </motion.article>
 
