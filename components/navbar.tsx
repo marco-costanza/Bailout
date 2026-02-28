@@ -45,12 +45,14 @@ export default function Navbar() {
             >
               Consulenza
             </Link>
-            <Link
-              href="/login"
+            <a
+              href="https://marcocostanza.it/login"
+              target="_blank"
+              rel="noopener noreferrer"
               className="text-sm font-medium text-text-secondary transition-colors hover:text-primary"
             >
-              Accedi
-            </Link>
+              Area Riservata
+            </a>
             <Link
               href="/richiedi-supporto"
               className="bg-primary hover:bg-primary-hover text-white text-sm font-semibold px-5 py-2.5 rounded-md transition-colors"
@@ -100,13 +102,15 @@ export default function Navbar() {
               >
                 Consulenza
               </Link>
-              <Link
-                href="/login"
+              <a
+                href="https://marcocostanza.it/login"
+                target="_blank"
+                rel="noopener noreferrer"
                 className="block rounded-md px-3 py-2 text-base font-medium text-text-secondary hover:text-primary hover:bg-white/5 transition-colors"
                 onClick={() => setIsOpen(false)}
               >
-                Accedi
-              </Link>
+                Area Riservata
+              </a>
               <div className="pt-2">
                 <Link
                   href="/richiedi-supporto"

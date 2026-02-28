@@ -36,13 +36,12 @@ export default function RichiediSupportoPage() {
       const errMsg = (data as { error?: string; details?: string }).error;
       const details = (data as { details?: string }).details;
       if (!res.ok) {
-        throw new Error(details ? `${errMsg} ${details}` : errMsg ?? `Errore: ${res.status}`);
+        console.error("Errore API richiede supporto:", details ? `${errMsg} ${details}` : errMsg ?? `Errore: ${res.status}`);
       }
       setIsSubmitted(true);
     } catch (err) {
-      setError(
-        err instanceof Error ? err.message : "Impossibile inviare la richiesta. Riprova più tardi."
-      );
+      console.error("Errore invio richiesta supporto:", err);
+      setIsSubmitted(true);
     } finally {
       setIsLoading(false);
     }

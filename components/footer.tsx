@@ -43,9 +43,9 @@ export default function Footer() {
                 </Link>
               </li>
               <li>
-                <Link href="/login" className="text-text-secondary hover:text-primary text-sm transition-colors">
+                <a href="https://marcocostanza.it/login" target="_blank" rel="noopener noreferrer" className="text-text-secondary hover:text-primary text-sm transition-colors">
                   Area Riservata Studenti (Accedi)
-                </Link>
+                </a>
               </li>
             </ul>
           </div>
