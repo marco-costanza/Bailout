@@ -19,7 +19,7 @@ export default function Footer() {
               />
             </Link>
             <p className="text-text-secondary text-sm leading-relaxed mt-2 max-w-xs">
-              Bailout: La Tua Ancora di Salvezza nel Mondo Bitcoin. Il polo educativo ed ingegneristico per diventare l'unico proprietario dei tuoi fondi.
+              Bailout: La Tua Ancora di Salvezza nel Mondo Bitcoin. Il polo educativo ed ingegneristico per diventare l&apos;unico proprietario dei tuoi fondi.
             </p>
           </div>
 

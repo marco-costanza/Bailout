@@ -74,7 +74,7 @@ export default function ProtocolsPage() {
               </div>
               <h3 className="text-xl font-semibold text-white mb-3">Fondamenti Economici</h3>
               <p className="text-text-secondary text-sm leading-relaxed">
-                Perché Bitcoin esiste? Come funziona la TimeChain, proof of work e perché sconfigge l'inflazione fiat.
+                Perché Bitcoin esiste? Come funziona la TimeChain, proof of work e perché sconfigge l&apos;inflazione fiat.
               </p>
             </div>
             

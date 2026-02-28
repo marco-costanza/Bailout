@@ -34,7 +34,7 @@ export default function ConsensusPage() {
             </h1>
             
             <p className="text-lg sm:text-xl text-text-secondary max-w-2xl mx-auto leading-relaxed mb-10">
-              Sessioni intensive in location riservate. Dalla teoria all'hardware: metti le mani sul protocollo assistito dai migliori cypherpunk del settore.
+              Sessioni intensive in location riservate. Dalla teoria all&apos;hardware: metti le mani sul protocollo assistito dai migliori cypherpunk del settore.
             </p>
             
             <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
@@ -107,13 +107,13 @@ export default function ConsensusPage() {
                 Nessun evento pubblico programmato al momento.
              </div>
              <p className="text-white mb-6">
-               Stiamo organizzando la prossima data. Iscriviti alla lista d'attesa per ricevere in anteprima il protocollo dell'evento.
+               Stiamo organizzando la prossima data. Iscriviti alla lista d&apos;attesa per ricevere in anteprima il protocollo dell&apos;evento.
              </p>
              <Link 
                 href="/#newsletter"
                 className="px-6 py-3 bg-white/5 hover:bg-white/10 border border-white/10 rounded-md text-white font-medium transition-colors"
               >
-                Mettimi in Lista d'Attesa
+                Mettimi in Lista d&apos;Attesa
               </Link>
           </div>
         </div>

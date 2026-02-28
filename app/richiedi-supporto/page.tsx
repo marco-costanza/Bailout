@@ -60,7 +60,7 @@ export default function RichiediSupportoPage() {
           <div className="bg-primary/10 border border-primary/20 rounded-xl p-5 mb-10 flex gap-4">
             <ShieldAlert className="w-6 h-6 text-primary flex-shrink-0" />
             <p className="text-sm text-text-secondary">
-              <strong>Avviso Importante:</strong> Questo modulo serve esclusivamente per consulenze di tipo tecnico/ingegneristico (Nodi, Multisig, Mining). Se stai cercando consulenza per l'allocazione patrimoniale o investimenti, rivolgiti alla nostra boutique <a href="https://whalestreet.it" className="text-primary hover:underline" target="_blank" rel="noopener noreferrer">WhaleStreet</a>.
+              <strong>Avviso Importante:</strong> Questo modulo serve esclusivamente per consulenze di tipo tecnico/ingegneristico (Nodi, Multisig, Mining). Se stai cercando consulenza per l&apos;allocazione patrimoniale o investimenti, rivolgiti alla nostra boutique <a href="https://whalestreet.it" className="text-primary hover:underline" target="_blank" rel="noopener noreferrer">WhaleStreet</a>.
             </p>
           </div>
 
@@ -94,7 +94,7 @@ export default function RichiediSupportoPage() {
               <div className="space-y-2">
                 <label htmlFor="ambito" className="block text-sm font-medium text-text-secondary">Scegli la tipologia *</label>
                 <select required id="ambito" className="w-full bg-background-dark border border-white/10 rounded-md px-4 py-3 text-white focus:outline-none focus:border-primary transition-colors appearance-none">
-                  <option value="" disabled selected>Seleziona un'area di interesse</option>
+                  <option value="" disabled selected>Seleziona un&apos;area di interesse</option>
                   <option value="multisig">Self-Custody e Soluzioni Multisig</option>
                   <option value="nodo">Setup e Routing su Nodo Lightning / On-Chain</option>
                   <option value="mining">Analisi / Installazione Mining Farm</option>

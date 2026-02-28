@@ -119,7 +119,7 @@ export default function HomePage() {
             A chi ci rivolgiamo
           </h2>
           <p className="text-text-secondary text-center max-w-xl mx-auto mb-12">
-            Niente fuffa, solo proof of work. Ti forniamo l'ingegneria per essere l'unico sovrano dei tuoi asset.
+            Niente fuffa, solo proof of work. Ti forniamo l&apos;ingegneria per essere l&apos;unico sovrano dei tuoi asset.
           </p>
           <div className="grid md:grid-cols-3 gap-6">
             {/* Target 1: Retail */}
@@ -153,7 +153,7 @@ export default function HomePage() {
                 href="/protocols"
                 className="inline-flex items-center gap-1 mt-4 text-primary text-sm font-medium hover:underline"
               >
-                Scopri l'Academy <ArrowRight className="w-4 h-4" />
+                Scopri l&apos;Academy <ArrowRight className="w-4 h-4" />
               </Link>
               </div>
             </motion.article>
@@ -219,7 +219,7 @@ export default function HomePage() {
                   Azienda & Corporate
                 </h3>
                 <p className="text-text-secondary text-sm leading-relaxed min-h-[80px]">
-                  CFO e imprenditori che necessitano di un partner tecnologico per integrare Bitcoin. Sviluppiamo studi di fattibilità per l'apertura di Mining Farm (casalinghe o industriali) e l'integrazione di gateway di pagamento Lightning in-house.
+                  CFO e imprenditori che necessitano di un partner tecnologico per integrare Bitcoin. Sviluppiamo studi di fattibilità per l&apos;apertura di Mining Farm (casalinghe o industriali) e l&apos;integrazione di gateway di pagamento Lightning in-house.
                 </p>
                 <Link
                   href="/consulenza"

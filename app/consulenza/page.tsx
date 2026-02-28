@@ -54,7 +54,7 @@ export default function ConsulenzaPage() {
           <div className="text-center mb-16">
             <h2 className="text-3xl font-semibold text-white mb-4">I nostri ambiti di intervento</h2>
             <p className="text-text-secondary text-lg max-w-2xl mx-auto">
-              Realizziamo infrastrutture critiche con i massimi standard cypherpunk valutando caso per caso le esigenze dell'entity.
+              Realizziamo infrastrutture critiche con i massimi standard cypherpunk valutando caso per caso le esigenze dell&apos;entity.
             </p>
           </div>
 
