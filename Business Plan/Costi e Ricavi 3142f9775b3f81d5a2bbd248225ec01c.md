@@ -2,7 +2,7 @@
 
 ### **Modello di Business e Flussi di Entrata**
 
-Il cuore finanziario è la membership annuale **Bailout Protocols**, venduta a **499€** l'anno. Questo servizio garantisce entrate ricorrenti (MRR) e funge da base per la sostenibilità. Parallelamente, il servizio **Bailout Consensus** (Masterclass) viene venduto a **149€** per gli esterni, fungendo da "esca" per l'Academy.L'operatività tecnica si divide in due: gli interventi **P2P**, con tariffe di **210€** per i membri e **500€** per gli esterni , e il servizio **TimeChain**, che parte da una base di **2.500€** per progetti infrastrutturali complessi. Ogni accesso al mondo B2B è filtrato da una call strategica da **210€**, che garantisce serietà e viene scalata dal preventivo finale.
+Il cuore finanziario è la membership annuale **Bailout Protocols**, venduta a **499€** l'anno. Questo servizio garantisce entrate ricorrenti (MRR) e funge da base per la sostenibilità. Parallelamente, il servizio **Bailout Consensus** (Masterclass) viene venduto a **149€** per gli esterni, fungendo da "esca" per l'Academy.L'operatività tecnica si divide in due: gli interventi **P2P**, con tariffe di **210€** per i membri e **500€** per gli esterni , e il servizio **Bailout Nodes**, che parte da una base di **2.500€** per progetti infrastrutturali complessi. Ogni accesso al mondo B2B è filtrato da una call strategica da **500€**, che garantisce serietà e viene scalata dal preventivo finale.
 
 ### **Revenue Share e Dinamiche Interne**
 

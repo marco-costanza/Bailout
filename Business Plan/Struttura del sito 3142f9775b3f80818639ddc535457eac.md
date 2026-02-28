@@ -41,8 +41,8 @@ Puliamo il sito da tutto ciò che abbassa il posizionamento ingegneristico o con
     - **Aggiungere:** Pagina dinamica per promuovere le sessioni formative di 3 ore su argomenti specifici (es. setup di un nodo, privacy).
     - **Aggiungere:** Checkout con biglietto a 149€ per gli utenti esterni. Dicitura ben visibile "Gratis per gli studenti dell'Academy" per innescare l'upsell.
 - **Pagina C: Bailout P2P & TimeChain (La Consulenza Tecnica)**
-    - **Aggiungere:** Divisione visiva netta tra l'intervento 1-to-1 di 90 minuti per azzerare l'errore umano (Bailout P2P) e la consulenza progettuale B2B per infrastrutture complesse (Bailout TimeChain).
-    - **Aggiungere:** Integrazione Calendly per il P2P con tariffe tiered (210€ o 500€). Per TimeChain, pulsante per prenotare unicamente la call di analisi strategica a 210€.
+    - **Aggiungere:** Divisione visiva netta tra l'intervento 1-to-1 di 90 minuti per azzerare l'errore umano (Bailout P2P) e la consulenza progettuale B2B per infrastrutture complesse (Bailout Nodes).
+    - **Aggiungere:** Integrazione Calendly per il P2P con tariffe tiered (210€ o 500€). Per Bailout Nodes, pulsante per prenotare unicamente la call di analisi strategica a 500€.
 - **Pagina D: Il Form di Pre-Qualificazione (La Porta d'Ingresso Ingegneristica)**
     - **Aggiungere:** Un sondaggio a step per mappare la criticità dell'utente. Domande chiave: Obiettivo (Setup HW, Eredità Digitale, Mining), urgenza tecnica, e budget aziendale (se applicabile).
     - **Aggiungere:** Routing automatico: se è un setup base va a Calendly per il P2P, se è un'integrazione Lightning aziendale o Multisig complesso va al form TimeChain.

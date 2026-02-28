@@ -18,7 +18,7 @@ Anche se lontani, sono fondamentali da studiare perché attraggono e definiscono
 - **Modello di Business:** Pionieri del mondo Corporate e Wealth. Lavorano con i servizi finanziari veri e propri e custodie Multisig Collaborative.
 - **Punto di Forza:** Il Multisig Collaborativo elimina la paura della self-custody sapendo che l'azienda possiede una chiave di backup.
 - **Punto Critico:** È un istituto di natura regolamentata, ed essendo KYCato cede sovranità. Il rischio Lending erode il capitale in procedure bancarie.
-- **Lezione per Bailout:** Attaccare questo modello proponendo **Bailout TimeChain**, fornendo progettazione e setup di architetture complesse e multisig avanzati per successione aziendale o eredità digitale. L'approccio di Bailout garantisce un'etica rigorosamente no-custodial e high-privacy, mantenendo la totale sovranità del cliente.
+- **Lezione per Bailout:** Attaccare questo modello proponendo **Bailout Nodes**, fornendo progettazione e setup di architetture complesse e multisig avanzati per successione aziendale o eredità digitale. L'approccio di Bailout garantisce un'etica rigorosamente no-custodial e high-privacy, mantenendo la totale sovranità del cliente.
 
 ### 3. Casa (USA)
 
@@ -43,14 +43,14 @@ Sono le aziende verso le quali l’utente sfugge se Bailout perde presa informat
 - **Modello di Business:** Education Pura e Meetup. Vendita di grossi ticket formativi e macro-eventi in loco.
 - **Punto di Forza:** Brand potentissimo e grossa community alle spalle per organizzare convegni.
 - **Punto Critico:** Approccio generalista di massa. Manca totalmente il supporto ingegneristico pratico e l'esecuzione tecnica privata a domicilio o 1-to-1.
-- **Strategia di Attacco Bailout:** Posizionarsi come il partner ingegneristico finale. Laddove Plan B si ferma alla teoria in grandi aule, Bailout subentra con **Bailout TimeChain** e **Bailout P2P** per fornire supporto pratico e puro setup di sicurezza ai privati avanzati e agli HNWI, che esigono privacy assoluta e non vogliono esporre i propri bisogni in eventi pubblici.
+- **Strategia di Attacco Bailout:** Posizionarsi come il partner ingegneristico finale. Laddove Plan B si ferma alla teoria in grandi aule, Bailout subentra con **Bailout Nodes** e **Bailout P2P** per fornire supporto pratico e puro setup di sicurezza ai privati avanzati e agli HNWI, che esigono privacy assoluta e non vogliono esporre i propri bisogni in eventi pubblici.
 
 ### 6. Bitcoin 4 Business
 
 - **Modello di Business:** Focus esclusivo al 100% sulla divisione B2B (Aziendale/POS BTCPay).
 - **Punto di Forza:** Pionieri in Italia per l'integrazione di pagamenti per commercianti e fiscalità aziendale/legale.
 - **Punto Critico:** L'esclusività sul B2B tralascia la tutela patrimoniale individuale prima che la ricchezza confluisca in azienda.
-- **Strategia di Attacco Bailout:** Coprire l'intero spettro dell'adozione. Mentre l'azienda viene seguita per gateway di pagamento Lightning tramite **Bailout TimeChain** , il founder viene educato tramite l'ecosistema **Protocols** e assistito nel setup della propria privacy e successione personale con i servizi dedicati. Le esigenze di tesoreria o asset allocation verranno poi reindirizzate alla nostra boutique WhaleStreet.
+- **Strategia di Attacco Bailout:** Coprire l'intero spettro dell'adozione. Mentre l'azienda viene seguita per gateway di pagamento Lightning tramite **Bailout Nodes** , il founder viene educato tramite l'ecosistema **Protocols** e assistito nel setup della propria privacy e successione personale con i servizi dedicati. Le esigenze di tesoreria o asset allocation verranno poi reindirizzate alla nostra boutique WhaleStreet.
 
 ### 7. SicurezzaBitcoin (Marco Cattaneo)
 
@@ -66,4 +66,4 @@ Sono le aziende verso le quali l’utente sfugge se Bailout perde presa informat
 - **Modello di Business:** Gestione massiva e costruzione di enormi container per il mining collegati a grosse centrali.
 - **Punto di Forza:** Sono i colossi italiani su grande scala, con accesso a macchine ASIC a prezzi imbattibili.
 - **Punto Critico:** Operano su budget milionari. Ignorano completamente le PMI o i privati che vogliono monetizzare piccoli surplus energetici.
-- **Strategia di Attacco Bailout:** Focus d’assalto come leader nel mercato micro-ingegneristico e industriale tramite **Bailout TimeChain**. Creiamo e pianifichiamo l'infrastruttura per mining farm casalinghe e industriali su misura, servendo l'imprenditore energivoro che desidera ottimizzare le proprie risorse e che viene ignorato dai grandi fondi speculativi.
+- **Strategia di Attacco Bailout:** Focus d’assalto come leader nel mercato micro-ingegneristico e industriale tramite **Bailout Nodes**. Creiamo e pianifichiamo l'infrastruttura per mining farm casalinghe e industriali su misura, servendo l'imprenditore energivoro che desidera ottimizzare le proprie risorse e che viene ignorato dai grandi fondi speculativi.
