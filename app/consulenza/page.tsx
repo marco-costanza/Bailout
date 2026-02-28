@@ -1,100 +1,102 @@
 "use client";
 
-import { useState } from "react";
 import Link from "next/link";
-import { ArrowLeft } from "lucide-react";
-import { Button } from "@/components/ui/button";
+import { motion } from "framer-motion";
+import { ArrowRight, Bitcoin, Code, Network, ShieldCheck } from "lucide-react";
 
 export default function ConsulenzaPage() {
-  const [step, setStep] = useState(1);
-
   return (
-    <div className="min-h-screen bg-background-dark relative overflow-hidden">
-      <div
-        className="absolute top-0 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[400px] h-[400px] rounded-full bg-bitcoin opacity-20 blur-[100px] pointer-events-none"
-        aria-hidden="true"
-      />
-      <div
-        className="absolute top-1/3 -left-32 w-64 h-64 rounded-full bg-bitcoin opacity-20 blur-[100px] pointer-events-none"
-        aria-hidden="true"
-      />
+    <div className="min-h-screen bg-background-dark selection:bg-primary/30 selection:text-white">
+      {/* Hero Section */}
+      <section className="relative pt-32 pb-20 sm:pt-40 sm:pb-28 overflow-hidden">
+        <div className="absolute inset-0 z-0">
+          <div className="absolute inset-0 bg-[radial-gradient(circle_at_center,rgba(255,97,2,0.1)_0,transparent_50%)]" />
+        </div>
+        
+        <div className="container relative z-10 mx-auto px-4 sm:px-6 lg:px-8">
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.6 }}
+            className="text-center max-w-4xl mx-auto"
+          >
+            <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-primary/10 border border-primary/20 text-primary text-sm font-medium mb-8">
+              <Code className="w-4 h-4" />
+              <span>Consulenza P2P & TimeChain</span>
+            </div>
+            
+            <h1 className="text-4xl sm:text-5xl md:text-6xl font-semibold text-white tracking-tight leading-tight mb-6">
+              Ingegneria Bitcoin per <br className="hidden sm:block" />
+              <span className="text-transparent bg-clip-text bg-gradient-to-r from-primary to-primary-hover">
+                Privati Avanzati e Corporate
+              </span>
+            </h1>
+            
+            <p className="text-lg sm:text-xl text-text-secondary max-w-2xl mx-auto leading-relaxed mb-10">
+              Sviluppo di infrastrutture self-hosted, architetture multisig hardware e studi di fattibilità per mining farm. Accedi alle stesse strategie usate dalle whale.
+            </p>
+            
+            <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
+              <Link 
+                href="/richiedi-supporto"
+                className="inline-flex justify-center items-center gap-2 bg-primary hover:bg-primary-hover text-white text-base font-semibold px-8 py-4 rounded-md transition-colors w-full sm:w-auto"
+              >
+                Invia una richiesta <ArrowRight className="w-5 h-5" />
+              </Link>
+            </div>
+          </motion.div>
+        </div>
+      </section>
 
-      <div className="relative max-w-xl mx-auto px-4 sm:px-6 py-16">
-        <Link
-          href="/#proof-of-work"
-          className="inline-flex items-center gap-1 text-bitcoin text-sm font-medium hover:underline mb-8"
-        >
-          <ArrowLeft className="w-4 h-4" /> Torna ai servizi
-        </Link>
-
-        <h1 className="text-3xl sm:text-4xl font-semibold text-white mb-4">
-          Consulenza tecnica
-        </h1>
-        <p className="text-text-muted text-lg mb-8">
-          Raccontaci di cosa hai bisogno: ti ricontattiamo noi con il professionista più adatto.
-        </p>
-
-        <div className="rounded-xl card-border bg-background-card/60 p-6 sm:p-8">
-          <div className="flex gap-2 mb-8">
-            <span
-              className={`h-1 flex-1 rounded-full ${step >= 1 ? "bg-bitcoin" : "bg-white/10"}`}
-              aria-hidden="true"
-            />
-            <span
-              className={`h-1 flex-1 rounded-full ${step >= 2 ? "bg-bitcoin" : "bg-white/10"}`}
-              aria-hidden="true"
-            />
+      {/* Ambiti di Intervento */}
+      <section className="py-20 border-t border-white/5 bg-background-card/20">
+        <div className="container mx-auto px-4 sm:px-6 lg:px-8 max-w-5xl">
+          <div className="text-center mb-16">
+            <h2 className="text-3xl font-semibold text-white mb-4">I nostri ambiti di intervento</h2>
+            <p className="text-text-secondary text-lg max-w-2xl mx-auto">
+              Realizziamo infrastrutture critiche con i massimi standard cypherpunk valutando caso per caso le esigenze dell'entity.
+            </p>
           </div>
 
-          {step === 1 && (
-            <section aria-labelledby="step1-heading">
-              <h2 id="step1-heading" className="text-xl font-semibold text-white mb-4">
-                Step 1 — I tuoi dati (placeholder)
-              </h2>
-              <p className="text-text-secondary text-sm mb-4">
-                Nome, email, telefono. Form da integrare con backend o servizio di invio.
+          <div className="grid md:grid-cols-2 gap-8">
+            <div className="bg-background-card p-10 rounded-xl border border-white/5 hover:border-primary/50 transition-colors">
+              <div className="w-14 h-14 rounded-lg bg-primary/10 flex items-center justify-center mb-6">
+                <ShieldCheck className="w-8 h-8 text-primary" />
+              </div>
+              <h3 className="text-2xl font-semibold text-white mb-4">Self-Custody e Multisig (HNWI)</h3>
+              <p className="text-text-secondary leading-relaxed mb-6">
+                Creazione di policy di sicurezza per capitali importanti. Setup e verifica the hardware wallet (Coldcard), architetture multisig (2-of-3 o 3-of-5), backup su acciaio e documentazione piana per le eredità e la successione di fondi crittografici.
               </p>
-              <div className="space-y-3 text-sm text-text-muted">
-                <p>Campo nome (placeholder)</p>
-                <p>Campo email (placeholder)</p>
-                <p>Campo telefono (placeholder)</p>
+            </div>
+            
+            <div className="bg-background-card p-10 rounded-xl border border-white/5 hover:border-primary/50 transition-colors">
+              <div className="w-14 h-14 rounded-lg bg-primary/10 flex items-center justify-center mb-6">
+                <Network className="w-8 h-8 text-primary" />
               </div>
-              <Button
-                type="button"
-                className="mt-6"
-                onClick={() => setStep(2)}
-              >
-                Avanti
-              </Button>
-            </section>
-          )}
-
-          {step === 2 && (
-            <section aria-labelledby="step2-heading">
-              <h2 id="step2-heading" className="text-xl font-semibold text-white mb-4">
-                Step 2 — Di cosa hai bisogno (placeholder)
-              </h2>
-              <p className="text-text-secondary text-sm mb-4">
-                Nodi, wallet, setup, azienda/privato. Campi da definire.
+              <h3 className="text-2xl font-semibold text-white mb-4">Corporate & Lightning</h3>
+              <p className="text-text-secondary leading-relaxed mb-6">
+                Nodi aziendali on-premise, sviluppo di soluzioni layer-2 personalizzate (gateway di instradamento pagamenti su Lightning Network), setup di casseforti aziendali incensurabili, compliance tecnica e studio di fattibilità hardware/software.
               </p>
-              <div className="space-y-3 text-sm text-text-muted">
-                <p>Area di interesse (placeholder)</p>
-                <p>Messaggio (placeholder)</p>
-              </div>
-              <div className="flex gap-3 mt-6">
-                <Button type="button" variant="outline" onClick={() => setStep(1)}>
-                  Indietro
-                </Button>
-                <Button type="button">Invia richiesta</Button>
-              </div>
-            </section>
-          )}
+            </div>
+          </div>
         </div>
+      </section>
 
-        <p className="text-text-muted text-sm mt-6 text-center">
-          Dopo l&apos;invio ti contatteremo per organizzare un incontro in videocall o dal vivo.
-        </p>
-      </div>
+      {/* CTA Final */}
+      <section className="py-24 border-t border-white/5">
+        <div className="container mx-auto px-4 sm:px-6 lg:px-8 max-w-4xl text-center">
+          <h2 className="text-3xl font-semibold text-white mb-6">Pronto ad elevare il tuo setup?</h2>
+          <p className="text-text-secondary mb-10 max-w-2xl mx-auto text-lg leading-relaxed">
+            Selezioniamo i progetti a cui affiancarci per garantire il massimo standard qualitativo. Compila il modulo di selezione e una volta presa in carico, organizzeremo una pre-call ingegneristica.
+          </p>
+          <Link 
+            href="/richiedi-supporto"
+            className="inline-flex justify-center items-center gap-2 bg-white text-black hover:bg-gray-200 text-base font-semibold px-8 py-4 rounded-md transition-colors"
+          >
+            Vai al Modulo di Selezione
+          </Link>
+        </div>
+      </section>
     </div>
   );
 }

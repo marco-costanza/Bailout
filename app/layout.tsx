@@ -1,13 +1,13 @@
 import type { Metadata } from "next";
-import { Lexend, Inter } from "next/font/google";
+import { Ubuntu, Inter } from "next/font/google";
 import "./globals.css";
 import Navbar from "@/components/navbar";
 import Footer from "@/components/footer";
 
-const lexend = Lexend({
+const ubuntu = Ubuntu({
   subsets: ["latin"],
-  weight: ["300", "400", "500", "600", "700"],
-  variable: "--font-lexend",
+  weight: ["300", "400", "500", "700"],
+  variable: "--font-ubuntu",
   display: "swap",
 });
 
@@ -48,7 +48,7 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="it" className={`${lexend.variable} ${inter.variable}`}>
+    <html lang="it" className={`${ubuntu.variable} ${inter.variable}`}>
       <head>
         <link
           rel="stylesheet"

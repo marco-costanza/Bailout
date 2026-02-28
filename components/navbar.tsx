@@ -26,24 +26,30 @@ export default function Navbar() {
           </Link>
 
           {/* Desktop Navigation */}
-          <div className="hidden md:flex md:items-center md:space-x-6">
+          <div className="hidden md:flex md:items-center md:space-x-8">
             <Link
-              href="/#proof-of-work"
-              className="text-sm font-medium text-text-secondary transition-colors hover:text-bitcoin"
+              href="/protocols"
+              className="text-sm font-medium text-text-secondary transition-colors hover:text-primary"
             >
-              Servizi
+              Protocols
             </Link>
             <Link
-              href="/#nodi"
-              className="text-sm font-medium text-text-secondary transition-colors hover:text-bitcoin"
+              href="/consensus"
+              className="text-sm font-medium text-text-secondary transition-colors hover:text-primary"
             >
-              Team
+              Consensus
             </Link>
             <Link
-              href="/#newsletter"
-              className="text-sm font-medium text-text-secondary transition-colors hover:text-bitcoin"
+              href="/consulenza"
+              className="text-sm font-medium text-text-secondary transition-colors hover:text-primary"
             >
-              Newsletter
+              Consulenza
+            </Link>
+            <Link
+              href="/richiedi-supporto"
+              className="bg-primary hover:bg-primary-hover text-white text-sm font-semibold px-5 py-2.5 rounded-md transition-colors"
+            >
+              Richiedi Supporto
             </Link>
           </div>
 
@@ -52,7 +58,7 @@ export default function Navbar() {
             <button
               onClick={() => setIsOpen(!isOpen)}
               aria-label="Toggle menu"
-              className="text-text-secondary hover:text-bitcoin transition-colors"
+              className="text-text-secondary hover:text-primary transition-colors focus:outline-none"
             >
               {isOpen ? (
                 <X className="h-6 w-6" />
@@ -65,29 +71,38 @@ export default function Navbar() {
 
         {/* Mobile Navigation */}
         {isOpen && (
-          <div className="md:hidden">
-            <div className="space-y-1 border-t border-white/10 px-2 pb-3 pt-2">
+          <div className="md:hidden border-t border-white/10 bg-background-dark px-2 pb-4 pt-2">
+            <div className="flex flex-col space-y-2">
               <Link
-                href="/#proof-of-work"
-                className="block rounded-md px-3 py-2 text-base font-medium text-text-secondary hover:text-bitcoin transition-colors"
+                href="/protocols"
+                className="block rounded-md px-3 py-2 text-base font-medium text-text-secondary hover:text-primary hover:bg-white/5 transition-colors"
                 onClick={() => setIsOpen(false)}
               >
-                Servizi
+                Protocols
               </Link>
               <Link
-                href="/#nodi"
-                className="block rounded-md px-3 py-2 text-base font-medium text-text-secondary hover:text-bitcoin transition-colors"
+                href="/consensus"
+                className="block rounded-md px-3 py-2 text-base font-medium text-text-secondary hover:text-primary hover:bg-white/5 transition-colors"
                 onClick={() => setIsOpen(false)}
               >
-                Team
+                Consensus
               </Link>
               <Link
-                href="/#newsletter"
-                className="block rounded-md px-3 py-2 text-base font-medium text-text-secondary hover:text-bitcoin transition-colors"
+                href="/consulenza"
+                className="block rounded-md px-3 py-2 text-base font-medium text-text-secondary hover:text-primary hover:bg-white/5 transition-colors"
                 onClick={() => setIsOpen(false)}
               >
-                Newsletter
+                Consulenza
               </Link>
+              <div className="pt-2">
+                <Link
+                  href="/richiedi-supporto"
+                  className="block w-full text-center bg-primary hover:bg-primary-hover text-white text-base font-semibold px-4 py-3 rounded-md transition-colors"
+                  onClick={() => setIsOpen(false)}
+                >
+                  Richiedi Supporto
+                </Link>
+              </div>
             </div>
           </div>
         )}

@@ -4,7 +4,7 @@
 
 @layer base {
   :root {
-    --font-lexend: 'Lexend', sans-serif;
+    --font-ubuntu: 'Ubuntu', sans-serif;
     --font-inter: 'Inter', sans-serif;
   }
 
@@ -13,7 +13,7 @@
   }
 
   body {
-    @apply bg-background-dark text-text-primary font-sans antialiased;
+    @apply bg-nero21 text-biancoWhitepaper font-sans antialiased;
   }
 
   h1, h2, h3, h4, h5, h6 {
@@ -39,6 +39,6 @@
   }
   
   .card-hover:hover {
-    @apply border-bitcoin/40 shadow-glow-sm;
+    @apply border-arancione6102/40 shadow-glow-sm;
   }
 }
