@@ -19,14 +19,23 @@ Per far funzionare il Magic Link (link via email) devi dire a Supabase dove rein
 
 1. Apri **Supabase**: [supabase.com](https://supabase.com) → il tuo progetto (Bailout).
 2. Menu a sinistra: **Authentication** → **URL Configuration**.
-3. Compila:
-   - **Site URL:** l’indirizzo del sito (es. `https://tuosito.com` oppure in locale `http://localhost:3001`).
-   - **Redirect URLs:** aggiungi questa riga (e in locale anche la seconda):
-     - `https://tuosito.com/auth/callback`
-     - `http://localhost:3001/auth/callback`
-4. Salva.
+3. Compila così (copia-incolla):
 
-Dopo aver salvato, il link che arriva via email porterà alla tua app e completerà il login.
+   **Site URL**
+   ```
+   https://bailout.website
+   ```
+
+   **Redirect URLs** (aggiungi queste tre righe, una per linea):
+   ```
+   https://bailout.website/auth/callback
+   https://bailout-git-editing-marco-costanzas-projects.vercel.app/auth/callback
+   http://localhost:3001/auth/callback
+   ```
+
+4. Clicca **Save**.
+
+Dopo aver salvato, il link che arriva via email porterà alla tua app e completerà il login (sia da bailout.website sia dalla preview Vercel).
 
 ---
 
