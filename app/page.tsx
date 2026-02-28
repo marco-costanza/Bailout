@@ -79,10 +79,10 @@ export default function HomePage() {
               priority
             />
             <h1 className="text-4xl sm:text-5xl md:text-6xl font-semibold text-white tracking-tight leading-tight">
-              Bailout: La Tua Ancora di Salvezza nel Mondo Bitcoin
+              La tua ancora di salvezza dal sistema tradizionale.
             </h1>
             <p className="mt-6 text-lg sm:text-xl text-text-secondary max-w-2xl mx-auto leading-relaxed">
-              Il salvataggio effettivo dal sistema fiat rotto verso la vera sovranità che la tecnologia Bitcoin concede. Rigorosamente Bitcoin Only.
+              La tua assicurazione dal possibile fallimento del sistema fiat grazie alla vera sovranità tecnologica che Bitcoin concede.
             </p>
             <div className="mt-10">
               <Button
@@ -92,7 +92,7 @@ export default function HomePage() {
               >
                 <Link href="/richiedi-supporto">
                   <ShieldCheck className="w-5 h-5" />
-                  Richiedi Supporto Tecnico
+                  Ho bisogno del vostro aiuto
                 </Link>
               </Button>
             </div>
@@ -116,10 +116,10 @@ export default function HomePage() {
         <div className="absolute top-0 left-1/2 transform -translate-x-1/2 w-4/5 h-px bg-gradient-to-r from-transparent via-bitcoin/20 to-transparent opacity-60"></div>
         <div className="max-w-6xl mx-auto px-6">
           <h2 className="text-2xl sm:text-3xl font-semibold text-white text-center mb-4">
-            A chi ci rivolgiamo
+            I nostri servizi
           </h2>
           <p className="text-text-secondary text-center max-w-xl mx-auto mb-12">
-            Niente fuffa, solo proof of work. Ti forniamo l&apos;ingegneria per essere l&apos;unico sovrano dei tuoi asset.
+            Ti forniamo tutto il necessario per diventare l&apos;unico sovrano dei tuoi asset. In completa privacy e sicurezza.
           </p>
           <div className="grid md:grid-cols-3 gap-6">
             {/* Target 1: Retail */}
@@ -144,16 +144,16 @@ export default function HomePage() {
                   <GraduationCap className="w-6 h-6 text-bitcoin" />
                 </div>
                 <h3 className="text-xl font-semibold text-white mb-2">
-                  Utente e Fai-da-te (Retail)
+                  Bailout Protocols (Membership Annuale)
                 </h3>
               <p className="text-text-secondary text-sm leading-relaxed min-h-[80px]">
-                Vuoi imparare a proteggere i risparmi e a comprendere il protocollo in autonomia. Desideri istruzioni step-by-step per nodi, privacy ed hardware wallet. Cerca una formazione accessibile (tramite videocorsi e masterclass) per non commettere errori.
+                L&apos;Accademia completa in continua evoluzione: lezioni video registrate, rilascio di nuovi moduli settimanali e sessioni tenute dai professionisti di riferimento del nostro Network. Include accesso rapido all&apos;AI proprietaria trainata sui nostri materiali per rispondere a tutti i tuoi dubbi.
               </p>
               <Link
                 href="/protocols"
                 className="inline-flex items-center gap-1 mt-4 text-primary text-sm font-medium hover:underline"
               >
-                Scopri l&apos;Academy <ArrowRight className="w-4 h-4" />
+                Scopri di più <ArrowRight className="w-4 h-4" />
               </Link>
               </div>
             </motion.article>
@@ -180,16 +180,16 @@ export default function HomePage() {
                   <Layers className="w-6 h-6 text-bitcoin" />
                 </div>
                 <h3 className="text-xl font-semibold text-white mb-2">
-                  Privato Avanzato & HNWI
+                  Bailout Consensus (Eventi Live e On-Demand)
                 </h3>
               <p className="text-text-secondary text-sm leading-relaxed min-h-[80px]">
-                Possiedi capitali rilevanti, ma vuoi adottare la self-custody per eliminare il rischio di exchange terzi. Hai bisogno di puro supporto ingegneristico per hardware wallet, seed in sicurezza e sistemi multisig per i piani di successione ed eredità.
+                Webinar in diretta e sessioni formative verticali di circa 3 ore con focus estremamente pratico (es. setup di un nodo, privacy avanzata). Includono una sessione finale di Q&A per dialogare direttamente con i docenti. Completamente gratuiti per gli iscritti all&apos;Academy (Live e differita).
               </p>
               <Link
-                href="/consulenza"
+                href="/consensus"
                 className="inline-flex items-center gap-1 mt-4 text-primary text-sm font-medium hover:underline"
               >
-                Scopri la Consulenza 1-to-1 <ArrowRight className="w-4 h-4" />
+                Scopri di più <ArrowRight className="w-4 h-4" />
               </Link>
               </div>
             </motion.article>
@@ -216,16 +216,16 @@ export default function HomePage() {
                   <Wrench className="w-6 h-6 text-bitcoin" />
                 </div>
                 <h3 className="text-xl font-semibold text-white mb-2">
-                  Azienda & Corporate
+                  Bailout P2P (Intervento 1-to-1)
                 </h3>
                 <p className="text-text-secondary text-sm leading-relaxed min-h-[80px]">
-                  CFO e imprenditori che necessitano di un partner tecnologico per integrare Bitcoin. Sviluppiamo studi di fattibilità per l&apos;apertura di Mining Farm (casalinghe o industriali) e l&apos;integrazione di gateway di pagamento Lightning in-house.
+                  L&apos;intervento ingegneristico 1-to-1 per azzerare l&apos;errore umano basato sulle tue necessità. Sessione da 90 minuti per svolgere il lavoro "sporco" insieme al cliente (es. setup hardware wallet, recupero fondi, etc) compreso di follow-up email finale per validare le operazioni.
                 </p>
                 <Link
                   href="/consulenza"
                   className="inline-flex items-center gap-1 mt-4 text-primary text-sm font-medium hover:underline"
                 >
-                  Scopri Bailout TimeChain <ArrowRight className="w-4 h-4" />
+                  Scopri di più <ArrowRight className="w-4 h-4" />
                 </Link>
               </div>
             </motion.article>

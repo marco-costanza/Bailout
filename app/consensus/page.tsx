@@ -23,28 +23,19 @@ export default function ConsensusPage() {
           >
             <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-primary/10 border border-primary/20 text-primary text-sm font-medium mb-8">
               <Users className="w-4 h-4" />
-              <span>Eventi Esclusivi Live</span>
+              <span>Eventi Esclusivi dal vivo o Live streaming</span>
             </div>
             
             <h1 className="text-4xl sm:text-5xl md:text-6xl font-semibold text-white tracking-tight leading-tight mb-6">
               Bailout Consensus: <br className="hidden sm:block" />
               <span className="text-transparent bg-clip-text bg-gradient-to-r from-primary to-primary-hover">
-                Masterclass Dal Vivo
+                In diretta con i docenti
               </span>
             </h1>
             
             <p className="text-lg sm:text-xl text-text-secondary max-w-2xl mx-auto leading-relaxed mb-10">
-              Sessioni intensive in location riservate. Dalla teoria all&apos;hardware: metti le mani sul protocollo assistito dai migliori cypherpunk del settore.
+              Dalla teoria alla pratica. Approfondisci gli argomenti con i migliori cypherpunk del settore. Togliti qualsiasi dubbio grazie alle sessioni finali di Q&A.
             </p>
-            
-            <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
-              <Link 
-                href="#prossimi-eventi"
-                className="inline-flex justify-center items-center gap-2 bg-primary hover:bg-primary-hover text-white text-base font-semibold px-8 py-4 rounded-md transition-colors w-full sm:w-auto"
-              >
-                Scopri le Prossime Date <ArrowRight className="w-5 h-5" />
-              </Link>
-            </div>
           </motion.div>
         </div>
       </section>
@@ -52,42 +43,42 @@ export default function ConsensusPage() {
       {/* Caratteristiche */}
       <section className="py-20 border-t border-white/5 bg-background-card/20">
         <div className="container mx-auto px-4 sm:px-6 lg:px-8 max-w-5xl">
-          <div className="grid md:grid-cols-2 gap-12 items-center">
-            <div>
-              <h2 className="text-3xl font-semibold text-white mb-6">Sincronizzati col Network</h2>
-              <p className="text-text-secondary mb-6 leading-relaxed">
-                Le masterclass Bailout Consensus non sono i classici convegni in cui ascolti passivamente. Porti il tuo PC, il tuo hardware wallet e operi.
+          <div className="text-center mb-16">
+            <h2 className="text-3xl font-semibold text-white mb-4">I dettagli dei nostri interventi</h2>
+            <p className="text-text-secondary text-lg max-w-2xl mx-auto">
+              Webinar verticali, approfondimenti live ed un filo diretto con i nostri docenti.
+            </p>
+          </div>
+
+          <div className="grid md:grid-cols-3 gap-8">
+            <div className="bg-background-card p-8 rounded-xl border border-white/5 hover:border-primary/50 transition-colors">
+              <div className="w-12 h-12 rounded-lg bg-primary/10 flex items-center justify-center mb-6">
+                <Target className="w-6 h-6 text-primary" />
+              </div>
+              <h3 className="text-xl font-semibold text-white mb-3">Da 2 a 3 ore</h3>
+              <p className="text-text-secondary text-sm leading-relaxed">
+                Di live streaming o lezione dal vivo (sarà specificato di volta in volta per ogni masterclass).
               </p>
-              <ul className="space-y-4">
-                <li className="flex items-start gap-3">
-                  <div className="mt-1 bg-primary/20 p-1.5 rounded-full">
-                    <Target className="w-4 h-4 text-primary" />
-                  </div>
-                  <div>
-                    <h4 className="text-white font-medium">Hands-on Garantito</h4>
-                    <p className="text-text-secondary text-sm">Fai setup live e verifichi i risultati insieme ai docenti.</p>
-                  </div>
-                </li>
-                <li className="flex items-start gap-3">
-                  <div className="mt-1 bg-primary/20 p-1.5 rounded-full">
-                    <Users className="w-4 h-4 text-primary" />
-                  </div>
-                  <div>
-                    <h4 className="text-white font-medium">Networking Reale</h4>
-                    <p className="text-text-secondary text-sm">Conosci altri bitcoiner con cui instaurare scambi peer-to-peer e collaborazioni.</p>
-                  </div>
-                </li>
-              </ul>
             </div>
             
-            <div className="relative h-96 rounded-2xl overflow-hidden border border-white/10 group">
-              <div className="absolute inset-0 bg-black/40 group-hover:bg-black/20 transition-colors z-10" />
-              <Image 
-                src="/images/Masterclass-BTC.jpg" 
-                alt="Bailout Consensus Masterclass" 
-                fill 
-                className="object-cover transition-transform duration-700 group-hover:scale-105"
-              />
+            <div className="bg-background-card p-8 rounded-xl border border-white/5 hover:border-primary/50 transition-colors">
+              <div className="w-12 h-12 rounded-lg bg-primary/10 flex items-center justify-center mb-6">
+                <Users className="w-6 h-6 text-primary" />
+              </div>
+              <h3 className="text-xl font-semibold text-white mb-3">Q&A Diretta</h3>
+              <p className="text-text-secondary text-sm leading-relaxed">
+                Possibilità di fare domande alla fine di ogni sessione per sciogliere qualsiasi dubbio pratico.
+              </p>
+            </div>
+            
+            <div className="bg-background-card p-8 rounded-xl border border-white/5 hover:border-primary/50 transition-colors">
+              <div className="w-12 h-12 rounded-lg bg-primary/10 flex items-center justify-center mb-6">
+                <Calendar className="w-6 h-6 text-primary" />
+              </div>
+              <h3 className="text-xl font-semibold text-white mb-3">Accesso Illimitato</h3>
+              <p className="text-text-secondary text-sm leading-relaxed">
+                Goditi la registrazione e tutti i materiali di supporto (saranno inviati in un secondo momento).
+              </p>
             </div>
           </div>
         </div>
@@ -97,7 +88,7 @@ export default function ConsensusPage() {
       <section id="prossimi-eventi" className="py-24 border-t border-white/5">
         <div className="container mx-auto px-4 sm:px-6 lg:px-8 max-w-4xl text-center">
           <Calendar className="w-12 h-12 text-primary mx-auto mb-6" />
-          <h2 className="text-3xl font-semibold text-white mb-4">Calendario Eventi</h2>
+          <h2 className="text-3xl font-semibold text-white mb-4">I prossimi incontri</h2>
           <p className="text-text-secondary mb-12">
             Le classi sono a numero chiuso (max 15/20 partecipanti) per garantire un alto grado di assistenza tecnica ad ogni singolo studente.
           </p>

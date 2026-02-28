@@ -1,14 +1,14 @@
-export default function PrivacyPolicyPage() {
+export default function TermsConditionsPage() {
   return (
     <div className="min-h-screen bg-background py-24 sm:py-32 selection:bg-primary/30 selection:text-white">
       <div className="container mx-auto px-4 sm:px-6 lg:px-8 max-w-3xl">
         <h1 className="text-3xl sm:text-4xl font-semibold text-white tracking-tight mb-8">
-          Privacy Policy
+          Termini e Condizioni
         </h1>
         
         <div className="bg-background-card/50 p-8 sm:p-10 rounded-2xl border border-white/5 space-y-6">
           <p className="text-text-secondary leading-relaxed">
-            In questa pagina verrà integrata la Privacy Policy.
+            In questa pagina verranno integrati i Termini e Condizioni d&apos;uso del servizio.
           </p>
           <div className="bg-primary/10 border border-primary/20 rounded-xl p-5">
             <p className="text-sm text-text-secondary">

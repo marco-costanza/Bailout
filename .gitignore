@@ -33,3 +33,15 @@ yarn-error.log*
 # typescript
 *.tsbuildinfo
 next-env.d.ts
+
+# Private project files and directories
+/Business Plan/
+/Immagini del brand/
+/_old-html/
+/docs/
+/mail/
+/scripts/
+Handover
+GUIDA.md
+CLAUDE.md
+CHANGELOG.md
