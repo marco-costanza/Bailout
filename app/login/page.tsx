@@ -3,11 +3,11 @@
 import { useState } from "react";
 import Link from "next/link";
 import { motion } from "framer-motion";
-import { Mail, Lock, Loader2, AlertCircle } from "lucide-react";
-import { signInWithMagicLink, signInWithPassword } from "./actions";
+import { Mail, Lock, Loader2, AlertCircle, UserPlus } from "lucide-react";
+import { signInWithMagicLink, signInWithPassword, signUp } from "./actions";
 
 export default function LoginPage() {
-  const [mode, setMode] = useState<"magic" | "password">("magic");
+  const [mode, setMode] = useState<"magic" | "password" | "signup">("magic");
   const [isLoading, setIsLoading] = useState(false);
   const [message, setMessage] = useState<{ type: "error" | "success"; text: string } | null>(null);
 
@@ -15,7 +15,9 @@ export default function LoginPage() {
     e.preventDefault();
     setMessage(null);
     setIsLoading(true);
-    const formData = new FormData(e.currentTarget);
+    const form = e.currentTarget;
+    const formData = new FormData(form);
+    formData.set("redirect_origin", window.location.origin);
     const result = await signInWithMagicLink(formData);
     setIsLoading(false);
     if (result.error) {
@@ -25,7 +27,7 @@ export default function LoginPage() {
     if (result.success) {
       setMessage({
         type: "success",
-        text: "Controlla la tua email: ti abbiamo inviato un link per accedere.",
+        text: "Controlla la tua email: ti abbiamo inviato un link per accedere. Tornerai su questa stessa pagina.",
       });
     }
   }
@@ -43,6 +45,25 @@ export default function LoginPage() {
     }
     if (result.success) {
       window.location.href = "/dashboard";
+    }
+  }
+
+  async function handleSignUp(e: React.FormEvent<HTMLFormElement>) {
+    e.preventDefault();
+    setMessage(null);
+    setIsLoading(true);
+    const formData = new FormData(e.currentTarget);
+    const result = await signUp(formData);
+    setIsLoading(false);
+    if (result.error) {
+      setMessage({ type: "error", text: result.error });
+      return;
+    }
+    if (result.success) {
+      setMessage({
+        type: "success",
+        text: result.message ?? "Account creato. Puoi accedere con email e password.",
+      });
     }
   }
 
@@ -74,7 +95,7 @@ export default function LoginPage() {
             </div>
           )}
 
-          {mode === "magic" ? (
+          {mode === "magic" && (
             <form onSubmit={handleMagicLink} className="space-y-6">
               <div>
                 <label htmlFor="email" className="block text-sm font-medium text-text-secondary mb-2">
@@ -105,7 +126,9 @@ export default function LoginPage() {
                 )}
               </button>
             </form>
-          ) : (
+          )}
+
+          {mode === "password" && (
             <form onSubmit={handlePassword} className="space-y-6">
               <div>
                 <label htmlFor="email" className="block text-sm font-medium text-text-secondary mb-2">
@@ -158,19 +181,109 @@ export default function LoginPage() {
             </form>
           )}
 
-          <div className="mt-6 pt-6 border-t border-white/10">
-            <button
-              type="button"
-              onClick={() => {
-                setMode(mode === "magic" ? "password" : "magic");
-                setMessage(null);
-              }}
-              className="text-sm text-text-secondary hover:text-arancione6102 transition-colors"
-            >
-              {mode === "magic"
-                ? "Hai già una password? Accedi con email e password"
-                : "Preferisci il link via email? Usa Magic Link"}
-            </button>
+          {mode === "signup" && (
+            <form onSubmit={handleSignUp} className="space-y-6">
+              <div>
+                <label htmlFor="signup-email" className="block text-sm font-medium text-text-secondary mb-2">
+                  Email
+                </label>
+                <div className="relative">
+                  <Mail className="absolute left-3 top-1/2 -translate-y-1/2 w-5 h-5 text-text-secondary" />
+                  <input
+                    id="signup-email"
+                    name="email"
+                    type="email"
+                    required
+                    autoComplete="email"
+                    placeholder="tu@email.com"
+                    className="w-full bg-nero21 border border-white/10 rounded-md pl-10 pr-4 py-3 text-biancoWhitepaper placeholder:text-text-secondary focus:outline-none focus:border-arancione6102 transition-colors"
+                  />
+                </div>
+              </div>
+              <div>
+                <label
+                  htmlFor="signup-password"
+                  className="block text-sm font-medium text-text-secondary mb-2"
+                >
+                  Password (min. 6 caratteri)
+                </label>
+                <div className="relative">
+                  <Lock className="absolute left-3 top-1/2 -translate-y-1/2 w-5 h-5 text-text-secondary" />
+                  <input
+                    id="signup-password"
+                    name="password"
+                    type="password"
+                    required
+                    minLength={6}
+                    autoComplete="new-password"
+                    placeholder="••••••••"
+                    className="w-full bg-nero21 border border-white/10 rounded-md pl-10 pr-4 py-3 text-biancoWhitepaper placeholder:text-text-secondary focus:outline-none focus:border-arancione6102 transition-colors"
+                  />
+                </div>
+              </div>
+              <button
+                type="submit"
+                disabled={isLoading}
+                className="w-full inline-flex justify-center items-center gap-2 bg-arancione6102 hover:bg-primary-hover text-white font-semibold py-3 px-4 rounded-md transition-colors disabled:opacity-70"
+              >
+                {isLoading ? (
+                  <Loader2 className="w-5 h-5 animate-spin" aria-hidden />
+                ) : (
+                  <>
+                    <UserPlus className="w-5 h-5" />
+                    Registrati
+                  </>
+                )}
+              </button>
+            </form>
+          )}
+
+          <div className="mt-6 pt-6 border-t border-white/10 space-y-2">
+            {mode === "magic" && (
+              <>
+                <button
+                  type="button"
+                  onClick={() => { setMode("password"); setMessage(null); }}
+                  className="block w-full text-left text-sm text-text-secondary hover:text-arancione6102 transition-colors"
+                >
+                  Hai già una password? Accedi con email e password
+                </button>
+                <button
+                  type="button"
+                  onClick={() => { setMode("signup"); setMessage(null); }}
+                  className="block w-full text-left text-sm text-text-secondary hover:text-arancione6102 transition-colors"
+                >
+                  Non hai un account? Registrati
+                </button>
+              </>
+            )}
+            {mode === "password" && (
+              <>
+                <button
+                  type="button"
+                  onClick={() => { setMode("magic"); setMessage(null); }}
+                  className="block w-full text-left text-sm text-text-secondary hover:text-arancione6102 transition-colors"
+                >
+                  Preferisci il link via email? Usa Magic Link
+                </button>
+                <button
+                  type="button"
+                  onClick={() => { setMode("signup"); setMessage(null); }}
+                  className="block w-full text-left text-sm text-text-secondary hover:text-arancione6102 transition-colors"
+                >
+                  Non hai un account? Registrati
+                </button>
+              </>
+            )}
+            {mode === "signup" && (
+              <button
+                type="button"
+                onClick={() => { setMode("magic"); setMessage(null); }}
+                className="block w-full text-left text-sm text-text-secondary hover:text-arancione6102 transition-colors"
+              >
+                Hai già un account? Accedi con Magic Link o password
+              </button>
+            )}
           </div>
         </div>
 
