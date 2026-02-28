@@ -150,11 +150,11 @@ export default function ProtocolsPage() {
                 <ul className="space-y-3 text-text-secondary mb-8">
                   <li className="flex items-start gap-3">
                     <ShieldCheck className="w-5 h-5 text-primary shrink-0 mt-0.5" />
-                    <span>Accesso on-demand a tutti i "Protocolli" (videocorsi pratici).</span>
+                    <span>Accesso on-demand a tutti i &quot;Protocolli&quot; (videocorsi pratici).</span>
                   </li>
                   <li className="flex items-start gap-3">
                     <ShieldCheck className="w-5 h-5 text-primary shrink-0 mt-0.5" />
-                    <span>L'Academy è un ambiente vivo: viene rilasciata una nuova lezione ogni settimana, tenuta dai diversi docenti e professionisti del nostro network.</span>
+                    <span>L&apos;Academy è un ambiente vivo: viene rilasciata una nuova lezione ogni settimana, tenuta dai diversi docenti e professionisti del nostro network.</span>
                   </li>
                   <li className="flex items-start gap-3">
                     <ShieldCheck className="w-5 h-5 text-primary shrink-0 mt-0.5" />
@@ -170,7 +170,7 @@ export default function ProtocolsPage() {
                   rel="noopener noreferrer"
                   className="w-full inline-flex justify-center items-center gap-2 bg-primary hover:bg-primary-hover text-white text-base font-semibold px-8 py-4 rounded-md transition-colors"
                 >
-                  Acquista l'Accesso
+                  Acquista l&apos;Accesso
                 </Link>
               </div>
             </div>
@@ -184,7 +184,7 @@ export default function ProtocolsPage() {
           <div className="text-center mb-12">
             <h2 className="text-3xl font-semibold text-white mb-4">Cerchi un supporto più mirato?</h2>
             <p className="text-text-secondary max-w-2xl mx-auto">
-              Se l'Academy non fa al caso tuo, scopri i nostri servizi esclusivi dal vivo o le consulenze individuali.
+              Se l&apos;Academy non fa al caso tuo, scopri i nostri servizi esclusivi dal vivo o le consulenze individuali.
             </p>
           </div>
 
@@ -205,7 +205,7 @@ export default function ProtocolsPage() {
             <div className="bg-background-card p-8 rounded-xl border border-white/5 hover:border-white/20 transition-all flex flex-col h-full group">
               <h3 className="text-2xl font-semibold text-white mb-2">Consulenze 1-to-1 e per Aziende</h3>
               <p className="text-text-secondary mb-8 flex-1">
-                L'intervento ingegneristico privato per annullare l'errore umano. Ideale per Private, Corporate o per realizzare architetture complesse (Mining Farm, Multisig etc.).
+                L&apos;intervento ingegneristico privato per annullare l&apos;errore umano. Ideale per Private, Corporate o per realizzare architetture complesse (Mining Farm, Multisig etc.).
               </p>
               <Link
                 href="/consulenza"

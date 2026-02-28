@@ -219,7 +219,7 @@ export default function HomePage() {
                   Bailout P2P (Intervento 1-to-1)
                 </h3>
                 <p className="text-text-secondary text-sm leading-relaxed min-h-[80px]">
-                  L&apos;intervento ingegneristico 1-to-1 per azzerare l&apos;errore umano basato sulle tue necessità. Sessione da 90 minuti per svolgere il lavoro "sporco" insieme al cliente (es. setup hardware wallet, recupero fondi, etc) compreso di follow-up email finale per validare le operazioni.
+                  L&apos;intervento ingegneristico 1-to-1 per azzerare l&apos;errore umano basato sulle tue necessità. Sessione da 90 minuti per svolgere il lavoro &quot;sporco&quot; insieme al cliente (es. setup hardware wallet, recupero fondi, etc) compreso di follow-up email finale per validare le operazioni.
                 </p>
                 <Link
                   href="/consulenza"
@@ -625,7 +625,7 @@ export default function HomePage() {
             />
           </div>
         </div>
-        <style jsx>{`
+        <style dangerouslySetInnerHTML={{ __html: `
           #newsletter #sib-container input,
           #newsletter #sib-container textarea {
             color: #212121;
@@ -640,7 +640,7 @@ export default function HomePage() {
           #newsletter .sib-form {
             background: transparent !important;
           }
-        `}</style>
+        `}} />
       </section>
 
       <BioModal

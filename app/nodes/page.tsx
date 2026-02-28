@@ -53,7 +53,7 @@ export default function NodesPage() {
       <section className="py-20 border-t border-white/5 bg-background-card/20">
         <div className="container mx-auto px-4 sm:px-6 lg:px-8 max-w-5xl">
           <div className="text-center mb-16">
-            <h2 className="text-3xl font-semibold text-white mb-4">L'Ingegneria incontra la Compliance</h2>
+            <h2 className="text-3xl font-semibold text-white mb-4">L&apos;Ingegneria incontra la Compliance</h2>
             <p className="text-text-secondary text-lg max-w-2xl mx-auto">
               Operazioni strategiche pensate per il tuo Business o per la successione aziendale dei tuoi fondi crittografici.
             </p>
@@ -97,10 +97,10 @@ export default function NodesPage() {
       <section className="py-24 border-t border-white/5">
         <div className="container mx-auto px-4 sm:px-6 lg:px-8 max-w-4xl text-center">
             
-          <h2 className="text-3xl font-semibold text-white mb-6">Dal setup all'operatività in house</h2>
+          <h2 className="text-3xl font-semibold text-white mb-6">Dal setup all&apos;operatività in house</h2>
           <p className="text-text-secondary mb-12 max-w-2xl mx-auto text-lg leading-relaxed">
             I lavori di ingegneria Corporate e Private per infrastrutture superiori richiedono tempo e attenzione totale.<br/><br/>
-            I costi di realizzazione partono da <span className="text-primary font-semibold">2.500€</span> (+ eventuali costi legati all'acquisto degli hardware o server dedicati).<br/><br/>
+            I costi di realizzazione partono da <span className="text-primary font-semibold">2.500€</span> (+ eventuali costi legati all&apos;acquisto degli hardware o server dedicati).<br/><br/>
             Si procede esclusivamente su <strong>preventivo personalizzato</strong>, elaborato dopo una Call di Analisi da 500€ (somma che verrà interamente dedotta dal costo finale se confermerai i lavori).
           </p>
           

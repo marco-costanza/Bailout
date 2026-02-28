@@ -57,7 +57,7 @@ export default function ConsulenzaPage() {
               <h3 className="text-2xl font-semibold text-white mb-4">P2P (Privati)</h3>
               <p className="text-text-secondary leading-relaxed mb-6 flex-1">
                 L&apos;intervento ingegneristico per azzerare l&apos;errore umano.<br/><br/>
-                <strong className="text-white font-medium">Cosa offriamo e tempo dedicato:</strong> 90 minuti netti di intervento esecutivo in videochiamata 1-to-1. Serve per fare il lavoro "sporco" e ingegneristico insieme al cliente (es. setup hardware wallet, recupero fondi basico, creazione seed). Include un follow-up via email per verificare che tutto sia andato a buon fine.<br/><br/>
+                <strong className="text-white font-medium">Cosa offriamo e tempo dedicato:</strong> 90 minuti netti di intervento esecutivo in videochiamata 1-to-1. Serve per fare il lavoro &quot;sporco&quot; e ingegneristico insieme al cliente (es. setup hardware wallet, recupero fondi basico, creazione seed). Include un follow-up via email per verificare che tutto sia andato a buon fine.<br/><br/>
                 <strong className="text-white font-medium">Prezzi:</strong><br/>
                 <span className="text-primary font-semibold">210€</span> (Prezzo agevolato riservato esclusivamente a chi è già membro dei Bailout Protocols).<br/>
                 <span className="text-primary font-semibold">500€</span> (Pacchetto chiuso, una tantum, per utenti esterni non iscritti all&apos;Academy).
