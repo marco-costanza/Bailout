@@ -18,15 +18,20 @@ export async function POST(request: NextRequest) {
       body: JSON.stringify(body),
     });
     if (!res.ok) {
+      const text = await res.text();
       return NextResponse.json(
-        { error: `Errore di rete: ${res.status}` },
+        {
+          error: `Webhook n8n ha risposto ${res.status}. Verifica che l'URL sia corretto e il workflow attivo.`,
+          details: res.status === 404 ? "URL webhook non trovato (404). Controlla BAILOUT_WEBHOOK_URL." : undefined,
+        },
         { status: 502 }
       );
     }
     return NextResponse.json({ ok: true });
-  } catch {
+  } catch (err) {
+    const message = err instanceof Error ? err.message : "Errore di rete";
     return NextResponse.json(
-      { error: "Impossibile inviare la richiesta. Riprova più tardi." },
+      { error: `Impossibile contattare n8n: ${message}. Riprova più tardi.` },
       { status: 502 }
     );
   }

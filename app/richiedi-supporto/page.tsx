@@ -33,10 +33,10 @@ export default function RichiediSupportoPage() {
         body: JSON.stringify(payload),
       });
       const data = await res.json().catch(() => ({}));
+      const errMsg = (data as { error?: string; details?: string }).error;
+      const details = (data as { details?: string }).details;
       if (!res.ok) {
-        throw new Error(
-          (data as { error?: string }).error ?? `Errore di rete: ${res.status}`
-        );
+        throw new Error(details ? `${errMsg} ${details}` : errMsg ?? `Errore: ${res.status}`);
       }
       setIsSubmitted(true);
     } catch (err) {
@@ -51,7 +51,7 @@ export default function RichiediSupportoPage() {
   if (isSubmitted) {
     return (
       <div className="min-h-screen bg-background flex flex-col items-center justify-center p-6">
-        <motion.div 
+        <motion.div
           initial={{ opacity: 0, scale: 0.95 }}
           animate={{ opacity: 1, scale: 1 }}
           className="bg-background-card border border-white/10 rounded-2xl p-10 max-w-lg text-center"
@@ -61,10 +61,12 @@ export default function RichiediSupportoPage() {
           </div>
           <h2 className="text-2xl font-semibold text-white mb-4">Richiesta Ricevuta</h2>
           <p className="text-text-secondary mb-8 leading-relaxed">
-            Abbiamo ricevuto il tuo modulo di applicazione. Il nostro team tecnico valuterà la fattibilità del tuo caso e ti contatterà al più presto per organizzare una prima analisi conoscitiva.
+            Abbiamo ricevuto il tuo modulo di applicazione. Il nostro team tecnico valuterà la
+            fattibilità del tuo caso e ti contatterà al più presto per organizzare una prima analisi
+            conoscitiva.
           </p>
-          <button 
-            onClick={() => window.location.href = '/'}
+          <button
+            onClick={() => (window.location.href = "/")}
             className="inline-flex justify-center items-center gap-2 bg-white/5 hover:bg-white/10 text-white font-medium px-6 py-3 rounded-md transition-colors border border-white/10"
           >
             Torna alla Home
@@ -87,48 +89,105 @@ export default function RichiediSupportoPage() {
               Richiesta di Consulenza Tecnica
             </h1>
             <p className="text-text-secondary text-lg leading-relaxed">
-              Bailout opera a stretto contatto con un numero selezionato di clienti privati e corporate. Compila il modulo con massima precisione per permetterci di valutare le tue necessità ingegneristiche.
+              Bailout opera a stretto contatto con un numero selezionato di clienti privati e
+              corporate. Compila il modulo con massima precisione per permetterci di valutare le
+              tue necessità ingegneristiche.
             </p>
           </div>
 
           <div className="bg-primary/10 border border-primary/20 rounded-xl p-5 mb-10 flex gap-4">
             <ShieldAlert className="w-6 h-6 text-primary flex-shrink-0" />
             <p className="text-sm text-text-secondary">
-              <strong>Avviso Importante:</strong> Questo modulo serve esclusivamente per consulenze di tipo tecnico/ingegneristico (Nodi, Multisig, Mining). Se stai cercando consulenza per l&apos;allocazione patrimoniale o investimenti, rivolgiti alla nostra boutique <a href="https://whalestreet.it" className="text-primary hover:underline" target="_blank" rel="noopener noreferrer">WhaleStreet</a>.
+              <strong>Avviso Importante:</strong> Questo modulo serve esclusivamente per consulenze
+              di tipo tecnico/ingegneristico (Nodi, Multisig, Mining). Se stai cercando consulenza
+              per l&apos;allocazione patrimoniale o investimenti, rivolgiti alla nostra boutique{" "}
+              <a
+                href="https://whalestreet.it"
+                className="text-primary hover:underline"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                WhaleStreet
+              </a>
+              .
             </p>
           </div>
 
-          <form onSubmit={handleSubmit} className="space-y-8 bg-background-card/50 p-6 sm:p-10 rounded-2xl border border-white/5">
-            {/* Dati Personali */}
+          <form
+            onSubmit={handleSubmit}
+            className="space-y-8 bg-background-card/50 p-6 sm:p-10 rounded-2xl border border-white/5"
+          >
             <div className="space-y-6">
-              <h3 className="text-xl font-medium text-white border-b border-white/10 pb-2">Informazioni Base</h3>
+              <h3 className="text-xl font-medium text-white border-b border-white/10 pb-2">
+                Informazioni Base
+              </h3>
               <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
                 <div className="space-y-2">
-                  <label htmlFor="nome" className="block text-sm font-medium text-text-secondary">Nome *</label>
-                  <input required type="text" id="nome" className="w-full bg-background border border-white/10 rounded-md px-4 py-3 text-white focus:outline-none focus:border-primary transition-colors" placeholder="Il tuo nome" />
+                  <label htmlFor="nome" className="block text-sm font-medium text-text-secondary">
+                    Nome *
+                  </label>
+                  <input
+                    required
+                    type="text"
+                    id="nome"
+                    className="w-full bg-background border border-white/10 rounded-md px-4 py-3 text-white focus:outline-none focus:border-primary transition-colors"
+                    placeholder="Il tuo nome"
+                  />
                 </div>
                 <div className="space-y-2">
-                  <label htmlFor="cognome" className="block text-sm font-medium text-text-secondary">Cognome *</label>
-                  <input required type="text" id="cognome" className="w-full bg-background border border-white/10 rounded-md px-4 py-3 text-white focus:outline-none focus:border-primary transition-colors" placeholder="Il tuo cognome" />
+                  <label htmlFor="cognome" className="block text-sm font-medium text-text-secondary">
+                    Cognome *
+                  </label>
+                  <input
+                    required
+                    type="text"
+                    id="cognome"
+                    className="w-full bg-background border border-white/10 rounded-md px-4 py-3 text-white focus:outline-none focus:border-primary transition-colors"
+                    placeholder="Il tuo cognome"
+                  />
                 </div>
               </div>
               <div className="space-y-2">
-                <label htmlFor="email" className="block text-sm font-medium text-text-secondary">Email *</label>
-                <input required type="email" id="email" className="w-full bg-background border border-white/10 rounded-md px-4 py-3 text-white focus:outline-none focus:border-primary transition-colors" placeholder="La tua email principale" />
+                <label htmlFor="email" className="block text-sm font-medium text-text-secondary">
+                  Email *
+                </label>
+                <input
+                  required
+                  type="email"
+                  id="email"
+                  className="w-full bg-background border border-white/10 rounded-md px-4 py-3 text-white focus:outline-none focus:border-primary transition-colors"
+                  placeholder="La tua email principale"
+                />
               </div>
               <div className="space-y-2">
-                <label htmlFor="telegram" className="block text-sm font-medium text-text-secondary">Username Telegram (Opzionale, consigliato)</label>
-                <input type="text" id="telegram" className="w-full bg-background border border-white/10 rounded-md px-4 py-3 text-white focus:outline-none focus:border-primary transition-colors" placeholder="@tuousername" />
+                <label htmlFor="telegram" className="block text-sm font-medium text-text-secondary">
+                  Username Telegram (Opzionale, consigliato)
+                </label>
+                <input
+                  type="text"
+                  id="telegram"
+                  className="w-full bg-background border border-white/10 rounded-md px-4 py-3 text-white focus:outline-none focus:border-primary transition-colors"
+                  placeholder="@tuousername"
+                />
               </div>
             </div>
 
-            {/* Dettagli Richiesta */}
             <div className="space-y-6 pt-4">
-              <h3 className="text-xl font-medium text-white border-b border-white/10 pb-2">Ambito Tecnico</h3>
+              <h3 className="text-xl font-medium text-white border-b border-white/10 pb-2">
+                Ambito Tecnico
+              </h3>
               <div className="space-y-2">
-                <label htmlFor="ambito" className="block text-sm font-medium text-text-secondary">Scegli la tipologia *</label>
-                <select required id="ambito" className="w-full bg-background border border-white/10 rounded-md px-4 py-3 text-white focus:outline-none focus:border-primary transition-colors appearance-none">
-                  <option value="" disabled selected>Seleziona un&apos;area di interesse</option>
+                <label htmlFor="ambito" className="block text-sm font-medium text-text-secondary">
+                  Scegli la tipologia *
+                </label>
+                <select
+                  required
+                  id="ambito"
+                  className="w-full bg-background border border-white/10 rounded-md px-4 py-3 text-white focus:outline-none focus:border-primary transition-colors appearance-none"
+                >
+                  <option value="" disabled selected>
+                    Seleziona un&apos;area di interesse
+                  </option>
                   <option value="multisig">Self-Custody e Soluzioni Multisig</option>
                   <option value="nodo">Setup e Routing su Nodo Lightning / On-Chain</option>
                   <option value="mining">Analisi / Installazione Mining Farm</option>
@@ -137,8 +196,16 @@ export default function RichiediSupportoPage() {
                 </select>
               </div>
               <div className="space-y-2">
-                <label htmlFor="descrizione" className="block text-sm font-medium text-text-secondary">Descrivi la tua necessità *</label>
-                <textarea required id="descrizione" rows={5} className="w-full bg-background border border-white/10 rounded-md px-4 py-3 text-white focus:outline-none focus:border-primary transition-colors resize-y" placeholder="Cosa stai cercando di implementare? Quali problematiche stai affrontando nel tuo setup attuale?"></textarea>
+                <label htmlFor="descrizione" className="block text-sm font-medium text-text-secondary">
+                  Descrivi la tua necessità *
+                </label>
+                <textarea
+                  required
+                  id="descrizione"
+                  rows={5}
+                  className="w-full bg-background border border-white/10 rounded-md px-4 py-3 text-white focus:outline-none focus:border-primary transition-colors resize-y"
+                  placeholder="Cosa stai cercando di implementare? Quali problematiche stai affrontando nel tuo setup attuale?"
+                />
               </div>
             </div>
 
@@ -165,7 +232,8 @@ export default function RichiediSupportoPage() {
               )}
             </button>
             <p className="text-xs text-text-secondary text-center mt-4">
-              Cliccando su invia acconsenti al trattamento dei dati personali ai fini operativi della consulenza.
+              Cliccando su invia acconsenti al trattamento dei dati personali ai fini operativi della
+              consulenza.
             </p>
           </form>
         </motion.div>
