@@ -4,7 +4,7 @@ import { useState } from "react";
 import { motion } from "framer-motion";
 import { ShieldAlert, ArrowRight, CheckCircle2, Loader2, AlertCircle } from "lucide-react";
 
-const WEBHOOK_URL = process.env.NEXT_PUBLIC_BAILOUT_WEBHOOK_URL ?? "";
+const API_URL = "/api/richiedi-supporto";
 
 export default function RichiediSupportoPage() {
   const [isSubmitted, setIsSubmitted] = useState(false);
@@ -14,10 +14,6 @@ export default function RichiediSupportoPage() {
   const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
     setError(null);
-    if (!WEBHOOK_URL) {
-      setError("Configurazione mancante. Contatta l'amministratore.");
-      return;
-    }
 
     const form = e.currentTarget;
     const payload = {
@@ -31,13 +27,16 @@ export default function RichiediSupportoPage() {
 
     setIsLoading(true);
     try {
-      const res = await fetch(WEBHOOK_URL, {
+      const res = await fetch(API_URL, {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify(payload),
       });
+      const data = await res.json().catch(() => ({}));
       if (!res.ok) {
-        throw new Error(`Errore di rete: ${res.status}`);
+        throw new Error(
+          (data as { error?: string }).error ?? `Errore di rete: ${res.status}`
+        );
       }
       setIsSubmitted(true);
     } catch (err) {
