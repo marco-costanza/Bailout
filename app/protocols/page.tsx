@@ -7,7 +7,7 @@ import { ArrowRight, BookOpen, ShieldCheck, Zap } from "lucide-react";
 
 export default function ProtocolsPage() {
   return (
-    <div className="min-h-screen bg-background-dark selection:bg-primary/30 selection:text-white">
+    <div className="min-h-screen bg-background selection:bg-primary/30 selection:text-white">
       {/* Hero Section */}
       <section className="relative pt-32 pb-20 sm:pt-40 sm:pb-28 overflow-hidden">
         <div className="absolute inset-0 z-0">

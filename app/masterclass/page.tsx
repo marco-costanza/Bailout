@@ -5,7 +5,7 @@ import { ArrowLeft } from "lucide-react";
 
 export default function MasterclassPage() {
   return (
-    <div className="min-h-screen bg-background-dark relative overflow-hidden">
+    <div className="min-h-screen bg-background relative overflow-hidden">
       <div
         className="absolute top-0 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[400px] h-[400px] rounded-full bg-bitcoin opacity-20 blur-[100px] pointer-events-none"
         aria-hidden="true"

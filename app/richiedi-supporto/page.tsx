@@ -51,7 +51,7 @@ export default function RichiediSupportoPage() {
 
   if (isSubmitted) {
     return (
-      <div className="min-h-screen bg-background-dark flex flex-col items-center justify-center p-6">
+      <div className="min-h-screen bg-background flex flex-col items-center justify-center p-6">
         <motion.div 
           initial={{ opacity: 0, scale: 0.95 }}
           animate={{ opacity: 1, scale: 1 }}
@@ -76,7 +76,7 @@ export default function RichiediSupportoPage() {
   }
 
   return (
-    <div className="min-h-screen bg-background-dark py-24 sm:py-32">
+    <div className="min-h-screen bg-background py-24 sm:py-32">
       <div className="container mx-auto px-4 sm:px-6 lg:px-8 max-w-3xl">
         <motion.div
           initial={{ opacity: 0, y: 20 }}
@@ -106,20 +106,20 @@ export default function RichiediSupportoPage() {
               <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
                 <div className="space-y-2">
                   <label htmlFor="nome" className="block text-sm font-medium text-text-secondary">Nome *</label>
-                  <input required type="text" id="nome" className="w-full bg-background-dark border border-white/10 rounded-md px-4 py-3 text-white focus:outline-none focus:border-primary transition-colors" placeholder="Il tuo nome" />
+                  <input required type="text" id="nome" className="w-full bg-background border border-white/10 rounded-md px-4 py-3 text-white focus:outline-none focus:border-primary transition-colors" placeholder="Il tuo nome" />
                 </div>
                 <div className="space-y-2">
                   <label htmlFor="cognome" className="block text-sm font-medium text-text-secondary">Cognome *</label>
-                  <input required type="text" id="cognome" className="w-full bg-background-dark border border-white/10 rounded-md px-4 py-3 text-white focus:outline-none focus:border-primary transition-colors" placeholder="Il tuo cognome" />
+                  <input required type="text" id="cognome" className="w-full bg-background border border-white/10 rounded-md px-4 py-3 text-white focus:outline-none focus:border-primary transition-colors" placeholder="Il tuo cognome" />
                 </div>
               </div>
               <div className="space-y-2">
                 <label htmlFor="email" className="block text-sm font-medium text-text-secondary">Email *</label>
-                <input required type="email" id="email" className="w-full bg-background-dark border border-white/10 rounded-md px-4 py-3 text-white focus:outline-none focus:border-primary transition-colors" placeholder="La tua email principale" />
+                <input required type="email" id="email" className="w-full bg-background border border-white/10 rounded-md px-4 py-3 text-white focus:outline-none focus:border-primary transition-colors" placeholder="La tua email principale" />
               </div>
               <div className="space-y-2">
                 <label htmlFor="telegram" className="block text-sm font-medium text-text-secondary">Username Telegram (Opzionale, consigliato)</label>
-                <input type="text" id="telegram" className="w-full bg-background-dark border border-white/10 rounded-md px-4 py-3 text-white focus:outline-none focus:border-primary transition-colors" placeholder="@tuousername" />
+                <input type="text" id="telegram" className="w-full bg-background border border-white/10 rounded-md px-4 py-3 text-white focus:outline-none focus:border-primary transition-colors" placeholder="@tuousername" />
               </div>
             </div>
 
@@ -128,7 +128,7 @@ export default function RichiediSupportoPage() {
               <h3 className="text-xl font-medium text-white border-b border-white/10 pb-2">Ambito Tecnico</h3>
               <div className="space-y-2">
                 <label htmlFor="ambito" className="block text-sm font-medium text-text-secondary">Scegli la tipologia *</label>
-                <select required id="ambito" className="w-full bg-background-dark border border-white/10 rounded-md px-4 py-3 text-white focus:outline-none focus:border-primary transition-colors appearance-none">
+                <select required id="ambito" className="w-full bg-background border border-white/10 rounded-md px-4 py-3 text-white focus:outline-none focus:border-primary transition-colors appearance-none">
                   <option value="" disabled selected>Seleziona un&apos;area di interesse</option>
                   <option value="multisig">Self-Custody e Soluzioni Multisig</option>
                   <option value="nodo">Setup e Routing su Nodo Lightning / On-Chain</option>
@@ -139,7 +139,7 @@ export default function RichiediSupportoPage() {
               </div>
               <div className="space-y-2">
                 <label htmlFor="descrizione" className="block text-sm font-medium text-text-secondary">Descrivi la tua necessità *</label>
-                <textarea required id="descrizione" rows={5} className="w-full bg-background-dark border border-white/10 rounded-md px-4 py-3 text-white focus:outline-none focus:border-primary transition-colors resize-y" placeholder="Cosa stai cercando di implementare? Quali problematiche stai affrontando nel tuo setup attuale?"></textarea>
+                <textarea required id="descrizione" rows={5} className="w-full bg-background border border-white/10 rounded-md px-4 py-3 text-white focus:outline-none focus:border-primary transition-colors resize-y" placeholder="Cosa stai cercando di implementare? Quali problematiche stai affrontando nel tuo setup attuale?"></textarea>
               </div>
             </div>
 
