@@ -2,16 +2,51 @@
 
 import { useState } from "react";
 import { motion } from "framer-motion";
-import { ShieldAlert, ArrowRight, CheckCircle2 } from "lucide-react";
+import { ShieldAlert, ArrowRight, CheckCircle2, Loader2, AlertCircle } from "lucide-react";
+
+const WEBHOOK_URL = process.env.NEXT_PUBLIC_BAILOUT_WEBHOOK_URL ?? "";
 
 export default function RichiediSupportoPage() {
   const [isSubmitted, setIsSubmitted] = useState(false);
+  const [isLoading, setIsLoading] = useState(false);
+  const [error, setError] = useState<string | null>(null);
 
-  // Form Submission Logic (Placeholder per n8n)
-  const handleSubmit = (e: React.FormEvent<HTMLFormElement>) => {
+  const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
-    // Qui andrà la chiamata verso il webhook di n8n stabilito nel modulo 4 avanzato
-    setIsSubmitted(true);
+    setError(null);
+    if (!WEBHOOK_URL) {
+      setError("Configurazione mancante. Contatta l'amministratore.");
+      return;
+    }
+
+    const form = e.currentTarget;
+    const payload = {
+      nome: (form.querySelector("#nome") as HTMLInputElement).value.trim(),
+      cognome: (form.querySelector("#cognome") as HTMLInputElement).value.trim(),
+      email: (form.querySelector("#email") as HTMLInputElement).value.trim(),
+      telegram: (form.querySelector("#telegram") as HTMLInputElement).value.trim() || undefined,
+      ambito: (form.querySelector("#ambito") as HTMLSelectElement).value,
+      descrizione: (form.querySelector("#descrizione") as HTMLTextAreaElement).value.trim(),
+    };
+
+    setIsLoading(true);
+    try {
+      const res = await fetch(WEBHOOK_URL, {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify(payload),
+      });
+      if (!res.ok) {
+        throw new Error(`Errore di rete: ${res.status}`);
+      }
+      setIsSubmitted(true);
+    } catch (err) {
+      setError(
+        err instanceof Error ? err.message : "Impossibile inviare la richiesta. Riprova più tardi."
+      );
+    } finally {
+      setIsLoading(false);
+    }
   };
 
   if (isSubmitted) {
@@ -108,13 +143,29 @@ export default function RichiediSupportoPage() {
               </div>
             </div>
 
-            <button 
-              type="submit" 
-              className="w-full inline-flex justify-center items-center gap-2 bg-primary hover:bg-primary-hover text-white text-base font-semibold px-8 py-4 rounded-md transition-colors mt-8"
+            {error && (
+              <div className="flex gap-3 p-4 rounded-lg bg-red-500/10 border border-red-500/30 text-red-200 text-sm">
+                <AlertCircle className="w-5 h-5 flex-shrink-0 mt-0.5" />
+                <p>{error}</p>
+              </div>
+            )}
+            <button
+              type="submit"
+              disabled={isLoading}
+              className="w-full inline-flex justify-center items-center gap-2 bg-primary hover:bg-primary-hover text-white text-base font-semibold px-8 py-4 rounded-md transition-colors mt-8 disabled:opacity-70 disabled:cursor-not-allowed"
             >
-              Invia Applicazione a Bailout <ArrowRight className="w-5 h-5" />
+              {isLoading ? (
+                <>
+                  <Loader2 className="w-5 h-5 animate-spin" aria-hidden />
+                  Invio in corso...
+                </>
+              ) : (
+                <>
+                  Invia Applicazione a Bailout <ArrowRight className="w-5 h-5" />
+                </>
+              )}
             </button>
-            <p className="text-xs text-text-muted text-center mt-4">
+            <p className="text-xs text-text-secondary text-center mt-4">
               Cliccando su invia acconsenti al trattamento dei dati personali ai fini operativi della consulenza.
             </p>
           </form>
