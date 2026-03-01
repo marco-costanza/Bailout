@@ -61,10 +61,10 @@ export default function HomePage() {
     <div className="min-h-screen">
       {/* Hero Section */}
       <header className="relative overflow-hidden">
-        <div className="absolute inset-0 bg-gradient-to-b from-bitcoin/5 via-transparent to-transparent pointer-events-none"></div>
+        <div className="absolute inset-0 bg-gradient-to-b from-black/80 via-background to-transparent pointer-events-none z-0"></div>
         <div className="absolute top-20 left-1/4 w-64 h-64 bg-bitcoin/10 rounded-full blur-3xl pointer-events-none"></div>
         <div className="absolute bottom-0 right-1/4 w-48 h-48 bg-bitcoin/5 rounded-full blur-3xl pointer-events-none"></div>
-        <div className="relative max-w-5xl mx-auto px-6 py-24 sm:py-32 text-center">
+        <div className="relative z-10 max-w-5xl mx-auto px-6 py-24 sm:py-32 text-center">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
@@ -78,11 +78,11 @@ export default function HomePage() {
               className="mx-auto h-20 sm:h-24 md:h-28 w-auto object-contain mb-8"
               priority
             />
-            <h1 className="text-4xl sm:text-5xl md:text-6xl font-semibold text-white tracking-tight leading-tight">
-              La tua ancora di salvezza dal sistema tradizionale.
+            <h1 className="text-4xl sm:text-5xl md:text-6xl font-semibold text-white tracking-tight leading-tight drop-shadow-lg">
+              La tua ancora di salvezza dal sistema tradizionale
             </h1>
-            <p className="mt-6 text-lg sm:text-xl text-text-secondary max-w-2xl mx-auto leading-relaxed">
-              La tua assicurazione dal possibile fallimento del sistema fiat grazie alla vera sovranità tecnologica che Bitcoin concede.
+            <p className="mt-6 text-lg sm:text-xl text-text-secondary max-w-2xl mx-auto leading-relaxed drop-shadow-md">
+              Il tuo patrimonio, le tue regole. Scopri la libertà, la sicurezza e la privacy che solo la tecnologia di Bitcoin può garantirti.
             </p>
             <div className="mt-10">
               <Button
@@ -147,7 +147,7 @@ export default function HomePage() {
                   Bailout Protocols (Membership Annuale)
                 </h3>
               <p className="text-text-secondary text-sm leading-relaxed min-h-[80px]">
-                L&apos;Accademia completa in continua evoluzione: lezioni video registrate, rilascio di nuovi moduli settimanali e sessioni tenute dai professionisti di riferimento del nostro Network. Include accesso rapido all&apos;AI proprietaria trainata sui nostri materiali per rispondere a tutti i tuoi dubbi.
+                L&apos;Accademia in continua evoluzione: nuovi moduli video settimanali tenuti dai professionisti del Network per padroneggiare regole e segreti di Bitcoin. Include l&apos;AI proprietaria addestrata sui nostri materiali.
               </p>
               <Link
                 href="/protocols"
@@ -183,7 +183,7 @@ export default function HomePage() {
                   Bailout Consensus (Eventi Live e On-Demand)
                 </h3>
               <p className="text-text-secondary text-sm leading-relaxed min-h-[80px]">
-                Webinar in diretta e sessioni formative verticali di circa 3 ore con focus estremamente pratico (es. setup di un nodo, privacy avanzata). Includono una sessione finale di Q&A per dialogare direttamente con i docenti. Completamente gratuiti per gli iscritti all&apos;Academy (Live e differita).
+                Webinar in diretta e sessioni pratiche (es. setup nodi, privacy) con docenti esperti ed una sessione live Q&amp;A per rispondere alle tue domande. L&apos;iscrizione è attualmente gratuita per i membri dell&apos;Academy.
               </p>
               <Link
                 href="/consensus"
@@ -219,7 +219,7 @@ export default function HomePage() {
                   Bailout P2P (Intervento 1-to-1)
                 </h3>
                 <p className="text-text-secondary text-sm leading-relaxed min-h-[80px]">
-                  L&apos;intervento ingegneristico 1-to-1 per azzerare l&apos;errore umano basato sulle tue necessità. Sessione da 90 minuti per svolgere il lavoro &quot;sporco&quot; insieme al cliente (es. setup hardware wallet, recupero fondi, etc) compreso di follow-up email finale per validare le operazioni.
+                  Intervento ingegneristico 1-to-1 da 90 minuti per Private e Corporate. Svolgiamo assieme il lavoro pratico (setup multisig, recupero fondi basico, nodi) per azzerare l&apos;errore umano, validato da un check email finale.
                 </p>
                 <Link
                   href="/consulenza"

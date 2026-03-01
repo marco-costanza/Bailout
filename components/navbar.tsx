@@ -2,7 +2,7 @@
 
 import Link from "next/link";
 import Image from "next/image";
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import { Menu, X } from "lucide-react";
 import { cn } from "@/lib/utils";
 import { RedirectPopup } from "@/components/RedirectPopup";
@@ -10,6 +10,12 @@ import { RedirectPopup } from "@/components/RedirectPopup";
 export default function Navbar() {
   const [isOpen, setIsOpen] = useState(false);
   const [isRedirectPopupOpen, setIsRedirectPopupOpen] = useState(false);
+
+  useEffect(() => {
+    const handleOpenPopup = () => setIsRedirectPopupOpen(true);
+    window.addEventListener('open-redirect-popup', handleOpenPopup);
+    return () => window.removeEventListener('open-redirect-popup', handleOpenPopup);
+  }, []);
 
   return (
     <>

@@ -43,9 +43,12 @@ export default function Footer() {
                 </Link>
               </li>
               <li>
-                <a href="https://marcocostanza.it/login" target="_blank" rel="noopener noreferrer" className="text-text-secondary hover:text-primary text-sm transition-colors">
+                <button 
+                  onClick={() => window.dispatchEvent(new CustomEvent('open-redirect-popup'))} 
+                  className="text-text-secondary hover:text-primary text-sm transition-colors"
+                >
                   Area Riservata Studenti (Accedi)
-                </a>
+                </button>
               </li>
             </ul>
           </div>
