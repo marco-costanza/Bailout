@@ -3,9 +3,13 @@
 import Link from "next/link";
 import Image from "next/image";
 import { motion } from "framer-motion";
+import { useState } from "react";
 import { ArrowRight, BookOpen, ShieldCheck, Zap } from "lucide-react";
+import { RedirectPopup } from "@/components/RedirectPopup";
 
 export default function ProtocolsPage() {
+  const [isRedirectPopupOpen, setIsRedirectPopupOpen] = useState(false);
+
   return (
     <div className="min-h-screen bg-background selection:bg-primary/30 selection:text-white">
       {/* Hero Section */}
@@ -164,14 +168,12 @@ export default function ProtocolsPage() {
               </div>
               
               <div className="w-full md:w-auto shrink-0 flex flex-col gap-4">
-                <Link 
-                  href="https://marcocostanza.it/store" 
-                  target="_blank" 
-                  rel="noopener noreferrer"
+                <button 
+                  onClick={() => setIsRedirectPopupOpen(true)}
                   className="w-full inline-flex justify-center items-center gap-2 bg-primary hover:bg-primary-hover text-white text-base font-semibold px-8 py-4 rounded-md transition-colors"
                 >
                   Acquista l&apos;Accesso
-                </Link>
+                </button>
               </div>
             </div>
           </div>
@@ -217,6 +219,12 @@ export default function ProtocolsPage() {
           </div>
         </div>
       </section>
+
+      <RedirectPopup 
+        isOpen={isRedirectPopupOpen} 
+        onClose={() => setIsRedirectPopupOpen(false)} 
+        targetUrl="https://marcocostanza.it/prodotto/bitcoin-academy-2026/"
+      />
     </div>
   );
 }
