@@ -61,8 +61,12 @@ export default function HomePage() {
     <div className="min-h-screen">
       {/* Hero Section */}
       <header className="relative overflow-hidden">
-        <div className="absolute inset-0 bg-gradient-to-b from-black/80 via-background to-transparent pointer-events-none z-0"></div>
-        <div className="absolute top-20 left-1/4 w-64 h-64 bg-bitcoin/10 rounded-full blur-3xl pointer-events-none"></div>
+        {/* Sfondo scuro per contrasto globale del Logo nero in cima */}
+        <div className="absolute inset-0 bg-background/95 z-0 pointer-events-none"></div>
+        {/* Glow focus sotto al logo per staccarlo */}
+        <div className="absolute top-10 left-1/2 -translate-x-1/2 w-[300px] h-[300px] bg-primary/20 rounded-full blur-[100px] pointer-events-none z-0"></div>
+        
+        <div className="absolute top-20 left-1/4 w-64 h-64 bg-bitcoin/5 rounded-full blur-3xl pointer-events-none"></div>
         <div className="absolute bottom-0 right-1/4 w-48 h-48 bg-bitcoin/5 rounded-full blur-3xl pointer-events-none"></div>
         <div className="relative z-10 max-w-5xl mx-auto px-6 py-24 sm:py-32 text-center">
           <motion.div
@@ -75,7 +79,7 @@ export default function HomePage() {
               alt="Bailout — La Tua Ancora di Salvezza nel Mondo Bitcoin"
               width={160}
               height={112}
-              className="mx-auto h-20 sm:h-24 md:h-28 w-auto object-contain mb-8"
+              className="mx-auto h-20 sm:h-24 md:h-28 w-auto object-contain mb-8 filter drop-shadow-[0_0_15px_rgba(255,97,2,0.8)]"
               priority
             />
             <h1 className="text-4xl sm:text-5xl md:text-6xl font-semibold text-white tracking-tight leading-tight drop-shadow-lg">

@@ -29,7 +29,7 @@ export default function Navbar() {
                 alt="Bailout Logo"
                 width={120}
                 height={40}
-                className="h-8 w-auto"
+                className="h-8 w-auto filter drop-shadow-[0_0_8px_rgba(255,97,2,0.6)]"
                 priority
               />
             </Link>
