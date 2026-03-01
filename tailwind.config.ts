@@ -10,24 +10,29 @@ const config: Config = {
   theme: {
     extend: {
       colors: {
-        // Bitcoin Theme Colors
-        bitcoin: {
-          DEFAULT: "#FF6102",
-          hover: "#e85802",
-          light: "rgba(255, 97, 2, 0.15)",
-        },
+        // Bailout Brand Colors (Narrativa Bitcoin)
+        nero21: "#212121",
+        arancione6102: "#FF6102",
+        arancioneGenesis: "#F7931A",
+        grigioCypherpunk: "#2C2C2C",
+        biancoWhitepaper: "#FAFAFA",
+        
+        // Semantic aliases
         background: {
-          dark: "#212121",
-          card: "#2a2a2a",
+          DEFAULT: "#212121", // nero21
+          card: "#2C2C2C",    // grigioCypherpunk
+        },
+        primary: {
+          DEFAULT: "#FF6102", // arancione6102
+          hover: "#e85802",
         },
         text: {
-          primary: "#FFFFFF",
+          primary: "#FAFAFA", // biancoWhitepaper
           secondary: "#9CA3AF",
-          muted: "#6B7280",
         },
       },
       fontFamily: {
-        heading: ["var(--font-lexend)", "sans-serif"],
+        heading: ["var(--font-ubuntu)", "sans-serif"],
         sans: ["var(--font-inter)", "system-ui", "sans-serif"],
       },
       boxShadow: {

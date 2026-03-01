@@ -61,45 +61,49 @@ export default function HomePage() {
     <div className="min-h-screen">
       {/* Hero Section */}
       <header className="relative overflow-hidden">
-        <div className="absolute inset-0 bg-gradient-to-b from-bitcoin/5 via-transparent to-transparent pointer-events-none"></div>
-        <div className="absolute top-20 left-1/4 w-64 h-64 bg-bitcoin/10 rounded-full blur-3xl pointer-events-none"></div>
+        {/* Sfondo scuro per contrasto globale del Logo nero in cima */}
+        <div className="absolute inset-0 bg-background/95 z-0 pointer-events-none"></div>
+        {/* Glow focus sotto al logo per staccarlo */}
+        <div className="absolute top-10 left-1/2 -translate-x-1/2 w-[300px] h-[300px] bg-primary/20 rounded-full blur-[100px] pointer-events-none z-0"></div>
+        
+        <div className="absolute top-20 left-1/4 w-64 h-64 bg-bitcoin/5 rounded-full blur-3xl pointer-events-none"></div>
         <div className="absolute bottom-0 right-1/4 w-48 h-48 bg-bitcoin/5 rounded-full blur-3xl pointer-events-none"></div>
-        <div className="relative max-w-5xl mx-auto px-6 py-24 sm:py-32 text-center">
+        <div className="relative z-10 max-w-5xl mx-auto px-6 py-24 sm:py-32 text-center">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6 }}
           >
             <Image
-              src="/images/Bailout_logo.png"
+              src="/images/Bailout logo.png"
               alt="Bailout — La Tua Ancora di Salvezza nel Mondo Bitcoin"
               width={160}
               height={112}
-              className="mx-auto h-20 sm:h-24 md:h-28 w-auto object-contain mb-8"
+              className="mx-auto h-20 sm:h-24 md:h-28 w-auto object-contain mb-8 filter drop-shadow-[0_0_15px_rgba(255,97,2,0.8)]"
               priority
             />
-            <h1 className="text-4xl sm:text-5xl md:text-6xl font-semibold text-white tracking-tight leading-tight">
-              Bailout: La Tua Ancora di Salvezza nel Mondo Bitcoin
+            <h1 className="text-4xl sm:text-5xl md:text-6xl font-semibold text-white tracking-tight leading-tight drop-shadow-lg">
+              La tua ancora di salvezza dal sistema tradizionale
             </h1>
-            <p className="mt-6 text-lg sm:text-xl text-text-secondary max-w-2xl mx-auto leading-relaxed">
-              Formazione seria, masterclass pratiche e consulenza tecnica per chi vuole diventare sovrano del proprio stack Bitcoin. Niente fuffa, solo proof of work.
+            <p className="mt-6 text-lg sm:text-xl text-text-secondary max-w-2xl mx-auto leading-relaxed drop-shadow-md">
+              Il tuo patrimonio, le tue regole. Scopri la libertà, la sicurezza e la privacy che solo la tecnologia di Bitcoin può garantirti.
             </p>
             <div className="mt-10">
               <Button
                 asChild
                 size="lg"
-                className="inline-flex items-center gap-2"
+                className="inline-flex items-center gap-2 bg-primary hover:bg-primary-hover text-white text-base"
               >
-                <Link href="#proof-of-work">
+                <Link href="/richiedi-supporto">
                   <ShieldCheck className="w-5 h-5" />
-                  Diventa un sovrano digitale
+                  Ho bisogno del vostro aiuto
                 </Link>
               </Button>
             </div>
             <p className="mt-6">
               <Link
                 href="#newsletter"
-                className="text-text-secondary hover:text-bitcoin transition-colors underline underline-offset-2"
+                className="text-text-secondary hover:text-primary transition-colors underline underline-offset-2"
               >
                 Iscriviti alla newsletter
               </Link>
@@ -108,21 +112,21 @@ export default function HomePage() {
         </div>
       </header>
 
-      {/* Proof of Work Section */}
+      {/* Target Section */}
       <section
-        id="proof-of-work"
+        id="servizi"
         className="relative py-20 sm:py-28 border-t border-white/10"
       >
         <div className="absolute top-0 left-1/2 transform -translate-x-1/2 w-4/5 h-px bg-gradient-to-r from-transparent via-bitcoin/20 to-transparent opacity-60"></div>
         <div className="max-w-6xl mx-auto px-6">
           <h2 className="text-2xl sm:text-3xl font-semibold text-white text-center mb-4">
-            Proof of Work
+            I nostri servizi
           </h2>
-          <p className="text-text-muted text-center max-w-xl mx-auto mb-12">
-            Offriamo: formazione, approfondimento e supporto tecnico
+          <p className="text-text-secondary text-center max-w-xl mx-auto mb-12">
+            Ti forniamo tutto il necessario per diventare l&apos;unico sovrano dei tuoi asset. In completa privacy e sicurezza.
           </p>
           <div className="grid md:grid-cols-3 gap-6">
-            {/* Card 1: Bitcoin Academy */}
+            {/* Target 1: Retail */}
             <motion.article
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
@@ -144,21 +148,21 @@ export default function HomePage() {
                   <GraduationCap className="w-6 h-6 text-bitcoin" />
                 </div>
                 <h3 className="text-xl font-semibold text-white mb-2">
-                  Bitcoin Academy
+                  Bailout Protocols (Membership Annuale)
                 </h3>
-              <p className="text-text-secondary text-sm leading-relaxed">
-                Percorso strutturato per capire Bitcoin dalla base: economia, tecnologia e sovranità. Per chi parte da zero o vuole sistematizzare.
+              <p className="text-text-secondary text-sm leading-relaxed min-h-[80px]">
+                L&apos;Accademia in continua evoluzione: nuovi moduli video settimanali tenuti dai professionisti del Network per padroneggiare regole e segreti di Bitcoin. Include l&apos;AI proprietaria addestrata sui nostri materiali.
               </p>
               <Link
-                href="/bitcoin-academy"
-                className="inline-flex items-center gap-1 mt-4 text-bitcoin text-sm font-medium hover:underline"
+                href="/protocols"
+                className="inline-flex items-center gap-1 mt-4 text-primary text-sm font-medium hover:underline"
               >
                 Scopri di più <ArrowRight className="w-4 h-4" />
               </Link>
               </div>
             </motion.article>
 
-            {/* Card 2: Masterclass */}
+            {/* Target 2: Esperti / Privati Avanzati / HNWI */}
             <motion.article
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
@@ -180,21 +184,21 @@ export default function HomePage() {
                   <Layers className="w-6 h-6 text-bitcoin" />
                 </div>
                 <h3 className="text-xl font-semibold text-white mb-2">
-                  Masterclass
+                  Bailout Consensus (Eventi Live e On-Demand)
                 </h3>
-              <p className="text-text-secondary text-sm leading-relaxed">
-                Sessioni intensive su temi avanzati: Lightning, self-custody, privacy. Per chi vuole andare oltre le basi con hands-on.
+              <p className="text-text-secondary text-sm leading-relaxed min-h-[80px]">
+                Webinar in diretta e sessioni pratiche (es. setup nodi, privacy) con docenti esperti ed una sessione live Q&amp;A per rispondere alle tue domande. L&apos;iscrizione è attualmente gratuita per i membri dell&apos;Academy.
               </p>
               <Link
-                href="/masterclass"
-                className="inline-flex items-center gap-1 mt-4 text-bitcoin text-sm font-medium hover:underline"
+                href="/consensus"
+                className="inline-flex items-center gap-1 mt-4 text-primary text-sm font-medium hover:underline"
               >
                 Scopri di più <ArrowRight className="w-4 h-4" />
               </Link>
               </div>
             </motion.article>
 
-            {/* Card 3: Consulenza Tecnica */}
+            {/* Target 3: Azienda / Corporate / Istituzionale */}
             <motion.article
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
@@ -216,14 +220,14 @@ export default function HomePage() {
                   <Wrench className="w-6 h-6 text-bitcoin" />
                 </div>
                 <h3 className="text-xl font-semibold text-white mb-2">
-                  Consulenza Tecnica
+                  Bailout P2P (Intervento 1-to-1)
                 </h3>
-                <p className="text-text-secondary text-sm leading-relaxed">
-                  Supporto one-to-one per nodi, wallet, setup e best practice. Consulenza su misura per aziende e privati.
+                <p className="text-text-secondary text-sm leading-relaxed min-h-[80px]">
+                  Intervento ingegneristico 1-to-1 da 90 minuti per Private e Corporate. Svolgiamo assieme il lavoro pratico (setup multisig, recupero fondi basico, nodi) per azzerare l&apos;errore umano, validato da un check email finale.
                 </p>
                 <Link
                   href="/consulenza"
-                  className="inline-flex items-center gap-1 mt-4 text-bitcoin text-sm font-medium hover:underline"
+                  className="inline-flex items-center gap-1 mt-4 text-primary text-sm font-medium hover:underline"
                 >
                   Scopri di più <ArrowRight className="w-4 h-4" />
                 </Link>
@@ -237,10 +241,10 @@ export default function HomePage() {
       <section id="nodi" className="relative py-20 sm:py-28">
         <div className="max-w-6xl mx-auto px-6">
           <h2 className="text-2xl sm:text-3xl font-semibold text-white text-center mb-4">
-            Nodi
+            Network e Docenti
           </h2>
           <p className="text-text-muted text-center max-w-xl mx-auto mb-12">
-            Il team dietro Bailout: chi fa proof of work ogni giorno.
+            Il team Bailout. I migliori professionisti italiani del settore con una reputazione internazionale.
           </p>
           <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-6">
             {/* Pierluigi Turla */}
@@ -264,7 +268,7 @@ export default function HomePage() {
                 <button
                   type="button"
                   onClick={() => setOpenBioId("gigi")}
-                  className="absolute -top-0.5 -right-0.5 z-10 p-1.5 rounded-lg bg-black/70 hover:bg-bitcoin text-text-secondary hover:text-bitcoin transition-colors shadow-lg"
+                  className="absolute -top-0.5 -right-0.5 z-10 p-1.5 rounded-lg bg-black/70 hover:bg-primary text-text-secondary hover:text-white transition-colors shadow-lg"
                   aria-label="La sua storia"
                 >
                   <BookOpen className="w-4 h-4" />
@@ -277,11 +281,11 @@ export default function HomePage() {
                 Fiscalità
               </p>
               <div className="flex flex-wrap gap-2 mt-4 justify-center">
-                <a href="https://educash.it/" target="_blank" rel="noopener noreferrer" className="p-2 rounded-lg bg-white/5 hover:bg-bitcoin-light text-text-secondary hover:text-bitcoin transition-colors text-xs">Educash</a>
-                <a href="https://www.smartycompany.it/" target="_blank" rel="noopener noreferrer" className="p-2 rounded-lg bg-white/5 hover:bg-bitcoin-light text-text-secondary hover:text-bitcoin transition-colors text-xs">SmartyCompany</a>
-                <a href="https://www.taxcare.it/" target="_blank" rel="noopener noreferrer" className="p-2 rounded-lg bg-white/5 hover:bg-bitcoin-light text-text-secondary hover:text-bitcoin transition-colors text-xs">TaxCare</a>
-                <a href="https://www.taxcare.it/criptocare/" target="_blank" rel="noopener noreferrer" className="p-2 rounded-lg bg-white/5 hover:bg-bitcoin-light text-text-secondary hover:text-bitcoin transition-colors text-xs">CriptoCare</a>
-                <a href="https://bitcareforum.it/" target="_blank" rel="noopener noreferrer" className="p-2 rounded-lg bg-white/5 hover:bg-bitcoin-light text-text-secondary hover:text-bitcoin transition-colors text-xs">BitCare Forum</a>
+                <a href="https://educash.it/" target="_blank" rel="noopener noreferrer" className="p-2 rounded-lg bg-white/5 hover:bg-white/10 text-text-secondary hover:text-primary transition-colors text-xs">Educash</a>
+                <a href="https://www.smartycompany.it/" target="_blank" rel="noopener noreferrer" className="p-2 rounded-lg bg-white/5 hover:bg-white/10 text-text-secondary hover:text-primary transition-colors text-xs">SmartyCompany</a>
+                <a href="https://www.taxcare.it/" target="_blank" rel="noopener noreferrer" className="p-2 rounded-lg bg-white/5 hover:bg-white/10 text-text-secondary hover:text-primary transition-colors text-xs">TaxCare</a>
+                <a href="https://www.taxcare.it/criptocare/" target="_blank" rel="noopener noreferrer" className="p-2 rounded-lg bg-white/5 hover:bg-white/10 text-text-secondary hover:text-primary transition-colors text-xs">CriptoCare</a>
+                <a href="https://bitcareforum.it/" target="_blank" rel="noopener noreferrer" className="p-2 rounded-lg bg-white/5 hover:bg-white/10 text-text-secondary hover:text-primary transition-colors text-xs">BitCare Forum</a>
               </div>
             </motion.article>
 
@@ -306,7 +310,7 @@ export default function HomePage() {
                 <button
                   type="button"
                   onClick={() => setOpenBioId("turtlecute")}
-                  className="absolute -top-0.5 -right-0.5 z-10 p-1.5 rounded-lg bg-black/70 hover:bg-bitcoin text-text-secondary hover:text-bitcoin transition-colors shadow-lg"
+                  className="absolute -top-0.5 -right-0.5 z-10 p-1.5 rounded-lg bg-black/70 hover:bg-primary text-text-secondary hover:text-white transition-colors shadow-lg"
                   aria-label="La sua storia"
                 >
                   <BookOpen className="w-4 h-4" />
@@ -317,9 +321,9 @@ export default function HomePage() {
                 Privacy e Sicurezza
               </p>
               <div className="flex flex-wrap gap-2 mt-4 justify-center">
-                <a href="https://priorato.org/" target="_blank" rel="noopener noreferrer" className="p-2 rounded-lg bg-white/5 hover:bg-bitcoin-light text-text-secondary hover:text-bitcoin transition-colors text-xs">Priorato</a>
-                <a href="https://open.spotify.com/show/51jZKEaXaYKypCICVHkkZE" target="_blank" rel="noopener noreferrer" className="p-2 rounded-lg bg-white/5 hover:bg-bitcoin-light text-text-secondary hover:text-bitcoin transition-colors text-xs">Podcast</a>
-                <a href="https://t.me/privacyfolder" target="_blank" rel="noopener noreferrer" className="p-2 rounded-lg bg-white/5 hover:bg-bitcoin-light text-text-secondary hover:text-bitcoin transition-colors text-xs">Privacy Folder</a>
+                <a href="https://priorato.org/" target="_blank" rel="noopener noreferrer" className="p-2 rounded-lg bg-white/5 hover:bg-white/10 text-text-secondary hover:text-primary transition-colors text-xs">Priorato</a>
+                <a href="https://open.spotify.com/show/51jZKEaXaYKypCICVHkkZE" target="_blank" rel="noopener noreferrer" className="p-2 rounded-lg bg-white/5 hover:bg-white/10 text-text-secondary hover:text-primary transition-colors text-xs">Podcast</a>
+                <a href="https://t.me/privacyfolder" target="_blank" rel="noopener noreferrer" className="p-2 rounded-lg bg-white/5 hover:bg-white/10 text-text-secondary hover:text-primary transition-colors text-xs">Privacy Folder</a>
               </div>
             </motion.article>
 
@@ -344,7 +348,7 @@ export default function HomePage() {
                 <button
                   type="button"
                   onClick={() => setOpenBioId("riccardo")}
-                  className="absolute -top-0.5 -right-0.5 z-10 p-1.5 rounded-lg bg-black/70 hover:bg-bitcoin text-text-secondary hover:text-bitcoin transition-colors shadow-lg"
+                  className="absolute -top-0.5 -right-0.5 z-10 p-1.5 rounded-lg bg-black/70 hover:bg-primary text-text-secondary hover:text-white transition-colors shadow-lg"
                   aria-label="La sua storia"
                 >
                   <BookOpen className="w-4 h-4" />
@@ -357,8 +361,8 @@ export default function HomePage() {
                 Mining
               </p>
               <div className="flex flex-wrap gap-2 mt-4 justify-center">
-                <a href="https://edgemining.energy/" target="_blank" rel="noopener noreferrer" className="p-2 rounded-lg bg-white/5 hover:bg-bitcoin-light text-text-secondary hover:text-bitcoin transition-colors text-xs">Edge Mining</a>
-                <a href="https://www.youtube.com/@arancircle/videos" target="_blank" rel="noopener noreferrer" className="p-2 rounded-lg bg-white/5 hover:bg-bitcoin-light text-text-secondary hover:text-bitcoin transition-colors text-xs">Aran Circle</a>
+                <a href="https://edgemining.energy/" target="_blank" rel="noopener noreferrer" className="p-2 rounded-lg bg-white/5 hover:bg-white/10 text-text-secondary hover:text-primary transition-colors text-xs">Edge Mining</a>
+                <a href="https://www.youtube.com/@arancircle/videos" target="_blank" rel="noopener noreferrer" className="p-2 rounded-lg bg-white/5 hover:bg-white/10 text-text-secondary hover:text-primary transition-colors text-xs">Aran Circle</a>
               </div>
             </motion.article>
 
@@ -383,7 +387,7 @@ export default function HomePage() {
                 <button
                   type="button"
                   onClick={() => setOpenBioId("marco")}
-                  className="absolute -top-0.5 -right-0.5 z-10 p-1.5 rounded-lg bg-black/70 hover:bg-bitcoin text-text-secondary hover:text-bitcoin transition-colors shadow-lg"
+                  className="absolute -top-0.5 -right-0.5 z-10 p-1.5 rounded-lg bg-black/70 hover:bg-primary text-text-secondary hover:text-white transition-colors shadow-lg"
                   aria-label="La sua storia"
                 >
                   <BookOpen className="w-4 h-4" />
@@ -396,12 +400,12 @@ export default function HomePage() {
                 Asset e Protocollo
               </p>
               <div className="flex flex-wrap gap-2 mt-4 justify-center items-center">
-                <a href="https://www.instagram.com/marcocostanza_/" target="_blank" rel="noopener noreferrer" className="p-2 rounded-lg bg-white/5 hover:bg-bitcoin-light text-text-secondary hover:text-bitcoin transition-colors text-xs">Instagram</a>
-                <a href="https://t.me/MarcoCostanzaTelegram/" target="_blank" rel="noopener noreferrer" className="p-2 rounded-lg bg-white/5 hover:bg-bitcoin-light text-text-secondary hover:text-bitcoin transition-colors text-xs">Telegram</a>
-                <a href="https://twitter.com/marcocostanza_" target="_blank" rel="noopener noreferrer" className="p-2 rounded-lg bg-white/5 hover:bg-bitcoin-light text-text-secondary hover:text-bitcoin transition-colors text-xs">Twitter</a>
-                <a href="https://www.youtube.com/c/MarcoCostanza94" target="_blank" rel="noopener noreferrer" className="p-2 rounded-lg bg-white/5 hover:bg-bitcoin-light text-text-secondary hover:text-bitcoin transition-colors text-xs">YouTube</a>
-                <a href="https://www.tiktok.com/@marcocostanza_" target="_blank" rel="noopener noreferrer" className="p-2 rounded-lg bg-white/5 hover:bg-bitcoin-light text-text-secondary hover:text-bitcoin transition-colors text-xs">TikTok</a>
-                <a href="https://marcocostanza.it" target="_blank" rel="noopener noreferrer" className="p-2 rounded-lg bg-white/5 hover:bg-bitcoin-light text-text-secondary hover:text-bitcoin transition-colors text-xs">marcocostanza.it</a>
+                <a href="https://www.instagram.com/marcocostanza_/" target="_blank" rel="noopener noreferrer" className="p-2 rounded-lg bg-white/5 hover:bg-white/10 text-text-secondary hover:text-primary transition-colors text-xs">Instagram</a>
+                <a href="https://t.me/MarcoCostanzaTelegram/" target="_blank" rel="noopener noreferrer" className="p-2 rounded-lg bg-white/5 hover:bg-white/10 text-text-secondary hover:text-primary transition-colors text-xs">Telegram</a>
+                <a href="https://twitter.com/marcocostanza_" target="_blank" rel="noopener noreferrer" className="p-2 rounded-lg bg-white/5 hover:bg-white/10 text-text-secondary hover:text-primary transition-colors text-xs">Twitter</a>
+                <a href="https://www.youtube.com/c/MarcoCostanza94" target="_blank" rel="noopener noreferrer" className="p-2 rounded-lg bg-white/5 hover:bg-white/10 text-text-secondary hover:text-primary transition-colors text-xs">YouTube</a>
+                <a href="https://www.tiktok.com/@marcocostanza_" target="_blank" rel="noopener noreferrer" className="p-2 rounded-lg bg-white/5 hover:bg-white/10 text-text-secondary hover:text-primary transition-colors text-xs">TikTok</a>
+                <a href="https://marcocostanza.it" target="_blank" rel="noopener noreferrer" className="p-2 rounded-lg bg-white/5 hover:bg-white/10 text-text-secondary hover:text-primary transition-colors text-xs">marcocostanza.it</a>
               </div>
             </motion.article>
           </div>
@@ -438,7 +442,7 @@ export default function HomePage() {
                 <button
                   type="button"
                   onClick={() => setOpenBioId("gabriele")}
-                  className="absolute -top-0.5 -right-0.5 z-10 p-1.5 rounded-lg bg-black/70 hover:bg-bitcoin text-text-secondary hover:text-bitcoin transition-colors shadow-lg"
+                  className="absolute -top-0.5 -right-0.5 z-10 p-1.5 rounded-lg bg-black/70 hover:bg-primary text-text-secondary hover:text-white transition-colors shadow-lg"
                   aria-label="La sua storia"
                 >
                   <BookOpen className="w-4 h-4" />
@@ -453,7 +457,7 @@ export default function HomePage() {
                   href="https://edgemining.energy/"
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="p-2 rounded-lg bg-white/5 hover:bg-bitcoin-light text-text-secondary hover:text-bitcoin transition-colors text-xs"
+                  className="p-2 rounded-lg bg-white/5 hover:bg-white/10 text-text-secondary hover:text-primary transition-colors text-xs"
                 >
                   Edge Mining
                 </a>
@@ -472,7 +476,7 @@ export default function HomePage() {
                 <UserPlus className="w-6 h-6 text-text-muted" />
               </div>
               <p className="text-text-muted text-sm">
-                Altri collaboratori in arrivo
+                Rete in espansione
               </p>
             </motion.article>
           </div>
@@ -625,7 +629,7 @@ export default function HomePage() {
             />
           </div>
         </div>
-        <style jsx>{`
+        <style dangerouslySetInnerHTML={{ __html: `
           #newsletter #sib-container input,
           #newsletter #sib-container textarea {
             color: #212121;
@@ -640,7 +644,7 @@ export default function HomePage() {
           #newsletter .sib-form {
             background: transparent !important;
           }
-        `}</style>
+        `}} />
       </section>
 
       <BioModal
