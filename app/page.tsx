@@ -132,7 +132,7 @@ export default function HomePage() {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ duration: 0.5 }}
-              className="group rounded-xl card-border bg-background-card/60 overflow-hidden card-hover transition-all duration-300"
+              className="group rounded-xl card-border bg-background-card/60 overflow-hidden card-hover"
             >
               <div className="relative w-full aspect-[16/10] overflow-hidden">
                 <Image
@@ -168,7 +168,7 @@ export default function HomePage() {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ duration: 0.5, delay: 0.1 }}
-              className="group rounded-xl card-border bg-background-card/60 overflow-hidden card-hover transition-all duration-300"
+              className="group rounded-xl card-border bg-background-card/60 overflow-hidden card-hover"
             >
               <div className="relative w-full aspect-[16/10] overflow-hidden">
                 <Image
@@ -204,7 +204,7 @@ export default function HomePage() {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ duration: 0.5, delay: 0.2 }}
-              className="group rounded-xl card-border bg-background-card/60 overflow-hidden card-hover transition-all duration-300"
+              className="group rounded-xl card-border bg-background-card/60 overflow-hidden card-hover"
             >
               <div className="relative w-full aspect-[16/10] overflow-hidden">
                 <Image
@@ -253,7 +253,7 @@ export default function HomePage() {
               whileInView={{ opacity: 1, scale: 1 }}
               viewport={{ once: true }}
               transition={{ duration: 0.5 }}
-              className="rounded-xl card-border bg-background-card/60 p-6 flex flex-col items-center text-center card-hover transition-all duration-300"
+              className="rounded-xl card-border bg-background-card/60 p-6 flex flex-col items-center text-center card-hover"
             >
               <div className="relative w-24 h-24 shrink-0 mb-4">
                 <div className="w-24 h-24 rounded-full bg-gray-600 overflow-hidden ring-2 ring-white/10">
@@ -295,7 +295,7 @@ export default function HomePage() {
               whileInView={{ opacity: 1, scale: 1 }}
               viewport={{ once: true }}
               transition={{ duration: 0.5, delay: 0.1 }}
-              className="rounded-xl card-border bg-background-card/60 p-6 flex flex-col items-center text-center card-hover transition-all duration-300"
+              className="rounded-xl card-border bg-background-card/60 p-6 flex flex-col items-center text-center card-hover"
             >
               <div className="relative w-24 h-24 shrink-0 mb-4">
                 <div className="w-24 h-24 rounded-full bg-gray-600 overflow-hidden ring-2 ring-white/10">
@@ -333,7 +333,7 @@ export default function HomePage() {
               whileInView={{ opacity: 1, scale: 1 }}
               viewport={{ once: true }}
               transition={{ duration: 0.5, delay: 0.2 }}
-              className="rounded-xl card-border bg-background-card/60 p-6 flex flex-col items-center text-center card-hover transition-all duration-300"
+              className="rounded-xl card-border bg-background-card/60 p-6 flex flex-col items-center text-center card-hover"
             >
               <div className="relative w-24 h-24 shrink-0 mb-4">
                 <div className="w-24 h-24 rounded-full bg-gray-600 overflow-hidden ring-2 ring-white/10">
@@ -372,7 +372,7 @@ export default function HomePage() {
               whileInView={{ opacity: 1, scale: 1 }}
               viewport={{ once: true }}
               transition={{ duration: 0.5, delay: 0.3 }}
-              className="rounded-xl card-border bg-background-card/60 p-6 flex flex-col items-center text-center card-hover transition-all duration-300"
+              className="rounded-xl card-border bg-background-card/60 p-6 flex flex-col items-center text-center card-hover"
             >
               <div className="relative w-24 h-24 shrink-0 mb-4">
                 <div className="w-24 h-24 rounded-full bg-gray-600 overflow-hidden ring-2 ring-white/10">
@@ -427,7 +427,7 @@ export default function HomePage() {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ duration: 0.5 }}
-              className="rounded-xl card-border bg-background-card/60 p-6 flex flex-col items-center text-center card-hover transition-all duration-300"
+              className="rounded-xl card-border bg-background-card/60 p-6 flex flex-col items-center text-center card-hover"
             >
               <div className="relative w-20 h-20 shrink-0 mb-4">
                 <div className="w-20 h-20 rounded-full bg-gray-600 overflow-hidden ring-2 ring-white/10">

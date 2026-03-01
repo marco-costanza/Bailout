@@ -38,6 +38,10 @@
     @apply border border-white/10;
   }
   
+  .card-hover {
+    transition: border-color 0.3s ease, box-shadow 0.3s ease;
+  }
+  
   .card-hover:hover {
     @apply border-arancione6102/40 shadow-glow-sm;
   }
