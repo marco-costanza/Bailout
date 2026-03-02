@@ -164,7 +164,7 @@ export default function ProtocolsPage() {
                   </li>
                   <li className="flex items-start gap-3">
                     <Zap className="w-5 h-5 text-primary shrink-0 mt-0.5" />
-                    <span className="font-medium text-white">Sconto permanente del 21%</span> su tutti i servizi accessori di consulenza privata (P2P 1-to-1, Nodes per Aziende e Bailout Consensus).
+                    <span><span className="font-medium text-white">Sconto permanente del 21%</span> su tutti i servizi accessori di consulenza privata (P2P 1-to-1, Nodes per Aziende e Bailout Consensus).</span>
                   </li>
                 </ul>
               </div>

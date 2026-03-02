@@ -1,0 +1,1 @@
+Non eseguire mai 'npm run build' o build locali quando si lavora su progetti web/siti. Affidati sempre ai log di Vercel per il deploy finale per via dei permessi di sistema.
