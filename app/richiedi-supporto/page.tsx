@@ -92,7 +92,7 @@ export default function RichiediSupportoPage() {
   if (formData.supporto === 'video') currentPrice = 250;
   if (currentPrice > 0) {
     if (formData.urgenza === 'urgente') currentPrice *= 2;
-    if (formData.isMember === 'si') currentPrice /= 2;
+    if (formData.isMember === 'si') currentPrice = Math.round(currentPrice * 0.79);
   }
 
   // Varianti Animazione
@@ -302,7 +302,7 @@ export default function RichiediSupportoPage() {
                     </button>
                   </div>
                   <p className="text-sm mt-3 text-text-secondary">
-                    Se hai scelto Mail\\Chat ma l&apos;intervento si scopre risolvibile solo in videochiamata, scaleremo quanto hai già pagato dal costo del servizio &quot;Video Call 1-to-1&quot;.
+                    Se hai scelto l&apos;intervento via mail \ chat ma il problema si scopre risolvibile solo in videochiamata, scaleremo quanto hai già pagato dal costo del servizio &quot;Video Call 1-to-1&quot;.
                   </p>
                 </div>
 
@@ -311,7 +311,7 @@ export default function RichiediSupportoPage() {
                   <div className="grid sm:grid-cols-2 gap-4">
                     <button type="button" onClick={() => handleSelect('isMember', 'si')} className={`p-4 rounded-xl border flex flex-col justify-start text-left gap-2 transition-colors ${formData.isMember === 'si' ? 'bg-primary/20 border-primary text-primary' : 'bg-background border-white/10 text-white hover:border-white/30'}`}>
                       <span className="font-semibold text-sm">Sono già Membro della vostra accademia</span>
-                      <span className="text-xs text-text-secondary leading-relaxed">Se fai parte di Bailout Protocols hai diritto al 50% di sconto sul nostro supporto.</span>
+                      <span className="text-xs text-text-secondary leading-relaxed">Se fai parte di Bailout Protocols hai diritto al 21% di sconto sul nostro supporto.</span>
                     </button>
                     <button type="button" onClick={() => handleSelect('isMember', 'no')} className={`p-4 rounded-xl border flex flex-col justify-start text-left gap-2 transition-colors ${formData.isMember === 'no' ? 'bg-primary/20 border-primary text-primary' : 'bg-background border-white/10 text-white hover:border-white/30'}`}>
                       <span className="font-semibold text-sm">NON sono ancora un membro della vostra accademia</span>
