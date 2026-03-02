@@ -223,7 +223,7 @@ export default function HomePage() {
                   Bailout P2P (Intervento 1-to-1)
                 </h3>
                 <p className="text-text-secondary text-sm leading-relaxed min-h-[80px]">
-                  Intervento ingegneristico 1-to-1 da 90 minuti per Private e Corporate. Svolgiamo assieme il lavoro pratico (setup multisig, recupero fondi basico, nodi) per azzerare l&apos;errore umano, validato da un check email finale.
+                  Intervento ingegneristico 1-to-1 da 90 minuti per Private e Corporate. Svolgiamo assieme il lavoro pratico (setup multisig, recupero fondi basico, nodi) per azzerare l&apos;errore umano, validato da un check email finale. I membri di Bailout Protocols hanno diritto al 21% di sconto.
                 </p>
                 <Link
                   href="/consulenza"

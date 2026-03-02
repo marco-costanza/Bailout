@@ -88,7 +88,7 @@ export default function RichiediSupportoPage() {
 
   // Calcolo prezzo dinamico
   let currentPrice = 0;
-  if (formData.supporto === 'chat') currentPrice = 50;
+  if (formData.supporto === 'chat') currentPrice = 100;
   if (formData.supporto === 'video') currentPrice = 250;
   if (currentPrice > 0) {
     if (formData.urgenza === 'urgente') currentPrice *= 2;

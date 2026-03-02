@@ -75,9 +75,9 @@ export default function ConsensusPage() {
               <div className="w-12 h-12 rounded-lg bg-primary/10 flex items-center justify-center mb-6">
                 <Calendar className="w-6 h-6 text-primary" />
               </div>
-              <h3 className="text-xl font-semibold text-white mb-3">Accesso Illimitato</h3>
+              <h3 className="text-xl font-semibold text-white mb-3">Accesso e Vantaggi</h3>
               <p className="text-text-secondary text-sm leading-relaxed">
-                Goditi la registrazione e tutti i materiali di supporto (saranno inviati in un secondo momento).
+                Goditi la registrazione e tutti i materiali di supporto post-evento. I membri di Bailout Protocols hanno uno sconto fisso del 21% sui ticket.
               </p>
             </div>
           </div>

@@ -58,9 +58,9 @@ export default function ConsulenzaPage() {
               <p className="text-text-secondary leading-relaxed mb-6 flex-1">
                 L&apos;intervento ingegneristico per azzerare l&apos;errore umano.<br/><br/>
                 <strong className="text-white font-medium">Cosa offriamo e tempo dedicato:</strong> 90 minuti netti di intervento esecutivo in videochiamata 1-to-1. Serve per fare il lavoro &quot;sporco&quot; e ingegneristico insieme al cliente (es. setup hardware wallet, recupero fondi basico, creazione seed). Include un follow-up via email per verificare che tutto sia andato a buon fine.<br/><br/>
-                <strong className="text-white font-medium">Prezzi:</strong><br/>
-                <span className="text-primary font-semibold">210€</span> (Prezzo agevolato riservato esclusivamente a chi è già membro dei Bailout Protocols).<br/>
-                <span className="text-primary font-semibold">500€</span> (Pacchetto chiuso, una tantum, per utenti esterni non iscritti all&apos;Academy).
+                <strong className="text-white font-medium">Prezzo:</strong><br/>
+                <span className="text-primary font-semibold">250€</span> (Pacchetto chiuso, una tantum, per utenti esterni).<br/>
+                <span className="text-xs italic mt-2 block">Nota: I membri di Bailout Protocols hanno diritto al 21% di sconto su questo servizio.</span>
               </p>
             </div>
             
@@ -73,7 +73,7 @@ export default function ConsulenzaPage() {
                 Studi di fattibilità ed esecuzione per infrastrutture complesse.<br/><br/>
                 <strong className="text-white font-medium">Cosa offriamo e tempo dedicato:</strong> Progettazione e setup di architetture complesse (Mining farm, Multisig avanzati per successione aziendale/eredità, gateway di pagamento Lightning BTCPay). Il tempo di realizzazione non è preventivabile a priori.<br/><br/>
                 <strong className="text-white font-medium">Prezzo:</strong> A partire da <span className="text-primary font-semibold">2.500€</span>.<br/>
-                <span className="text-xs italic mt-2 block">Nota: L&apos;accesso al servizio avviene solo tramite preventivo, rilasciato dopo una prima call di analisi strategica non risolutiva, dal costo di 500€. Se il cliente accetta di procedere con il progetto, i 500€ verranno interamente scalati dal costo finale dell&apos;appalto.</span>
+                <span className="text-xs italic mt-2 block">Nota: L&apos;accesso al servizio avviene solo tramite preventivo, rilasciato dopo una prima call di analisi strategica non risolutiva, dal costo di 250€. Se il cliente accetta di procedere con il progetto, i 250€ verranno interamente scalati dal costo finale dell&apos;appalto (i membri di Bailout Protocols hanno accesso allo sconto del 21% anche su questo servizio di analisi istruttoria).</span>
               </p>
             </div>
           </div>
