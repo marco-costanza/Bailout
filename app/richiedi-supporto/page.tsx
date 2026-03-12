@@ -24,7 +24,6 @@ export default function RichiediSupportoPage() {
     descrizione: "",
     urgenza: "", // "urgente" o "normale"
     supporto: "", // "chat", "video"
-    isMember: "", // "si", "no"
   });
 
   const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement>) => {
@@ -57,8 +56,8 @@ export default function RichiediSupportoPage() {
 
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
-    if (!formData.urgenza || !formData.supporto || !formData.isMember) {
-      setError("Seleziona urgenza, tipo di supporto e se sei membro dell'accademia prima di inviare.");
+    if (!formData.urgenza || !formData.supporto) {
+      setError("Seleziona urgenza e tipo di supporto prima di inviare.");
       return;
     }
 
@@ -90,10 +89,7 @@ export default function RichiediSupportoPage() {
   let currentPrice = 0;
   if (formData.supporto === 'chat') currentPrice = 100;
   if (formData.supporto === 'video') currentPrice = 250;
-  if (currentPrice > 0) {
-    if (formData.urgenza === 'urgente') currentPrice *= 2;
-    if (formData.isMember === 'si') currentPrice = Math.round(currentPrice * 0.79);
-  }
+  if (currentPrice > 0 && formData.urgenza === 'urgente') currentPrice *= 2;
 
   // Varianti Animazione
   const containerVariants = {
@@ -304,20 +300,6 @@ export default function RichiediSupportoPage() {
                   <p className="text-sm mt-3 text-text-secondary">
                     Se hai scelto l&apos;intervento via mail \ chat ma il problema si scopre risolvibile solo in videochiamata, scaleremo quanto hai già pagato dal costo del servizio &quot;Video Call 1-to-1&quot;.
                   </p>
-                </div>
-
-                <div className="space-y-3 pt-4">
-                  <label className="block text-sm font-medium text-text-secondary">Accademia Bailout *</label>
-                  <div className="grid sm:grid-cols-2 gap-4">
-                    <button type="button" onClick={() => handleSelect('isMember', 'si')} className={`p-4 rounded-xl border flex flex-col justify-start text-left gap-2 transition-colors ${formData.isMember === 'si' ? 'bg-primary/20 border-primary text-primary' : 'bg-background border-white/10 text-white hover:border-white/30'}`}>
-                      <span className="font-semibold text-sm">Sono già Membro della vostra accademia</span>
-                      <span className="text-xs text-text-secondary leading-relaxed">Se fai parte di Bailout Protocols hai diritto al 21% di sconto sul nostro supporto.</span>
-                    </button>
-                    <button type="button" onClick={() => handleSelect('isMember', 'no')} className={`p-4 rounded-xl border flex flex-col justify-start text-left gap-2 transition-colors ${formData.isMember === 'no' ? 'bg-primary/20 border-primary text-primary' : 'bg-background border-white/10 text-white hover:border-white/30'}`}>
-                      <span className="font-semibold text-sm">NON sono ancora un membro della vostra accademia</span>
-                      <span className="text-xs text-text-secondary leading-relaxed">Prezzo pieno.</span>
-                    </button>
-                  </div>
                 </div>
 
                 {currentPrice > 0 && (

@@ -77,7 +77,7 @@ export default function ConsensusPage() {
               </div>
               <h3 className="text-xl font-semibold text-white mb-3">Accesso e Vantaggi</h3>
               <p className="text-text-secondary text-sm leading-relaxed">
-                Goditi la registrazione e tutti i materiali di supporto post-evento. I membri di Bailout Protocols hanno uno sconto fisso del 21% sui ticket.
+                Goditi la registrazione e tutti i materiali di supporto post-evento.
               </p>
             </div>
           </div>
