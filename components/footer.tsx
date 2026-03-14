@@ -31,7 +31,7 @@ export default function Footer() {
             <ul className="space-y-3">
               <li>
                 <Link href="/protocols" className="text-text-secondary hover:text-primary text-sm transition-colors">
-                  Bailout Protocols (Academy)
+                  Bailout Protocols
                 </Link>
               </li>
               <li>

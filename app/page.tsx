@@ -148,10 +148,10 @@ export default function HomePage() {
                   <GraduationCap className="w-6 h-6 text-bitcoin" />
                 </div>
                 <h3 className="text-xl font-semibold text-white mb-2">
-                  Bailout Protocols (Membership Annuale)
+                  Bailout Protocols
                 </h3>
               <p className="text-text-secondary text-sm leading-relaxed min-h-[80px]">
-                L&apos;Accademia in continua evoluzione: nuovi moduli video settimanali tenuti dai professionisti del Network per padroneggiare regole e segreti di Bitcoin. Include l&apos;AI proprietaria addestrata sui nostri materiali.
+                Videocorsi pratici venduti singolarmente: ogni protocollo ha docente, prezzo e durata propri. Dal fondamenti alla self-custody, dal mining ai layer 2. Scegli i corsi che ti servono.
               </p>
               <Link
                 href="/protocols"
@@ -187,7 +187,7 @@ export default function HomePage() {
                   Bailout Consensus (Eventi Live e On-Demand)
                 </h3>
               <p className="text-text-secondary text-sm leading-relaxed min-h-[80px]">
-                Webinar in diretta e sessioni pratiche (es. setup nodi, privacy) con docenti esperti ed una sessione live Q&amp;A per rispondere alle tue domande. L&apos;iscrizione è attualmente gratuita per i membri dell&apos;Academy.
+                Webinar in diretta e sessioni pratiche (es. setup nodi, privacy) con docenti esperti ed una sessione live Q&amp;A per rispondere alle tue domande.
               </p>
               <Link
                 href="/consensus"

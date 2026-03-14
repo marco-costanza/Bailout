@@ -1,15 +1,61 @@
 "use client";
 
 import Link from "next/link";
-import Image from "next/image";
 import { motion } from "framer-motion";
-import { useState } from "react";
-import { ArrowRight, BookOpen, ShieldCheck, Zap } from "lucide-react";
-import { RedirectPopup } from "@/components/RedirectPopup";
+import { ArrowRight, BookOpen, User, Clock } from "lucide-react";
+
+const PROTOCOLLI_PLACEHOLDER = [
+  {
+    id: "1",
+    titolo: "Fondamenti Bitcoin e Self-Custody",
+    docente: "Docente da definire",
+    prezzo: "€99",
+    durata: "6 ore",
+    descrizione: "Dalla teoria alla pratica: acquisto, custodia e gestione dei tuoi satoshi in totale autonomia.",
+  },
+  {
+    id: "2",
+    titolo: "Hardware Wallet e Sicurezza",
+    docente: "Docente da definire",
+    prezzo: "€149",
+    durata: "4 moduli",
+    descrizione: "Scelta, configurazione e uso sicuro del tuo hardware wallet. Zero compromessi sulla sicurezza.",
+  },
+  {
+    id: "3",
+    titolo: "Privacy e Anonimato",
+    docente: "Docente da definire",
+    prezzo: "€129",
+    durata: "5 ore",
+    descrizione: "Migliori pratiche per acquisto e spesa in anonimato. Strumenti e procedure operative.",
+  },
+  {
+    id: "4",
+    titolo: "Mining: dalle basi all'operatività",
+    docente: "Docente da definire",
+    prezzo: "€179",
+    durata: "8 ore",
+    descrizione: "Proof of Work, mining domestico e industriale. Come partecipare alla rete in prima persona.",
+  },
+  {
+    id: "5",
+    titolo: "Lightning Network e Layer 2",
+    docente: "Docente da definire",
+    prezzo: "€149",
+    durata: "6 ore",
+    descrizione: "Micro-pagamenti istantanei, Liquid e altri layer. Teoria e setup pratico.",
+  },
+  {
+    id: "6",
+    titolo: "Nodi e Protocollo",
+    docente: "Docente da definire",
+    prezzo: "€199",
+    durata: "10 ore",
+    descrizione: "Avvia il tuo nodo, verifica le transazioni e contribuisci alla decentralizzazione del network.",
+  },
+] as const;
 
 export default function ProtocolsPage() {
-  const [isRedirectPopupOpen, setIsRedirectPopupOpen] = useState(false);
-
   return (
     <div className="min-h-screen bg-background selection:bg-primary/30 selection:text-white">
       {/* Hero Section */}
@@ -17,7 +63,7 @@ export default function ProtocolsPage() {
         <div className="absolute inset-0 z-0">
           <div className="absolute inset-0 bg-[radial-gradient(circle_at_center,rgba(255,97,2,0.15)_0,transparent_50%)]" />
         </div>
-        
+
         <div className="container relative z-10 mx-auto px-4 sm:px-6 lg:px-8">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
@@ -27,28 +73,28 @@ export default function ProtocolsPage() {
           >
             <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-primary/10 border border-primary/20 text-primary text-sm font-medium mb-8">
               <BookOpen className="w-4 h-4" />
-              <span>La nostra accademia di formazione</span>
+              <span>Catalogo corsi</span>
             </div>
-            
+
             <h1 className="text-4xl sm:text-5xl md:text-6xl font-semibold text-white tracking-tight leading-tight mb-6">
               Bailout Protocols: <br className="hidden sm:block" />
               <span className="text-transparent bg-clip-text bg-gradient-to-r from-primary to-primary-hover">
                 Diventa Sovrano del Tuo Stack
               </span>
             </h1>
-            
+
             <p className="text-lg sm:text-xl text-text-secondary max-w-2xl mx-auto leading-relaxed mb-10">
-              Il percorso online strutturato passo-passo (0 a 100) per comprendere il network Bitcoin e padroneggiare in totale autonomia la self-custody.
+              Videocorsi pratici venduti singolarmente. Ogni protocollo ha il suo docente, prezzo e durata: scegli ciò che ti serve e studia al tuo ritmo.
             </p>
-            
+
             <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
-              <button 
-                onClick={() => setIsRedirectPopupOpen(true)}
+              <a
+                href="#corsi"
                 className="inline-flex justify-center items-center gap-2 bg-primary hover:bg-primary-hover text-white text-base font-semibold px-8 py-4 rounded-md transition-colors w-full sm:w-auto"
               >
-                Inizia ora il percorso <ArrowRight className="w-5 h-5" />
-              </button>
-              <Link 
+                Scopri i protocolli <ArrowRight className="w-5 h-5" />
+              </a>
+              <Link
                 href="/consulenza"
                 className="inline-flex justify-center items-center gap-2 bg-white/5 hover:bg-white/10 text-white text-base font-semibold px-8 py-4 rounded-md transition-colors border border-white/10 w-full sm:w-auto"
               >
@@ -59,121 +105,44 @@ export default function ProtocolsPage() {
         </div>
       </section>
 
-      {/* Curriculum / Struttura */}
-      <section className="py-20 bg-background border-t border-white/5">
+      {/* Griglia Corsi (placeholder) */}
+      <section id="corsi" className="py-20 bg-background border-t border-white/5">
         <div className="container mx-auto px-4 sm:px-6 lg:px-8 max-w-5xl">
           <div className="text-center mb-16">
-            <h2 className="text-3xl font-semibold text-white mb-4">Cosa trovi all&apos;interno</h2>
+            <h2 className="text-3xl font-semibold text-white mb-4">I protocolli</h2>
             <p className="text-text-secondary text-lg max-w-2xl mx-auto">
-              Tutto ciò che ti serve per acquistare, gestire ed utilizzare i tuoi satoshi al 100%. In completa sicurezza ed anonimato.
+              Corsi on-demand acquistabili singolarmente. Ogni protocollo è tenuto da un docente del network Bailout.
             </p>
           </div>
 
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-            <div className="bg-background-card p-8 rounded-xl border border-white/5 hover:border-primary/50 transition-colors">
-              <div className="w-12 h-12 rounded-lg bg-primary/10 flex items-center justify-center mb-6">
-                <BookOpen className="w-6 h-6 text-primary" />
-              </div>
-              <h3 className="text-xl font-semibold text-white mb-3">Fondamenti Economici</h3>
-              <p className="text-text-secondary text-sm leading-relaxed">
-                Perché Bitcoin esiste? Come funziona la TimeChain, proof of work e perché sconfigge l&apos;inflazione fiat.
-              </p>
-            </div>
-            
-            <div className="bg-background-card p-8 rounded-xl border border-white/5 hover:border-primary/50 transition-colors">
-              <div className="w-12 h-12 rounded-lg bg-primary/10 flex items-center justify-center mb-6">
-                <ShieldCheck className="w-6 h-6 text-primary" />
-              </div>
-              <h3 className="text-xl font-semibold text-white mb-3">Sicurezza</h3>
-              <p className="text-text-secondary text-sm leading-relaxed">
-                Come scegliere e configurare il tuo hardware wallet. Come gestire le tue transazioni. Come diventare il sovrano del tuo patrimonio.
-              </p>
-            </div>
-            
-            <div className="bg-background-card p-8 rounded-xl border border-white/5 hover:border-primary/50 transition-colors">
-              <div className="w-12 h-12 rounded-lg bg-primary/10 flex items-center justify-center mb-6">
-                <ShieldCheck className="w-6 h-6 text-primary" />
-              </div>
-              <h3 className="text-xl font-semibold text-white mb-3">Privacy e anonimato</h3>
-              <p className="text-text-secondary text-sm leading-relaxed">
-                Tutte le migliori pratiche per gestire l&apos;acquisto e la spesa in totale sicurezza e anonimato.
-              </p>
-            </div>
-
-            <div className="bg-background-card p-8 rounded-xl border border-white/5 hover:border-primary/50 transition-colors">
-              <div className="w-12 h-12 rounded-lg bg-primary/10 flex items-center justify-center mb-6">
-                <Zap className="w-6 h-6 text-primary" />
-              </div>
-              <h3 className="text-xl font-semibold text-white mb-3">Mining</h3>
-              <p className="text-text-secondary text-sm leading-relaxed">
-                Approfondisci le basi del mining e della Proof of Work. Scopri come partecipare alla rete costruendo la tua operatività casalinga o industriale.
-              </p>
-            </div>
-
-            <div className="bg-background-card p-8 rounded-xl border border-white/5 hover:border-primary/50 transition-colors">
-              <div className="w-12 h-12 rounded-lg bg-primary/10 flex items-center justify-center mb-6">
-                <Zap className="w-6 h-6 text-primary" />
-              </div>
-              <h3 className="text-xl font-semibold text-white mb-3">Layer 2</h3>
-              <p className="text-text-secondary text-sm leading-relaxed">
-                Studia e applica Lightning Network, Liquid e altri layer secondari per micro-transazioni istantanee, confidenziali e a bassissimo costo.
-              </p>
-            </div>
-
-            <div className="bg-background-card p-8 rounded-xl border border-white/5 hover:border-primary/50 transition-colors">
-              <div className="w-12 h-12 rounded-lg bg-primary/10 flex items-center justify-center mb-6">
-                <Zap className="w-6 h-6 text-primary" />
-              </div>
-              <h3 className="text-xl font-semibold text-white mb-3">Nodi e protocollo</h3>
-              <p className="text-text-secondary text-sm leading-relaxed">
-                Avvia e gestisci il tuo nodo personale. Contribuisci attivamente alla decentralizzazione del network interagendo senza intermediari.
-              </p>
-            </div>
-
-          </div>
-        </div>
-      </section>
-
-      {/* Pricing / Offer Section */}
-      <section className="py-20 bg-background border-t border-white/5">
-        <div className="container mx-auto px-4 sm:px-6 lg:px-8 max-w-4xl">
-          <div className="bg-background-card rounded-2xl border border-primary/20 overflow-hidden shadow-2xl relative">
-            <div className="absolute top-0 left-0 w-full h-1.5 bg-gradient-to-r from-primary/50 via-primary to-primary/50" />
-            
-            <div className="p-8 sm:p-12 md:flex justify-between items-center gap-12">
-              <div className="flex-1">
-                <h2 className="text-3xl font-semibold text-white mb-4">Iscrizione Annuale</h2>
-                <div className="flex items-end gap-2 mb-6">
-                  <span className="text-5xl font-bold text-white">€499</span>
-                  <span className="text-text-secondary mb-1">/ anno</span>
+            {PROTOCOLLI_PLACEHOLDER.map((corso) => (
+              <motion.div
+                key={corso.id}
+                initial={{ opacity: 0, y: 16 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true }}
+                transition={{ duration: 0.4 }}
+                className="bg-background-card p-8 rounded-xl border border-white/5 hover:border-primary/50 transition-colors flex flex-col h-full"
+              >
+                <h3 className="text-xl font-semibold text-white mb-3">{corso.titolo}</h3>
+                <div className="flex flex-wrap items-center gap-3 text-sm text-text-secondary mb-3">
+                  <span className="inline-flex items-center gap-1.5">
+                    <User className="w-4 h-4 text-primary" />
+                    {corso.docente}
+                  </span>
+                  <span className="inline-flex items-center gap-1.5">
+                    <Clock className="w-4 h-4 text-primary" />
+                    {corso.durata}
+                  </span>
                 </div>
-                
-                <h4 className="text-lg font-medium text-white mb-3">Cosa offriamo:</h4>
-                <ul className="space-y-3 text-text-secondary mb-8">
-                  <li className="flex items-start gap-3">
-                    <ShieldCheck className="w-5 h-5 text-primary shrink-0 mt-0.5" />
-                    <span>Accesso on-demand a tutti i &quot;Protocolli&quot; (videocorsi pratici).</span>
-                  </li>
-                  <li className="flex items-start gap-3">
-                    <ShieldCheck className="w-5 h-5 text-primary shrink-0 mt-0.5" />
-                    <span>L&apos;Academy è un ambiente vivo: viene rilasciata una nuova lezione ogni settimana, tenuta dai diversi docenti e professionisti del nostro network.</span>
-                  </li>
-                  <li className="flex items-start gap-3">
-                    <ShieldCheck className="w-5 h-5 text-primary shrink-0 mt-0.5" />
-                    <span>Assistente AI integrato (addestrato sui nostri materiali) per uno studio interattivo in tempo reale.</span>
-                  </li>
-                </ul>
-              </div>
-              
-              <div className="w-full md:w-auto shrink-0 flex flex-col gap-4">
-                <button 
-                  onClick={() => setIsRedirectPopupOpen(true)}
-                  className="w-full inline-flex justify-center items-center gap-2 bg-primary hover:bg-primary-hover text-white text-base font-semibold px-8 py-4 rounded-md transition-colors"
-                >
-                  Acquista l&apos;Accesso
-                </button>
-              </div>
-            </div>
+                <p className="text-primary font-semibold text-lg mb-4">{corso.prezzo}</p>
+                <p className="text-text-secondary text-sm leading-relaxed flex-1 mb-6">{corso.descrizione}</p>
+                <span className="inline-flex justify-center items-center py-2.5 px-4 rounded-md bg-white/5 text-text-secondary text-sm font-medium border border-white/10 cursor-not-allowed">
+                  Prossimamente
+                </span>
+              </motion.div>
+            ))}
           </div>
         </div>
       </section>
@@ -184,7 +153,7 @@ export default function ProtocolsPage() {
           <div className="text-center mb-12">
             <h2 className="text-3xl font-semibold text-white mb-4">Cerchi un supporto più mirato?</h2>
             <p className="text-text-secondary max-w-2xl mx-auto">
-              Se l&apos;Academy non fa al caso tuo, scopri i nostri servizi esclusivi dal vivo o le consulenze individuali.
+              Se i corsi non bastano, scopri i nostri servizi esclusivi dal vivo o le consulenze individuali.
             </p>
           </div>
 
@@ -201,7 +170,7 @@ export default function ProtocolsPage() {
                 Scopri Bailout Consensus <ArrowRight className="w-4 h-4" />
               </Link>
             </div>
-            
+
             <div className="bg-background-card p-8 rounded-xl border border-white/5 hover:border-white/20 transition-all flex flex-col h-full group">
               <h3 className="text-2xl font-semibold text-white mb-2">Consulenze 1-to-1 e per Aziende</h3>
               <p className="text-text-secondary mb-8 flex-1">
@@ -217,12 +186,6 @@ export default function ProtocolsPage() {
           </div>
         </div>
       </section>
-
-      <RedirectPopup 
-        isOpen={isRedirectPopupOpen} 
-        onClose={() => setIsRedirectPopupOpen(false)} 
-        targetUrl="https://marcocostanza.it/prodotto/bitcoin-academy-2026/"
-      />
     </div>
   );
 }
